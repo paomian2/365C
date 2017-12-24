@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_msg_title"/>
+    
+    <TextView
+        android:textColor="@color/black"
+        android:paddingLeft="32px"
+        android:gravity="center_vertical"
+        android:textSize="28px"
+        android:text="联系人"
+        android:layout_width="match_parent"
+        android:layout_height="70px" />
+
+    <RelativeLayout
+       style="@style/layout_88px">
+
+        <TextView
+            android:id="@+id/tvNameStatic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="姓名："
+            android:textColor="@color/black"
+            android:textSize="28px" />
+
+        <EditText
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="70px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tvNameStatic"
+            android:background="@color/white"
+            android:hint="请填写收货人姓名"
+            android:lines="1"
+            android:padding="5px"
+            android:textColor="@color/black"
+            android:textSize="28px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/layout_88px">
+         <RadioGroup
+             android:layout_centerInParent="true"
+             android:orientation="horizontal"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+             <RadioButton
+                 android:checked="true"
+                 android:layout_gravity="center"
+                 android:id="@+id/rb_sex0"
+                 android:paddingLeft="20px"
+                 android:text="先生"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content" />
+             <RadioButton
+                 android:layout_marginLeft="90px"
+                 android:layout_gravity="center"
+                 android:id="@+id/rb_sex1"
+                 android:paddingLeft="20px"
+                 android:text="女士"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content" />
+         </RadioGroup>
+     </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/layout_88px">
+        <TextView
+            android:id="@+id/tvPhoneStatic"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:textSize="28px"
+            android:text="姓名："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/tvPhone"
+            android:textColor="@color/black"
+            android:textSize="28px"
+            android:hint="请填写收货人手机号"
+            android:lines="1"
+            android:padding="5px"
+            android:layout_toRightOf="@+id/tvPhoneStatic"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="70px" />
+    </RelativeLayout>
+
+    <TextView
+        android:textColor="@color/black"
+        android:paddingLeft="32px"
+        android:gravity="center_vertical"
+        android:textSize="28px"
+        android:text="收货地址"
+        android:layout_width="match_parent"
+        android:layout_height="70px" />
+
+    <RelativeLayout
+        style="@style/layout_88px">
+        <TextView
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:text="小区/大夏/学校："
+            android:id="@+id/tvAdressStatic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvAdressDesc"
+            android:drawablePadding="20px"
+            android:textColor="#999999"
+            android:textSize="28px"
+            android:drawableLeft="@mipmap/icon_adress_location"
+            android:hint="点击选择"
+            android:drawableRight="@drawable/icon_next"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tvAdressStatic"
+            android:gravity="center_vertical|left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="32px"
+        android:background="@color/line_back"/>
+    <RelativeLayout
+        style="@style/layout_88px">
+        <TextView
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:text="楼号-门派："
+            android:id="@+id/tvHouseNoStatic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:background="@color/white"
+            android:textSize="28px"
+            android:layout_centerVertical="true"
+            android:hint="例：228号楼2单元902室"
+            android:id="@+id/tvHouseNo"
+            android:layout_width="match_parent"
+            android:layout_height="70px"
+            android:lines="1"
+            android:layout_toRightOf="@+id/tvHouseNoStatic"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

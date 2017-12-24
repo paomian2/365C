@@ -1,0 +1,16 @@
+package com.a365vintagewine.mvp.view.goods;
+
+import com.a365vintagewine.mvp.bean.GoodsEvaluate;
+import com.commsdk.base.view.BaseView;
+
+import java.util.List;
+
+/**
+ * Created by Administrator on 2017/9/5 0005.
+ */
+
+public interface GoodsEvaluateView extends BaseView {
+
+    //适配商品评价列表数据
+    void setGoodsEvaluateAdapter(List<GoodsEvaluate> list);
+}

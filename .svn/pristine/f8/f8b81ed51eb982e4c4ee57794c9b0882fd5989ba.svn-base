@@ -1,0 +1,15 @@
+package com.a365vintagewine.mvp.view;
+
+import com.a365vintagewine.mvp.bean.IntegralDetail;
+import com.commsdk.base.view.BaseView;
+
+import java.util.List;
+
+/**
+ * Created by Administrator on 2017/8/28 0028.
+ */
+
+public interface IntegralDetailView extends BaseView {
+    //适配积分明细
+    void setIntegralDetailAdapter(List<IntegralDetail> list);
+}

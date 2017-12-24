@@ -1,0 +1,76 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '26.0.2'
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 18
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "API_SERVER_URL", "\"http://erp-api.mingpin365.cn/\""
+            buildConfigField "String", "IMAGE_SERVER_URL", "\"http://erp.mingpin365.cn\""
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "API_SERVER_URL", "\"http://lianjiu-api.iwms.xin/\""
+            buildConfigField "String", "IMAGE_SERVER_URL", "\"http://lianjiu.iwms.xin/\""
+        }
+        //注：见下面的configurations注释
+        publishNonDefault true
+    }
+
+    //主要用于解决buildTypes切换环境问题(打包的时候生成release跟debug，提供给使用者)
+    //使用者导入方式： debugCompile project(path: ':commsdk', configuration: 'debug')
+    //                  releaseCompile project(path: ':commsdk', configuration: 'release')
+    configurations {
+        debug
+        release
+    }
+
+    android {
+        useLibrary 'org.apache.http.legacy'
+    }
+}
+
+dependencies {
+    //compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    // compile files('libs/glide-3.6.1.jar')
+    compile files('libs/xUtils-2.6.14.jar')
+    compile files('libs/zxing.jar')
+    compile 'com.githang:status-bar-compat:0.3'
+    compile 'com.jakewharton:butterknife:7.0.0'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'io.reactivex:rxjava:1.1.0'
+    compile files('libs/glide-3.6.1.jar')
+    //compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:support-v4:24.2.0'
+    //compile 'com.android.support:design:24.1.1'
+    //环信
+    //    compile 'com.android.support:appcompat-v7:23.4.0'
+    //    //Optional compile for GCM (Google Cloud Messaging).
+    //    compile 'com.google.android.gms:play-services-gcm:9.4.0'
+    //    compile 'com.hyphenate:hyphenate-sdk:3.3.0'
+}

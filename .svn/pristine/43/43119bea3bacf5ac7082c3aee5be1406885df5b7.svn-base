@@ -1,0 +1,64 @@
+package com.a365vintagewine.mvp.model;
+import com.a365vintagewine.mvp.bean.VoucherBean;
+import com.commsdk.base.retrofit.ModelCallBack;
+import com.commsdk.common.TimeUtil;
+import java.util.ArrayList;
+import java.util.List;
+/**
+ * 描述：
+ * 作者：Linxz
+ * E-mail:lin_xiao_zhang@163.com
+ * 时间:2017年08月29日  9:43
+ * 版本：3.0
+ */
+
+public class MyVoucherModel extends BaseModel2{
+
+    /**获取优惠券三种状态的数据*/
+    public void getVoucherCount(ModelCallBack modelCallBack){
+        modelCallBack.onSuccess(null);
+    }
+
+    /**根据优惠券状态获取优惠券列表*/
+    public void getVoucherListOfStatus(int status,ModelCallBack callBack){
+        List<VoucherBean> voucherBeanList=new ArrayList<>();
+        VoucherBean voucherBean1=new VoucherBean();
+        voucherBean1.setCouponsId("1001");
+        voucherBean1.setBranchId("111");
+        voucherBean1.setCouponsActivityId("1001");
+        voucherBean1.setCouponsIntro("365名酒汇茅台酒专用");
+        voucherBean1.setCouponsName("七夕情人节大减价");
+        voucherBean1.setCouponsPrice("38");
+        voucherBean1.setCreateOrderId("10001");
+        voucherBean1.setCreateTime(TimeUtil.timeToSecond2("2017年08月28日HH时:12分:30秒",1)+"");
+        voucherBean1.setUsedPrice("18");
+
+        VoucherBean voucherBean2=new VoucherBean();
+        voucherBean2.setCouponsId("1001");
+        voucherBean2.setBranchId("111");
+        voucherBean2.setCouponsActivityId("1001");
+        voucherBean2.setCouponsIntro("365名酒汇茅台酒专用");
+        voucherBean2.setCouponsName("七夕情人节大减价");
+        voucherBean2.setCouponsPrice("38");
+        voucherBean2.setCreateOrderId("10001");
+        voucherBean2.setCreateTime(TimeUtil.timeToSecond2("2017年08月28日HH时:12分:30秒",1)+"");
+        voucherBean2.setUsedPrice("18");
+
+        VoucherBean voucherBean3=new VoucherBean();
+        voucherBean3.setCouponsId("1001");
+        voucherBean3.setBranchId("111");
+        voucherBean3.setCouponsActivityId("1001");
+        voucherBean3.setCouponsIntro("365名酒汇茅台酒专用");
+        voucherBean3.setCouponsName("七夕情人节大减价");
+        voucherBean3.setCouponsPrice("38");
+        voucherBean3.setCreateOrderId("10001");
+        voucherBean3.setCreateTime(TimeUtil.timeToSecond2("2017年08月29日HH时:12分:30秒",1)+"");
+        voucherBean3.setUsedPrice("18");
+
+        voucherBeanList.add(voucherBean1);
+        voucherBeanList.add(voucherBean2);
+        voucherBeanList.add(voucherBean3);
+        callBack.onSuccess(voucherBeanList);
+    }
+
+}

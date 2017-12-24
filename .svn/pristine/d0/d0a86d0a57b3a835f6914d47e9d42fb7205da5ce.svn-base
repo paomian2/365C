@@ -1,0 +1,34 @@
+package com.a365vintagewine.adapter;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+
+import com.a365vintagewine.mvp.fragment.ProTypeFragment;
+
+/**
+ * Created by Administrator on 2017/8/24 0024.
+ */
+
+public class ClassificationVPAdapter  extends FragmentPagerAdapter {
+    private String[] list;
+    public ClassificationVPAdapter(FragmentManager fm,String[] list) {
+        super(fm);
+        this.list = list;
+    }
+
+    @Override
+    public Fragment getItem(int index) {
+        Fragment fragment = new ProTypeFragment();
+        Bundle bundle = new Bundle();
+        bundle.putInt("index", index);
+        fragment.setArguments(bundle);
+        return fragment;
+    }
+
+    @Override
+    public int getCount() {
+        return list.length;
+    }
+}

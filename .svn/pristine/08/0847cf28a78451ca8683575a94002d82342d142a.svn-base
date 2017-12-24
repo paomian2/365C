@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">365名酒汇</string>
+
+    <string-array name="spingarr">
+        <item>北京</item>
+        <item>上海</item>
+        <item>广州</item>
+        <item>广州</item>
+        <item>深圳</item>
+    </string-array>
+
+    <string name="app_exit">再按一次退出程序</string>
+    <string name="emptyData4">&#160;&#160;&#160;&#160;</string>
+    <string name="emptyData3">&#160;&#160;&#160;</string>
+    <string name="emptyData2">&#160;&#160;</string>
+    <string name="emptyData1">&#160;</string>
+    <string name="bankagreement"><![CDATA[<<银行卡绑定协>>]]></string>
+    <!--正式服-->
+    <string name="gaodeappkey1">a8788981a4d0d77ca792872266cea5ca</string>
+    <!--mine-->
+    <string name="gaodeappkey2">cef93e036784334c8e8b29bd7205db49</string>
+
+    <string name="agreement_regist">用户注册协议</string>
+    <string name="agreement_cust">商家入驻协议</string>
+    <string name="agreement_bank">银行卡绑定协议</string>
+
+
+
+
+    <!--扫码-->
+    <string name="hello_world">Hello world!</string>
+    <string name="scan_barcode_title">条形码扫描</string>
+    <string name="scan_qrcode_title">二维码扫描</string>
+    <string name="scan_allcode_title">二维码或条形码扫描</string>
+    <string name="scan_barcode_hint">将条形码对入取景框，即可自动扫描</string>
+    <string name="scan_qrcode_hint">将二维码对入取景框，即可自动扫描</string>
+    <string name="scan_allcode_hint">将二维码或条形码对入取景框，即可自动扫描</string>
+    <string name="title_activity_sao_mao">SaoMaoActivity</string>
+    <string name="action_settings">Settings</string>
+
+
+    <color name="line_color">#cccccc</color>
+    <color name="edittext_line_color">#000000</color>
+    <string name="title_activity_jump_to">JumpToActivity</string>
+
+</resources>

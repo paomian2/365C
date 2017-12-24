@@ -1,0 +1,23 @@
+package com.a365vintagewine.mvp.view;
+
+import com.a365vintagewine.mvp.bean.BalanceBean;
+import com.commsdk.base.view.BaseView;
+
+/**
+ * 描述：
+ * 作者：Linxz
+ * E-mail:lin_xiao_zhang@163.com
+ * 时间:2017年08月29日  13:08
+ * 版本：3.0
+ */
+
+public interface BalanceHomeView extends BaseView{
+
+    /**获取整体余额信息*/
+    public void getBalanceInfo();
+
+    /**获取整体余额信息结果*/
+    public void onGetBalanceInfoResult(boolean success, BalanceBean balanceBean);
+
+
+}

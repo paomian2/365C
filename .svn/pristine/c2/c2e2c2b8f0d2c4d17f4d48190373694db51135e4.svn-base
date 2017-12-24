@@ -1,0 +1,189 @@
+package com.a365vintagewine.mvp.search;
+
+import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.text.TextPaint;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.a365vintagewine.R;
+import com.a365vintagewine.adapter.ScreenBrandAdapter;
+import com.a365vintagewine.adapter.SearchSGAdapter;
+import com.a365vintagewine.mvp.bean.ShopGoods;
+import com.a365vintagewine.mvp.presenter.search.SearchSGPresenter;
+import com.a365vintagewine.mvp.view.search.SearchSGView;
+import com.a365vintagewine.widget.ScreenGoodsPw;
+import com.commsdk.base.AppActivityManager;
+import com.commsdk.base.BaseActivity;
+import com.commsdk.base.view.BaseMVPActivity;
+import com.commsdk.common.LogUtil;
+
+import java.util.List;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+public class SearchShopGoodsActivity extends BaseMVPActivity<SearchSGPresenter> implements SearchSGView,
+        ScreenGoodsPw.CallbackSreenGoods {
+
+    @Bind(R.id.img_text_title_back)
+    RelativeLayout imgTextTitleBack;
+    @Bind(R.id.et_title_search)
+    EditText etTitleSearch;
+    @Bind(R.id.tv_title_search)
+    RelativeLayout tvTitleSearch;
+    @Bind(R.id.tv_search_comprehensive)
+    TextView tvSearchComprehensive;
+    @Bind(R.id.tv_search_salesvolume)
+    TextView tvSearchSalesvolume;
+    @Bind(R.id.tv_search_evaluate)
+    TextView tvSearchEvaluate;
+    @Bind(R.id.tv_search_screen)
+    TextView tvSearchScreen;
+    @Bind(R.id.ll_search_screen)
+    LinearLayout llSearchScreen;
+    @Bind(R.id.lv_search_shopgoods)
+    ListView lvSearchShopgoods;
+    @Bind(R.id.sf_search_shop_goods)
+    SwipeRefreshLayout sfSearchShopGoods;
+
+
+    private SearchSGAdapter adapter;
+    private ScreenGoodsPw pw;
+
+    @Override
+    protected SearchSGPresenter createPresenter() {
+        return new SearchSGPresenter(this);
+    }
+
+    @Override
+    protected void setActivityView(Bundle bundle) {
+        setContentView(R.layout.act_search_shop_goods);
+        ButterKnife.bind(this);
+    }
+
+    @Override
+    protected void initUI() {
+        adapter = new SearchSGAdapter(activity);
+        lvSearchShopgoods.setAdapter(adapter);
+        etTitleSearch.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN){
+                    AppActivityManager.getInstance().goTo(activity,SearchActivity.class);
+                }
+                return false;
+            }
+        });
+    }
+
+    @Override
+    protected void initData() {
+        mvpPresenter.getShopGoods();
+    }
+
+    @Override
+    public BaseActivity getMyContext() {
+        return activity;
+    }
+
+    @Override
+    public void showProgress(String msg) {
+
+    }
+
+    @Override
+    public void hideProgress() {
+
+    }
+
+    private void swichItem(TextView textView){
+
+        tvSearchComprehensive.setTextColor(getResources().getColor(R.color.corlor_666));
+        textPaint = tvSearchComprehensive.getPaint();
+        textPaint.setFakeBoldText(false);
+        tvSearchSalesvolume.setTextColor(getResources().getColor(R.color.corlor_666));
+        textPaint = tvSearchSalesvolume.getPaint();
+        textPaint.setFakeBoldText(false);
+        tvSearchEvaluate.setTextColor(getResources().getColor(R.color.corlor_666));
+        textPaint = tvSearchEvaluate.getPaint();
+        textPaint.setFakeBoldText(false);
+        tvSearchScreen.setTextColor(getResources().getColor(R.color.corlor_666));
+        textPaint = tvSearchScreen.getPaint();
+        textPaint.setFakeBoldText(false);
+
+        textView.setTextColor(getResources().getColor(R.color.black));
+        textPaint = textView.getPaint();
+        textPaint.setFakeBoldText(true);
+    }
+
+    /**
+     * 返回上级页面
+     */
+    @OnClick(R.id.img_text_title_back)
+    public void back(){
+        finish();
+    }
+
+    /**
+     * 综合排序
+     */
+    @OnClick(R.id.tv_search_comprehensive)
+    public void comprehensive(){
+        swichItem(tvSearchComprehensive);
+    }
+
+    /**
+     * 销量最高
+     */
+    @OnClick(R.id.tv_search_salesvolume)
+    public void salesvolume(){
+        swichItem(tvSearchSalesvolume);
+    }
+
+    /**
+     * 评价最高
+     */
+    @OnClick(R.id.tv_search_evaluate)
+    public void evaluate(){
+        swichItem(tvSearchEvaluate);
+    }
+
+    /**
+     * 筛选
+     */
+    TextPaint textPaint;
+    @OnClick(R.id.ll_search_screen)
+    public void screen(){
+        swichItem(tvSearchScreen);
+        pw = new ScreenGoodsPw(activity);
+        pw.showPopupWindow(llSearchScreen);
+        pw.setCallbackScreenGoods(this);
+        mvpPresenter.getBrand();
+    }
+
+    @Override
+    public void setShopGoodsAdapter(List<ShopGoods> list) {
+        adapter.setMlist(list);
+        adapter.notifyDataSetChanged();
+    }
+
+    /**
+     * 适配筛选中品牌数据
+     */
+    @Override
+    public void setBrandAdapter(List<String> brandlist) {
+        pw.setAdapter(brandlist);
+    }
+
+    @Override
+    public void setSreenGoods(int distribution, String startPrice, String endPrice, List<String> brandName) {
+        LogUtil.i("aaa","选择的配送方式"+distribution+"开始价格"+startPrice+"结束价格"+endPrice+"品牌"+brandName.toString());
+    }
+}

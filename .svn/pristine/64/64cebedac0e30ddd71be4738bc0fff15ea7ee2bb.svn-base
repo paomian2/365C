@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_order_detail_goodsImg"
+        android:layout_width="164px"
+        android:layout_height="164px"
+        android:layout_marginTop="32px"
+        android:layout_marginLeft="42px"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="164px"
+        android:layout_marginTop="40px"
+        android:layout_marginLeft="38px"
+        android:layout_marginRight="40px">
+        <TextView
+            android:id="@+id/tv_order_detail_goodsname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="26px"
+            android:text="茅台"
+            android:textColor="@color/black"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <TextView
+                android:id="@+id/tv_order_detail_goodsprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="28px"
+                android:textColor="@color/black"
+                android:text="¥1000"/>
+            <TextView
+                android:id="@+id/tv_order_detail_goodsdnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="28px"
+                android:text="X  3"
+                android:textColor="@color/black"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

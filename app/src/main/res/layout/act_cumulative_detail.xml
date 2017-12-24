@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <include layout="@layout/layout_text_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180px"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <TextView
+            android:id="@+id/tv_cumulative_detail_profit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:textSize="36px"
+            android:textColor="@color/black"
+            android:text="¥  3333"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:textSize="28px"
+            android:textColor="@color/black"
+            android:text="累计收益"/>
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10px">
+        <ListView
+            android:id="@+id/lv_cumulative_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title_et_search"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@color/line_back"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_search_comprehensive"
+            android:layout_width="match_parent"
+            android:layout_weight="1.0"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="28px"
+            android:textColor="@color/black"
+            android:text="综合排序"/>
+        <TextView
+            android:id="@+id/tv_search_salesvolume"
+            android:layout_width="match_parent"
+            android:layout_weight="1.0"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="28px"
+            android:textColor="@color/corlor_666"
+            android:text="销量最高"/>
+        <TextView
+            android:id="@+id/tv_search_evaluate"
+            android:layout_width="match_parent"
+            android:layout_weight="1.0"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="28px"
+            android:textColor="@color/corlor_666"
+            android:text="评价最好"/>
+        <LinearLayout
+            android:id="@+id/ll_search_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_search_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@mipmap/screen"
+                android:drawablePadding="10px"
+                android:gravity="center"
+                android:textSize="28px"
+                android:textColor="@color/corlor_666"
+                android:text="筛选"/>
+        </LinearLayout>
+    </LinearLayout>
+    <com.a365vintagewine.widget.SwipeRefreshLayoutCompat
+        android:id="@+id/sf_search_shop_goods"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/lv_search_shopgoods"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/background"
+                android:dividerHeight="10px"/>
+    </com.a365vintagewine.widget.SwipeRefreshLayoutCompat>
+
+</LinearLayout>

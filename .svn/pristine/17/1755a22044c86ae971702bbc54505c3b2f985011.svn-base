@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="F:\Project\365VintageWine\easeUI\build\intermediates\bundles\default\libs\HwPush_SDK_V2705_nomap.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d68d22f9e4842e7ea73a667df0808babf6402704">
+        <dex dex="F:\Project\365VintageWine\app\build\intermediates\pre-dexed\debug\HwPush_SDK_V2705_nomap_c37d5c53a90df2df79fb7a2963e520676ae68de9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Project\365VintageWine\easeUI\build\intermediates\bundles\default\libs\glide-3.6.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="015a639bd9933f4f812be8bede14f14bd1bdea8b">
+        <dex dex="F:\Project\365VintageWine\app\build\intermediates\pre-dexed\debug\glide-3.6.1_6823da6c4a9889487f404df0f6baf0f22e527459.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="32293b969bbe6425b506552cc8923fdc39946799">
+        <dex dex="F:\Project\365VintageWine\app\build\intermediates\pre-dexed\debug\classes_ae709f772736e82242999497b11a118fbc01e1bd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Project\365VintageWine\easeUI\build\intermediates\bundles\default\libs\hyphenatechat_3.2.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0cfb3fe4f6154c8869dbb7f2ac11e7774a956cba">
+        <dex dex="F:\Project\365VintageWine\app\build\intermediates\pre-dexed\debug\hyphenatechat_3.2.3_1c097a2156059c691f362747dbd43190eec5b4f7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Project\365VintageWine\easeUI\build\intermediates\bundles\default\libs\org.apache.http.legacy.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="49bc2d83ccb0cfe1dbc853e3ba80db0f950ed96d">
+        <dex dex="F:\Project\365VintageWine\app\build\intermediates\pre-dexed\debug\org.apache.http.legacy_d5d43fe3829d9573a8fe3a042927c69c996fdbe9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Project\365VintageWine\easeUI\build\intermediates\bundles\default\libs\BaiduLBS_Android.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f1d3eb83228ace176170b6c5c9fa3b792011581b">
+        <dex dex="F:\Project\365VintageWine\app\build\intermediates\pre-dexed\debug\BaiduLBS_Android_dee8327beecf7231547260dc2ff564d3d76fd9cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Project\365VintageWine\easeUI\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5763e69d075da7da40553945034759bba841c7af">
+        <dex dex="F:\Project\365VintageWine\app\build\intermediates\pre-dexed\debug\classes_2745e4e54b0ea5180422d8d3d79e2afcf485e60f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Project\365VintageWine\easeUI\build\intermediates\bundles\default\libs\MiPush_SDK_Client_2_2_19.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6231c3f3409df7b3172bc5e89f68fbc6beec733e">
+        <dex dex="F:\Project\365VintageWine\app\build\intermediates\pre-dexed\debug\MiPush_SDK_Client_2_2_19_e2dcbd2a3e357976dfce6139e7008c37517a62f8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\5d7bf57b458e1f7819eaf830ab5797199d5774d2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="F:\Project\365VintageWine\app\build\intermediates\pre-dexed\debug\classes_a712d35e9f6f02a75f65272df2ed032ed27979e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\5c99af1e561e4231a88f90b3bff0d5deefab7551\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="F:\Project\365VintageWine\app\build\intermediates\pre-dexed\debug\classes_0871a9722d8439acfb28d13be990876010db3c43.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\libs\zxing.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="657431ffc6f0c763c22579b392e0bdfab26fc817">
+        <dex dex="F:\Project\365VintageWine\app\build\intermediates\pre-dexed\debug\zxing_eea09a46ba489f71496d072b949e1767008d78ff.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Project\365VintageWine\sdk_imagepicker\build\intermediates\bundles\default\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="13a60499e1f5311a044f706d2ceb67951c4e49b0">
+        <dex dex="F:\Project\365VintageWine\app\build\intermediates\pre-dexed\debug\classes_b33f5a25d22117bf5304476a12dc5faa7a2f24c9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\libs\xUtils-2.6.14.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8cf49af2fa4eef2515cbb5beb537791c2d0c7ffb">
+        <dex dex="F:\Project\365VintageWine\app\build\intermediates\pre-dexed\debug\xUtils-2.6.14_cddf3b1a5acb5380c85d1be5ebfa94ab0ff47700.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Administrator\.android\build-cache\3a71cff8b1154764224e4f128e60df89d3137145\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="F:\Project\365VintageWine\app\build\intermediates\pre-dexed\debug\classes_17693eb57f0b28e58822892885e4f7d49810951b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Project\365VintageWine\easeUI\build\intermediates\bundles\default\libs\google-play-services.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dc8ba9e80c63fa62ffe4130ae3487a2ec25912ef">
+        <dex dex="F:\Project\365VintageWine\app\build\intermediates\pre-dexed\debug\google-play-services_0be178e8e1bc5bde53d55fbdd6068cc977b4d73e.jar" />
+    </item>
+
+</items>

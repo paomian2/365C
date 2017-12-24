@@ -1,0 +1,514 @@
+[
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rb_bg_meeting.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rb_bg_meeting.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_cb.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_cb.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shouquan_qrcode_ic_back.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\shouquan_qrcode_ic_back.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bg_transparent.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\bg_transparent.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\customer_password_keyboard_delete.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\customer_password_keyboard_delete.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_clear_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_search_api_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rec_btn_gray.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rec_btn_gray.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rec_edt_withe.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rec_edt_withe.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rec_edt_red.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rec_edt_red.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_btn_cancel_pressed_shape.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_btn_cancel_pressed_shape.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_cb_switch.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_cb_switch.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\icon_login_pwd_close.png",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\icon_login_pwd_close.png"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rb_pay_way.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rb_pay_way.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bg_empty.png",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\bg_empty.png"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chat_send_btn_selector.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_chat_send_btn_selector.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_pwd_cb.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_pwd_cb.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shouquan_qrcode_g_gallery.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\shouquan_qrcode_g_gallery.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_radio_button_regiser.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_radio_button_regiser.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\edt_bg.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\edt_bg.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_btn_blue_pressed_shape.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_btn_blue_pressed_shape.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\dot_normal.png",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\dot_normal.png"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rb_bg_datastatics_time.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rb_bg_datastatics_time.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_mm_listitem.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_mm_listitem.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shouquan_qrcode_s_flashgun.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\shouquan_qrcode_s_flashgun.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_recording_hint_bg.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_recording_hint_bg.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_btn_blue_selector.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_btn_blue_selector.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rb_bg_datamanager.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rb_bg_datamanager.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rb_bg_goodsmanager.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rb_bg_goodsmanager.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\img_sekill.png",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\img_sekill.png"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rb_bg_ordersmanager.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rb_bg_ordersmanager.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_selected.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_selected.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_capture_back.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_capture_back.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\dot.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\dot.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chatting_setmode_keyboard_btn.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_chatting_setmode_keyboard_btn.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chatfrom_bg.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_chatfrom_bg.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_edit_text_bg.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_edit_text_bg.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\dot_selected.png",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\dot_selected.png"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rec_edt_bule.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rec_edt_bule.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_home_index.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_home_index.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ratingbar_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_recording_text_hint_bg.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_recording_text_hint_bg.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_goods_cb.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_goods_cb.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\head.jpg",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\head.jpg"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chatto_bg.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_chatto_bg.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\corner_solid_yellow2.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\corner_solid_yellow2.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_btn_cancel_normal_shape.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_btn_cancel_normal_shape.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rescan_shape_button.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rescan_shape_button.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rec_edt_black.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rec_edt_black.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\dot_selector.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\dot_selector.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chat_takepic_selector.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_chat_takepic_selector.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_btn_cancel_bj.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_btn_cancel_bj.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\selector_item_background.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\selector_item_background.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\indicator_normal.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\indicator_normal.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_mm_listitem_grey.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_mm_listitem_grey.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shouquan_loading_dialog_progressbar.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\shouquan_loading_dialog_progressbar.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\adress_moren.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\adress_moren.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rb_bg.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rb_bg.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chat_location_selector.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_chat_location_selector.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\check_box.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\check_box.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\color_shape.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\color_shape.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\loading_circular_bg.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\loading_circular_bg.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_sidebar_background_pressed.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_sidebar_background_pressed.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\icon_baifenhao.png",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\icon_baifenhao.png"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rec_diaolog_notice_bg.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rec_diaolog_notice_bg.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\corner_solid_gray.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\corner_solid_gray.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_btn_blue_normal_shape.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_btn_blue_normal_shape.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\corner_shoppingcar_red.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\corner_shoppingcar_red.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chat_press_speak_btn.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_chat_press_speak_btn.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_vector_test.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_vector_test.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rec_btn_yellow.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rec_btn_yellow.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\icon_back2.png",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\icon_back2.png"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rb_bg_goods_buy.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rb_bg_goods_buy.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chat_image_selector.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_chat_image_selector.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rec_diaolog_notice_bg_left.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rec_diaolog_notice_bg_left.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_msg_state_failed_resend.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_msg_state_failed_resend.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_common_tab_bg.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_common_tab_bg.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_dialog_material_background.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rec_progress_red.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rec_progress_red.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_type_select_btn.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_type_select_btn.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rec_diaolog_notice_bg_right.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rec_diaolog_notice_bg_right.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_timestampe_bg.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_timestampe_bg.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chatting_setmode_voice_btn.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_chatting_setmode_voice_btn.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\shouquan_bg_loading_dialog_shape.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\shouquan_bg_loading_dialog_shape.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_search_clear.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\drawable\\ease_search_clear.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\edt_bg_search.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\edt_bg_search.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rect_yellow2.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rect_yellow2.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\img_def.png",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\img_def.png"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\icon_login_pwd_show.png",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\icon_login_pwd_show.png"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\base_bgpic.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\base_bgpic.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\animdraw2.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\animdraw2.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rb_bg_moneymanager.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rb_bg_moneymanager.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rec_btn_red.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rec_btn_red.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rb_bg_shoppingcar.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\rb_bg_shoppingcar.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\progressbar_color.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\bundles\\debug\\res\\drawable\\progressbar_color.xml"
+    }
+]

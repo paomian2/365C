@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/btnOperation"
+        android:layout_width="160px"
+        android:layout_height="58px"
+        android:layout_marginLeft="30px"
+        android:layout_centerInParent="true"
+        android:background="@drawable/btn_background_black"
+        android:text="付 款"
+        android:textColor="@color/white"
+        android:textSize="30px"/>
+
+</RelativeLayout>

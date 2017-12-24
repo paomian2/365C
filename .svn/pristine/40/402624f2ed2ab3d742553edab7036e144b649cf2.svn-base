@@ -1,0 +1,74 @@
+package com.a365vintagewine.mvp.presenter.search;
+
+import com.a365vintagewine.mvp.model.search.SearchModel;
+import com.a365vintagewine.mvp.view.search.SearchView;
+import com.commsdk.base.presenter.BasePresenter;
+import com.commsdk.base.retrofit.ModelCallBack;
+
+/**
+ * Created by Administrator on 2017/9/1 0001.
+ */
+
+public class SearchPresenter extends BasePresenter<SearchView,SearchModel> {
+    public SearchPresenter(SearchView mView) {
+        super(mView);
+    }
+
+    @Override
+    public SearchModel createModel() {
+        return new SearchModel();
+    }
+
+    /**
+     * 获取热门搜索数据
+     */
+    public void getHotSearch(){
+        mModel.getHotSearch(new ModelCallBack<String[]>() {
+
+            @Override
+            public void onSuccess(String[] model) {
+                mView.setHotsearchData(model);
+            }
+
+            @Override
+            public void onFailure(String msg) {
+
+            }
+        });
+    }
+
+    /**
+     * 获取搜索历史数据
+     */
+    public void getHistorySearch(){
+        mModel.getHistorySearch(mView.getMyContext(), new ModelCallBack<String>() {
+
+            @Override
+            public void onSuccess(String model) {
+                mView.setHistorySearchData(model);
+            }
+
+            @Override
+            public void onFailure(String msg) {
+
+            }
+        });
+    }
+
+    /**
+     * 存储历史搜索数据
+     */
+    public void saveHistorySearch(String searchStr){
+        mModel.putHistorySearch(searchStr, mView.getMyContext(), new ModelCallBack<Boolean>() {
+            @Override
+            public void onSuccess(Boolean model) {
+                mView.saveSearch(model);
+            }
+
+            @Override
+            public void onFailure(String msg) {
+
+            }
+        });
+    }
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--注册第二页：公司、个体-->
+    <item android:drawable="@drawable/icon_cb_select" android:state_checked="true"/> <!-- 选中时效果 -->
+    <item android:drawable="@drawable/icon_cb_def" android:state_checked="false"/> <!-- 未选中时效果 -->
+
+</selector>

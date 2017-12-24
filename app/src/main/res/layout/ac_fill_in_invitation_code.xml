@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    
+    <include layout="@layout/layout_msg_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_marginTop="200px"
+        android:gravity="bottom"
+        android:paddingBottom="10px">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="64px"
+            android:text="邀请码："
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/et_invitation_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:inputType="textPassword"
+            android:hint="请输入邀请码"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_back"
+        android:layout_marginLeft="20px"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18px"
+        android:layout_marginLeft="66px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="25px"
+            android:layout_height="25px"
+            android:src="@mipmap/invitation_code_prompt"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5px"
+            android:text="邀请码只能填写一次，请核对后绑定"
+            android:textColor="#ffaa76"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_binding_invitation_code"
+        style="@style/btn_login_register"
+        android:layout_marginTop="142px"
+        android:text="确认绑定"/>
+
+</LinearLayout>

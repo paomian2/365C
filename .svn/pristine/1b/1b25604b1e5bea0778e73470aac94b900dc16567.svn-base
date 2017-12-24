@@ -1,0 +1,55 @@
+package com.a365vintagewine.adapter;
+
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.a365vintagewine.R;
+import com.a365vintagewine.mvp.bean.FollowGoods;
+import com.commsdk.base.BaseAdapter2;
+import com.commsdk.common.UIHelper;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
+/**
+ * Created by Administrator on 2017/9/1 0001.
+ */
+
+public class SearchGoodsAdapter extends BaseAdapter2<FollowGoods> {
+    public SearchGoodsAdapter(Context context) {
+        super(context);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder viewHolder = null;
+        if (null == convertView){
+            convertView = inflater.inflate(R.layout.item_search_goods, null);
+            viewHolder = new ViewHolder(convertView);
+            convertView.setTag(viewHolder);
+        }else{
+            viewHolder = (ViewHolder) convertView.getTag();
+        }
+        FollowGoods goods = getItem(position);
+        viewHolder.tvSearchGoodprice.setText("¥  "+goods.getPrice());
+        viewHolder.tvSearchGoodsname.setText(goods.getGoodsname());
+        UIHelper.imageNet(context,goods.getImgUrl(),viewHolder.imgSearchGoods,true);
+        return convertView;
+    }
+
+    static class ViewHolder {
+        @Bind(R.id.img_search_goods)
+        ImageView imgSearchGoods;
+        @Bind(R.id.tv_search_goodsname)
+        TextView tvSearchGoodsname;
+        @Bind(R.id.tv_search_goodprice)
+        TextView tvSearchGoodprice;
+
+        ViewHolder(View view) {
+            ButterKnife.bind(this, view);
+        }
+    }
+}

@@ -1,0 +1,64 @@
+package com.a365vintagewine.mvp.bean;
+
+/**
+ * Created by Administrator on 2017/8/30 0030.
+ */
+
+public class CumulativeDetail {
+    private String imgUrl;
+    private String nikename;
+    private String time;
+    private double money;
+    private boolean isNew;
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+    public String getNikename() {
+        return nikename;
+    }
+
+    public void setNikename(String nikename) {
+        this.nikename = nikename;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public double getMoney() {
+        return money;
+    }
+
+    public void setMoney(double money) {
+        this.money = money;
+    }
+
+    public boolean isNew() {
+        return isNew;
+    }
+
+    public void setNew(boolean aNew) {
+        isNew = aNew;
+    }
+
+    public CumulativeDetail(String imgUrl, String nikename, String time, double money, boolean isNew) {
+        this.imgUrl = imgUrl;
+        this.nikename = nikename;
+        this.time = time;
+        this.money = money;
+        this.isNew = isNew;
+    }
+
+    public CumulativeDetail() {
+    }
+}

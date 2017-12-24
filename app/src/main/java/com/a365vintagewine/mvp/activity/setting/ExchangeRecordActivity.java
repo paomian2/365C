@@ -1,0 +1,95 @@
+package com.a365vintagewine.mvp.activity.setting;
+
+import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.a365vintagewine.R;
+import com.a365vintagewine.adapter.ExchangeRecordAdapter;
+import com.a365vintagewine.mvp.model.bean.ExchangeRecord;
+import com.a365vintagewine.mvp.presenter.ExchangeRecordPresenter;
+import com.a365vintagewine.mvp.view.ExchangeRecordView;
+import com.commsdk.base.BaseActivity;
+import com.commsdk.base.view.BaseMVPActivity;
+
+import java.util.List;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+public class ExchangeRecordActivity extends BaseMVPActivity<ExchangeRecordPresenter> implements ExchangeRecordView {
+
+    @Bind(R.id.img_text_title_back)
+    RelativeLayout imgTextTitleBack;
+    @Bind(R.id.tv_text_title)
+    TextView tvTextTitle;
+    @Bind(R.id.myself_msg)
+    ImageView myselfMsg;
+    @Bind(R.id.tv_myself_msgcount)
+    TextView tvMyselfMsgcount;
+    @Bind(R.id.rl_myself_msg)
+    RelativeLayout rlMyselfMsg;
+    @Bind(R.id.ll_text_title)
+    RelativeLayout llTextTitle;
+    @Bind(R.id.lv_exchange_record)
+    ListView lvExchangeRecord;
+    @Bind(R.id.sf_exchange_record)
+    SwipeRefreshLayout sfExchangeRecord;
+
+    private ExchangeRecordAdapter adapter;
+    @Override
+    protected ExchangeRecordPresenter createPresenter() {
+        return new ExchangeRecordPresenter(this);
+    }
+
+    @Override
+    protected void setActivityView(Bundle bundle) {
+        setContentView(R.layout.act_exchange_record);
+        ButterKnife.bind(this);
+    }
+
+    @Override
+    protected void initUI() {
+        tvTextTitle.setText("兑换记录");
+        adapter = new ExchangeRecordAdapter(this);
+        lvExchangeRecord.setAdapter(adapter);
+    }
+
+    @Override
+    protected void initData() {
+        mvpPresenter.getExchangeRecord();
+    }
+
+    @Override
+    public BaseActivity getMyContext() {
+        return activity;
+    }
+
+    @Override
+    public void showProgress(String msg) {
+
+    }
+
+    @Override
+    public void hideProgress() {
+
+    }
+
+    /**
+     * 返回上级页面
+     */
+    @OnClick(R.id.img_text_title_back)
+    public void back(){
+        finish();
+    }
+
+    @Override
+    public void setMyAdapter(List<ExchangeRecord> list) {
+        adapter.setMlist(list);
+        adapter.notifyDataSetChanged();
+    }
+}

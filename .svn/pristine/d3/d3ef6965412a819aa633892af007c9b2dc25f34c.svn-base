@@ -1,0 +1,197 @@
+package com.a365vintagewine.mvp.fragment;
+
+
+import android.os.Bundle;
+import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
+import com.a365vintagewine.R;
+import com.a365vintagewine.adapter.ClassificationVPAdapter;
+import com.a365vintagewine.mvp.bean.TwoLevelList;
+import com.a365vintagewine.mvp.model.ClassificationModel;
+import com.a365vintagewine.mvp.presenter.ClassificationPresenter;
+import com.a365vintagewine.mvp.search.SearchActivity;
+import com.a365vintagewine.mvp.view.ClassificationView;
+import com.a365vintagewine.widget.HotSearchLayout;
+import com.commsdk.base.AppActivityManager;
+import com.commsdk.base.BaseActivity;
+import com.commsdk.base.view.BaseMVPFragment;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 分类列表
+ */
+public class ClassificationFragment extends BaseMVPFragment<ClassificationPresenter> implements ClassificationView {
+
+    @Bind(R.id.ll_classification)
+    LinearLayout llClassification;
+    @Bind(R.id.scroll_classification)
+    ScrollView scrollClassification;
+    @Bind(R.id.vp_classification)
+    ViewPager vpClassification;
+    @Bind(R.id.tv_title_search)
+    TextView tvTitleSearch;
+
+    private LayoutInflater inflater;
+    private int currentItem = 0; //当前选中的id
+    private ClassificationVPAdapter classificationVPAdapter; //左边二级分类列表适配器
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_classification, null);
+        this.inflater = inflater;
+        ButterKnife.bind(this, view);
+        initUI();
+        return view;
+    }
+
+    @Override
+    protected ClassificationPresenter createPresenter() {
+        return new ClassificationPresenter(this);
+    }
+
+    @Override
+    public void initUI() {
+        showToolsView();
+        classificationVPAdapter = new ClassificationVPAdapter(getChildFragmentManager(), list);
+        vpClassification.setAdapter(classificationVPAdapter);
+        vpClassification.setOnPageChangeListener(onPageChangeListener);
+    }
+
+    @Override
+    public void initData() {
+
+    }
+
+    @Override
+    public BaseActivity getMyContext() {
+        return activity;
+    }
+
+    @Override
+    public void showProgress(String msg) {
+
+    }
+
+    @Override
+    public void hideProgress() {
+
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        ButterKnife.unbind(this);
+    }
+
+    /**
+     * 动态生成显示items中的textview
+     */
+    private String[] list; //左边二级分类数据
+    private TextView[] tvList; //左边二级分类名称
+    private View[] views; //左边二级分类视图
+
+    private void showToolsView() {
+        list = ClassificationModel.toolsList;
+        tvList = new TextView[list.length];
+        views = new View[list.length];
+
+        for (int i = 0; i < list.length; i++) {
+            View view = inflater.inflate(R.layout.item_classification_list, null);
+            view.setId(i);
+            view.setOnClickListener(toolsItemListener);
+            TextView textView = (TextView) view.findViewById(R.id.tv_classification_scrollview_item);
+            textView.setText(list[i]);
+            llClassification.addView(view);
+            tvList[i] = textView;
+            views[i] = view;
+        }
+        changeTextColor(0);
+    }
+
+    private View.OnClickListener toolsItemListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            vpClassification.setCurrentItem(v.getId());
+        }
+    };
+
+    /**
+     * OnPageChangeListener<br/>
+     * 监听ViewPager选项卡变化事的事件
+     */
+    private ViewPager.OnPageChangeListener onPageChangeListener = new ViewPager.OnPageChangeListener() {
+        @Override
+        public void onPageSelected(int arg0) {
+            if (vpClassification.getCurrentItem() != arg0)
+                vpClassification.setCurrentItem(arg0);
+            if (currentItem != arg0) {
+                changeTextColor(arg0);
+                changeTextLocation(arg0);
+            }
+            currentItem = arg0;
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int arg0) {
+        }
+
+        @Override
+        public void onPageScrolled(int arg0, float arg1, int arg2) {
+        }
+    };
+
+    /**
+     * 改变textView的颜色
+     *
+     * @param id
+     */
+    private void changeTextColor(int id) {
+        for (int i = 0; i < tvList.length; i++) {
+            if (i != id) {
+                tvList[i].setBackgroundColor(0x00000000);
+                tvList[i].setTextColor(0xFF000000);
+            }
+        }
+        tvList[id].setBackgroundColor(0xFFFFFFFF);
+        tvList[id].setTextColor(0xFFFF5D5E);
+    }
+
+    /**
+     * 改变栏目位置
+     *
+     * @param clickPosition
+     */
+    private void changeTextLocation(int clickPosition) {
+        int x = (views[clickPosition].getTop());
+        scrollClassification.smoothScrollTo(0, x);
+    }
+
+    @Override
+    public void onSuccess(TwoLevelList twoLevelList) {
+
+    }
+
+    @Override
+    public void onFail(String msg) {
+
+    }
+
+    /**
+     * 跳转到搜索页面
+     */
+    @OnClick(R.id.tv_title_search)
+    public void search(){
+        AppActivityManager.getInstance().goTo(activity, SearchActivity.class);
+    }
+}

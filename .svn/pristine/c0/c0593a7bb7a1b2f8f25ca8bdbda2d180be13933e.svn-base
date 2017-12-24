@@ -1,0 +1,23 @@
+package com.a365vintagewine.mvp.presenter;
+
+import com.a365vintagewine.mvp.model.ForgetPasswordModel;
+import com.a365vintagewine.mvp.model.RegisterModel;
+import com.a365vintagewine.mvp.view.ForgetPasswordView;
+import com.a365vintagewine.mvp.view.RegisterView;
+import com.commsdk.base.presenter.BasePresenter;
+
+/**
+ * Created by Administrator on 2017/8/22 0022.
+ */
+
+public class ForgetPasswordPresenter extends BasePresenter<ForgetPasswordView, ForgetPasswordModel> {
+
+    public ForgetPasswordPresenter(ForgetPasswordView mView) {
+        super(mView);
+    }
+
+    @Override
+    public ForgetPasswordModel createModel() {
+        return new ForgetPasswordModel();
+    }
+}

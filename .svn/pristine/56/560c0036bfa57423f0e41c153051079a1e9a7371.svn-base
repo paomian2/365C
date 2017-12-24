@@ -1,0 +1,193 @@
+package com.a365vintagewine.adapter;
+
+import android.app.Activity;
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.a365vintagewine.R;
+import com.a365vintagewine.mvp.activity.order.OrderDetailActivity;
+import com.a365vintagewine.utils.FinalUtils;
+import com.commsdk.base.AppActivityManager;
+import com.commsdk.base.BaseAdapter2;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
+/**
+ * Created by Administrator on 2017/9/6 0006.
+ */
+
+public class OrderListAdapter extends BaseAdapter2 {
+
+    public OrderListAdapter(Context context) {
+        super(context);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder viewHolder = null;
+        if (null == convertView) {
+            convertView = inflater.inflate(R.layout.item_order_list, null);
+            viewHolder = new ViewHolder(convertView);
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (ViewHolder) convertView.getTag();
+        }
+        orderstatus(position,viewHolder);
+        onClicks(viewHolder);
+        return convertView;
+    }
+
+    private void onClicks(ViewHolder viewHolder) {
+        viewHolder.llOrderListGoods1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoOrder();
+            }
+        });
+        viewHolder.llOrderListGoods2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoOrder();
+            }
+        });
+        viewHolder.tvOrderListSeeMoreGoods.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoOrder();
+            }
+        });
+    }
+
+    public void gotoOrder(){
+        AppActivityManager.getInstance().goTo((Activity) context, OrderDetailActivity.class);
+    }
+    @Override
+    public int getCount() {
+        return 9;
+    }
+
+    /**
+     * 判断不同的订单状态
+     */
+    private void orderstatus(int orderStatus,ViewHolder viewHolder){
+        switch(orderStatus){
+            case FinalUtils.ORDERPAYMENT: //待付款
+                showOrderStatus(viewHolder,viewHolder.llOrderListPayment);
+                break;
+            case FinalUtils.SHIPMENTPENDING: //待发货
+                showOrderStatus(viewHolder,viewHolder.llOrderListShipmentPending);
+                break;
+            case FinalUtils.SHIPMENT: //待收货
+                showOrderStatus(viewHolder,viewHolder.llOrderListShipped);
+                break;
+            case FinalUtils.COMPLETED: //已完成
+                showOrderStatus(viewHolder,viewHolder.llOrderListAgainSingle);
+                break;
+            case FinalUtils.PENDINGEVALUATION: //待评价
+                showOrderStatus(viewHolder,viewHolder.llOrderListPendingEvaluation);
+                break;
+            case FinalUtils.CANCLED: //已取消
+                showOrderStatus(viewHolder,viewHolder.llOrderListAgainSingle);
+                break;
+            case FinalUtils.REFUND: //退款中
+                showOrderStatus(viewHolder,viewHolder.llOrderListRefund);
+                break;
+            case FinalUtils.REFUNDCOMPLETED: //退款完成
+                showOrderStatus(viewHolder,viewHolder.llOrderListAgainSingle);
+                break;
+            default :
+                showOrderStatus(viewHolder,viewHolder.llOrderListAgainSingle);
+                break;
+        }
+    }
+
+    /**
+     * 根据订单状态显示不同的模块
+     */
+    private void showOrderStatus(ViewHolder viewHolder ,LinearLayout linearLayout){
+        viewHolder.llOrderListPayment.setVisibility(View.GONE);
+        viewHolder.llOrderListShipmentPending.setVisibility(View.GONE);
+        viewHolder.llOrderListShipped.setVisibility(View.GONE);
+        viewHolder.llOrderListRefund.setVisibility(View.GONE);
+        viewHolder.llOrderListPendingEvaluation.setVisibility(View.GONE);
+        viewHolder.llOrderListAgainSingle.setVisibility(View.GONE);
+        linearLayout.setVisibility(View.VISIBLE);
+    }
+
+    static class ViewHolder {
+        @Bind(R.id.tv_order_list_shopname)
+        TextView tvOrderListShopname;  //店铺名字
+        @Bind(R.id.tv_order_list_orderstatus)
+        TextView tvOrderListOrderstatus; //订单状态
+        @Bind(R.id.tv_order_list_orderCountDown)
+        TextView tvOrderListOrderCountDown; //待付款订单倒计时
+        @Bind(R.id.img_order_list_goodsImg1)
+        ImageView imgOrderListGoodsImg1; //商品图片
+        @Bind(R.id.tv_order_list_goodsname1)
+        TextView tvOrderListGoodsname1; //第一个商品名字
+        @Bind(R.id.tv_order_list_goodsprice1)
+        TextView tvOrderListGoodsPrice1; //第一个商品价格
+        @Bind(R.id.tv_order_list_goodsdnum1)
+        TextView tvOrderListGoodsdnum1; //第一个商品数量
+        @Bind(R.id.ll_order_list_goods1)
+        LinearLayout llOrderListGoods1; //第一个商品模块
+        @Bind(R.id.img_order_list_goodsImg2)
+        ImageView imgOrderListGoodsImg2; //第二个商品图片
+        @Bind(R.id.tv_order_list_goodsname2)
+        TextView tvOrderListGoodsname2; //第二个商品名字
+        @Bind(R.id.tv_order_list_goodsprice2)
+        TextView tvOrderListGoodsPrice2; //第二个商品价格
+        @Bind(R.id.tv_order_list_goodsdnum2)
+        TextView tvOrderListGoodsdnum2; //第二个商品数量
+        @Bind(R.id.ll_order_list_goods2)
+        LinearLayout llOrderListGoods2; //第二个商品模块
+        @Bind(R.id.tv_order_list_seeMoreGoods)
+        TextView tvOrderListSeeMoreGoods; //查看剩余的商品
+        @Bind(R.id.tv_order_list_orderInfo)
+        TextView tvOrderListOrderInfo; //订单总商品数量和总价
+        @Bind(R.id.btn_order_list_ordercancle)
+        Button btnOrderListOrdercancle; //订单待付款状态中取消订单
+        @Bind(R.id.btn_order_list_payment)
+        Button btnOrderListPayment; //订单待支付中支付订单按钮
+        @Bind(R.id.ll_order_list_payment)
+        LinearLayout llOrderListPayment; //待支付订单模块
+        @Bind(R.id.btn_order_list_reminder)
+        Button btnOrderListReminder; //订单待发货状态催单
+        @Bind(R.id.btn_order_list_Shipment_pending_cancle)
+        Button btnOrderListShipmentPendingCancle; //订单待发货状态取消订单
+        @Bind(R.id.ll_order_list_Shipment_pending)
+        LinearLayout llOrderListShipmentPending; //订单待发货状态模块
+        @Bind(R.id.btn_order_list_see_logistics)
+        Button btnOrderListSeeLogistics; //订单已发货状态查看物流
+        @Bind(R.id.btn_order_list_confirmreceipt)
+        Button btnOrderListConfirmreceipt; //订单已发货状态确认收货
+        @Bind(R.id.ll_order_list_Shipped)
+        LinearLayout llOrderListShipped; //订单待收货状态模块
+        @Bind(R.id.btn_order_list_cancle_refund)
+        Button btnOrderListCancleRefund; //订单退款状态取消退款
+        @Bind(R.id.btn_order_list_refund_detail)
+        Button btnOrderListRefundDetail; //订单退款状态查看退款详情
+        @Bind(R.id.ll_order_list_refund)
+        LinearLayout llOrderListRefund; //订单退款状态模块
+        @Bind(R.id.btn_order_list_evaluate)
+        Button btnOrderListEvaluate; //订单评价
+        @Bind(R.id.btn_order_list_again_single1)
+        Button btnOrderListAgainSingle1; //订单评价状态再来一单
+        @Bind(R.id.ll_order_list_Pending_evaluation)
+        LinearLayout llOrderListPendingEvaluation; //订单评价状态
+        @Bind(R.id.ll_order_list_again_single)
+        LinearLayout llOrderListAgainSingle; //再来一单模块
+        @Bind(R.id.btn_order_list_again_single)
+        Button btnOrderListAgainSingle; //再来一单
+
+        ViewHolder(View view) {
+            ButterKnife.bind(this, view);
+        }
+    }
+}

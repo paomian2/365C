@@ -1,0 +1,207 @@
+package com.a365vintagewine.mvp.fragment;
+
+import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import com.a365vintagewine.R;
+import com.a365vintagewine.adapter.VoucherAdapter;
+import com.a365vintagewine.mvp.bean.VoucherBean;
+import com.a365vintagewine.mvp.bean.VoucherTypeStatusEnum;
+import com.a365vintagewine.mvp.presenter.VoucherFragmentPresenter;
+import com.a365vintagewine.mvp.view.VoucherFragmentView;
+import com.commsdk.base.BaseActivity;
+import com.commsdk.base.view.BaseMVPFragment;
+import com.commsdk.common.UIHelper;
+import com.commsdk.common.widget.PagedLoader;
+
+import java.util.List;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
+/**
+ * 功能描述:返券列表
+ * 作者：Linxz
+ * E-mail：lin_xiao_zhang@13.com
+ * 版本信息：V1.0.0
+ * 时间：2017年04月08日  10:26.
+ **/
+public class VoucherFragment extends BaseMVPFragment<VoucherFragmentPresenter> implements VoucherFragmentView, SwipeRefreshLayout.OnRefreshListener, PagedLoader.OnLoadListener {
+
+   /**加载布局*/
+   @Bind(R.id.layoutLoading)
+    LinearLayout layoutLoading;
+    /**
+     * 返券列表
+     */
+    @Bind(R.id.lv_common)
+    ListView lvCommon;
+    /**
+     * 刷新组件
+     */
+    @Bind(R.id.refrenshLayout)
+    SwipeRefreshLayout refrenshLayout;
+    /**
+     * 列表离导航栏的间距
+     */
+    @Bind(R.id.ViewDistance)
+    View ViewDistance;
+
+    /**
+     * 加载更多组件
+     */
+    private PagedLoader pagedLoader;
+    /**
+     * 券列表适配器
+     */
+    private VoucherAdapter voucherAdapter;
+
+    /**
+     * 当前券列表状态
+     */
+    private final static String STATUS = "status";
+    private String actionCode;
+    /**
+     * 是否触发了刷新组件
+     */
+    private boolean refresh;
+    private int page = 0;
+    private int size = 15;
+
+    @Override
+    public void onGetBundle(Bundle bundle) {
+        super.onGetBundle(bundle);
+        if (bundle != null) {
+            actionCode = bundle.getString(STATUS);
+        }
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected VoucherFragmentPresenter createPresenter() {
+        return new VoucherFragmentPresenter(this);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.frag_voucherlist, container, false);
+        ButterKnife.bind(this, view);
+        super.onCreateView(inflater,container,savedInstanceState);
+        return view;
+    }
+
+
+    @Override
+    public void initUI() {
+        VoucherTypeStatusEnum vouvherTypeStatusEnum = VoucherTypeStatusEnum.statusNameToOrderStatusEnum(actionCode);
+        UIHelper.initRefreshView(refrenshLayout);
+        ViewDistance.setVisibility(View.VISIBLE);
+        refrenshLayout.setOnRefreshListener(this);
+        pagedLoader = PagedLoader.from(lvCommon).setOnLoadListener(this).builder();
+        voucherAdapter = new VoucherAdapter(activity, vouvherTypeStatusEnum.getStatusInt() + "");
+        pagedLoader.setAdapter(voucherAdapter);
+        lvCommon.setAdapter(voucherAdapter);
+        //立即使用券监听
+        voucherAdapter.setVoucherUseOnclickListener(new VoucherAdapter.VoucherUseOnclickListener() {
+            @Override
+            public void onUseClick(VoucherBean voucherBean) {
+
+            }
+        });
+//        switch (vouvherTypeStatusEnum) {
+//            case VOUCHER_STATUS_0:
+//                //未使用
+//                vouvherTypeStatusEnum = VoucherTypeStatusEnum.VOUCHER_STATUS_0;
+//                break;
+//            case VOUCHER_STATUS_1:
+//                vouvherTypeStatusEnum = VoucherTypeStatusEnum.VOUCHER_STATUS_1;
+//                //使用记录
+//                break;
+//            case VOUCHER_STATUS_2:
+//                vouvherTypeStatusEnum = VoucherTypeStatusEnum.VOUCHER_STATUS_2;
+//                //已过期
+//                break;
+//        }
+
+    }
+
+    @Override
+    public void initData() {
+        refresh = true;
+        page = 0;
+       getVoucherListOfStatus(0,page,size);
+
+    }
+
+    @Override
+    public String setTag() {
+        return null;
+    }
+
+    @Override
+    public void onLoading(PagedLoader pagedLoader, boolean isAutoLoad) {
+        refresh = false;
+        getVoucherListOfStatus(0,page,size);
+    }
+
+    @Override
+    public void onRefresh() {
+        initData();
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+    }
+
+    private void cancellWidget() {
+        if (refrenshLayout != null)
+            refrenshLayout.setRefreshing(false);
+        if (pagedLoader != null)
+            pagedLoader.setLoading(false);
+    }
+
+    @Override
+    public void getVoucherListOfStatus(int status,int page ,int size) {
+         mvpPresenter.getVoucherListOfStatus(status,page,size);
+    }
+
+    @Override
+    public void onGetVoucherListOfStatusResult(boolean success, List<VoucherBean> voucherBeanList) {
+        cancellWidget();
+        if (refresh)
+            voucherAdapter.clearAdapter();
+         voucherAdapter.addAdapterData(voucherBeanList);
+            page++;
+        layoutLoading.setVisibility(View.GONE);
+        refrenshLayout.setVisibility(View.VISIBLE);
+        }
+
+
+    @Override
+    public BaseActivity getMyContext() {
+        return activity;
+    }
+
+    @Override
+    public void showProgress(String msg) {
+
+    }
+
+    @Override
+    public void hideProgress() {
+
+    }
+
+
+}

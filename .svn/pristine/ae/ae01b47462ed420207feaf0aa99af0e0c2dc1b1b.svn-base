@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <RelativeLayout
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:layout_marginLeft="36px"
+            android:layout_marginRight="30px">
+            <ImageView
+                android:id="@+id/img_my_team_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/tv_my_team_ranking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="60px"
+                android:textColor="@color/tv_hint"
+                android:textStyle="bold"
+                android:text="1"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_my_team_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="26px"
+            android:textColor="@color/corlor_666"
+            android:text="mingzi "/>
+
+        <TextView
+            android:id="@+id/tv_my_team_num"
+            android:layout_width="match_parent"
+            android:layout_weight="1.0"
+            android:layout_height="wrap_content"
+            android:textSize="26px"
+            android:textColor="@color/corlor_666"
+            android:text="（24人）"/>
+
+        <TextView
+            android:id="@+id/tv_my_team_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/right_arrow"
+            android:drawablePadding="28px"
+            android:layout_marginRight="20px"
+            android:textSize="26px"
+            android:textColor="@color/black"
+            android:text="¥200"/>
+    </LinearLayout>
+
+</LinearLayout>

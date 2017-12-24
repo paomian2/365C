@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layoutActionBar"
+        android:background="@mipmap/icon_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_gravity="center"
+                android:id="@+id/tvAdress"
+                android:layout_marginLeft="30px"
+                android:drawablePadding="10px"
+                android:textColor="@color/white"
+                android:text="  星海集团"
+                android:drawableLeft="@mipmap/icon_adress_location_white"
+                android:drawableRight="@mipmap/arrow_dowm_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginLeft="28px"
+                android:layout_marginRight="24px"
+                android:background="@mipmap/img_search_touming"
+                android:layout_width="match_parent"
+                android:layout_height="54px">
+                <TextView
+                    android:drawablePadding="24px"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:text="搜索商家商品"
+                    android:textSize="@dimen/font_common_size_small"
+                    android:layout_marginLeft="30px"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@mipmap/icon_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="24px"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/icon_scanner"
+                    android:layout_width="40px"
+                    android:layout_height="40px" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="0"
+                android:id="@+id/rl_myself_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20px">
+                <ImageView
+                    android:id="@+id/myself_msg"
+                    android:layout_width="50px"
+                    android:layout_height="50px"
+                    android:src="@mipmap/icon_msg_white"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:id="@+id/tv_myself_msgcount"
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:background="@mipmap/myself_msg_roundback"
+                    android:layout_toRightOf="@+id/myself_msg"
+                    android:layout_marginLeft="-22px"
+                    android:layout_marginTop="10px"
+                    android:text="16"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:gravity="center"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fcfcfc">
+
+    <include layout="@layout/layout_text_title"/>
+    
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="155px"
+        android:layout_height="82px"
+        android:layout_marginTop="355px"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/about_us_logo"
+        />
+    <TextView
+        android:id="@+id/tv_about_us_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50px"
+        android:text="365名酒汇  V3.0.0"
+        android:textSize="32px"
+        android:textColor="@color/tv_hint"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/about_us_foot"/>
+</RelativeLayout>

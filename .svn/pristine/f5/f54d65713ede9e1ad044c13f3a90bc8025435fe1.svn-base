@@ -1,0 +1,175 @@
+package com.a365vintagewine.mvp.activity.personal;
+
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.widget.TextView;
+import com.a365vintagewine.R;
+import com.a365vintagewine.adapter.AdressListAdapter;
+import com.a365vintagewine.mvp.bean.AdressBean;
+import com.a365vintagewine.mvp.presenter.AdressHomePresenter;
+import com.a365vintagewine.mvp.view.AdressHomeView;
+import com.baoyz.swipemenulistview.SwipeMenu;
+import com.baoyz.swipemenulistview.SwipeMenuCreator;
+import com.baoyz.swipemenulistview.SwipeMenuItem;
+import com.baoyz.swipemenulistview.SwipeMenuListView;
+import com.commsdk.base.BaseActivity;
+import com.commsdk.base.view.BaseMVPActivity;
+import java.util.List;
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 描述：
+ * 作者：Linxz
+ * E-mail:lin_xiao_zhang@163.com
+ * 时间:2017年08月30日  2:23
+ * 版本：3.0
+ */
+
+public class AdressHomeActivcity extends BaseMVPActivity<AdressHomePresenter> implements AdressHomeView {
+
+    /**
+     * 标题：地址管理
+     */
+    @Bind(R.id.tv_text_title)
+    TextView tvTextTitle;
+    /**
+     * 未读消息数
+     */
+    @Bind(R.id.tv_myself_msgcount)
+    TextView tv_myself_msgcount;
+    /**
+     * 数据列表
+     */
+    @Bind(R.id.lv_address_swipemenu)
+    SwipeMenuListView lvAddressSwipemenu;
+    private AdressListAdapter adressListAdapter;
+
+    @Override
+    protected AdressHomePresenter createPresenter() {
+        return new AdressHomePresenter(this);
+    }
+
+    @Override
+    protected void setActivityView(Bundle bundle) {
+        setContentView(R.layout.act_adress_home);
+        ButterKnife.bind(this);
+    }
+
+    @Override
+    protected void initUI() {
+        tvTextTitle.setText("地址管理");
+        tv_myself_msgcount.setText("18");
+        adressListAdapter = new AdressListAdapter(activity);
+        lvAddressSwipemenu.setAdapter(adressListAdapter);
+        lvAddressSwipemenu.setMenuCreator(initSwip());
+
+         //左划菜单的监听事件
+        lvAddressSwipemenu.setOnMenuItemClickListener(new SwipeMenuListView.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(int position, SwipeMenu menu, int index) {
+                deleteAdressRecord(adressListAdapter.getItem(position).getId());
+                return false;
+            }
+        });
+    }
+
+    @Override
+    protected void initData() {
+        getAdressList();
+    }
+
+    @Override
+    public BaseActivity getMyContext() {
+        return activity;
+    }
+
+    @Override
+    public void showProgress(String msg) {
+
+    }
+
+    @Override
+    public void hideProgress() {
+
+    }
+
+    @Override
+    public void getAdressList() {
+        mvpPresenter.getAdressList("userId");
+    }
+
+    @Override
+    public void onGetAdressListResult(boolean success, List<AdressBean> adressBeanList) {
+        if (!success)
+            return;
+        adressListAdapter.addAdapterData(adressBeanList);
+    }
+
+    @Override
+    public void deleteAdressRecord(String id) {
+        mvpPresenter.deleteAdressRecord(id);
+    }
+
+    @Override
+    public void onDeleteAdressRecordResult(boolean success) {
+        if (success)
+            showToast("删除成功");
+        else
+            showToast("删除失败");
+    }
+
+    /**
+     * 设计左划窗口
+     */
+    private SwipeMenuCreator initSwip() {
+        return new SwipeMenuCreator() {
+            @Override
+            public void create(SwipeMenu menu) {
+                SwipeMenuItem openItem2 = new SwipeMenuItem(
+                        getApplicationContext());
+                openItem2.setBackground(new ColorDrawable(Color.RED));
+                // set item width
+                openItem2.setWidth(200);
+                // set item title
+                openItem2.setTitle("删除");
+                // set item title fontsize
+                openItem2.setTitleSize(18);
+                // set item title font color
+                openItem2.setTitleColor(Color.WHITE);
+                // add to menu
+                menu.addMenuItem(openItem2);
+            }
+        };
+
+    }
+
+
+    /**
+     * 返回
+     */
+    @OnClick(R.id.img_text_title_back)
+    public void back() {
+        finish();
+    }
+
+    /**消息*/
+    @OnClick(R.id.rl_myself_msg)
+    public void onMsgClick(){
+        showToast("消息");
+    }
+
+    /**
+     * 地址添加
+     */
+    @OnClick(R.id.layoutAdressAdd)
+    public void adressAdd() {
+        AdressEditActivity.lunch(activity,AdressEditActivity.ACTION_CODE_ADD);
+    }
+
+
+
+
+}

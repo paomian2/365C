@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_marginLeft="38px"
+        android:layout_marginRight="37px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvShopName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawablePadding="20px"
+            android:drawableRight="@drawable/icon_next"
+            android:text="商家名称"
+            android:textColor="@color/black"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/tvActLable"
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10px"
+            android:layout_toRightOf="@+id/tvShopName"
+            android:background="@drawable/rec_edt_red"
+            android:gravity="center"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:text="满减"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/tvOrderStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tvTime"
+            android:text="订单状态"
+            android:textColor="@color/black"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:text="订单时间"
+            android:textColor="@color/black"
+            android:textSize="30px"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="42px"
+        android:background="@color/line_back" />
+
+    <LinearLayout
+        android:id="@+id/layoutGoodsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="42px"
+        android:background="@color/line_back" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="36px"
+        android:orientation="vertical"
+        android:paddingBottom="20px">
+
+        <TextView
+            android:id="@+id/tv_order_list_orderInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40px"
+            android:layout_marginTop="24px"
+            android:gravity="right"
+            android:text="共0件商品，实付0元"
+            android:textColor="@color/black"
+            android:textSize="30px" />
+
+
+        <!--待付款-->
+        <LinearLayout
+            android:id="@+id/layoutButtonView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:visibility="visible">
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

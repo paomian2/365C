@@ -1,0 +1,142 @@
+package com.a365vintagewine.mvp.fragment;
+
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AbsListView;
+import android.widget.ListView;
+
+import com.a365vintagewine.R;
+import com.a365vintagewine.adapter.FollowGoodsAdapter;
+import com.a365vintagewine.mvp.bean.FollowGoods;
+import com.a365vintagewine.mvp.presenter.FollowPresenter;
+import com.a365vintagewine.mvp.view.FollowGoodsView;
+import com.a365vintagewine.widget.SwipeListLayout;
+import com.baoyz.swipemenulistview.SwipeMenu;
+import com.baoyz.swipemenulistview.SwipeMenuCreator;
+import com.baoyz.swipemenulistview.SwipeMenuItem;
+import com.baoyz.swipemenulistview.SwipeMenuListView;
+import com.commsdk.base.BaseActivity;
+import com.commsdk.base.view.BaseMVPFragment;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
+/**
+ * 关注商品
+ */
+public class FollowGoodsFragment extends BaseMVPFragment<FollowPresenter> implements FollowGoodsView {
+
+
+    @Bind(R.id.lv_swipe)
+    SwipeMenuListView listview;
+
+    private FollowGoodsAdapter adapter;
+    private int positiontag;
+
+    @Override
+    protected FollowPresenter createPresenter() {
+        return new FollowPresenter(this);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.layout_list, container, false);
+        ButterKnife.bind(this, view);
+        super.onCreateView(inflater,container,savedInstanceState);
+        return view;
+    }
+
+    @Override
+    public void initUI() {
+        adapter = new FollowGoodsAdapter(activity);
+        listview.setAdapter(adapter);
+        listview.setMenuCreator(initSwip());
+
+        //左划菜单的监听事件
+        listview.setOnMenuItemClickListener(new SwipeMenuListView.OnMenuItemClickListener() {
+
+            @Override
+            public boolean onMenuItemClick(int position, SwipeMenu menu, int index) {
+                positiontag = position;
+                deleteFollowGoods(null);
+                return false;
+            }
+        });
+    }
+
+    private void deleteFollowGoods(String goodsId) {
+        mvpPresenter.deleteGoods(goodsId);
+    }
+
+    /**
+     * 设计左划窗口
+     */
+    private SwipeMenuCreator initSwip() {
+        return new SwipeMenuCreator() {
+            @Override
+            public void create(SwipeMenu menu) {
+                SwipeMenuItem openItem2 = new SwipeMenuItem(
+                        getApplicationContext());
+                openItem2.setBackground(new ColorDrawable(Color.RED));
+                // set item width
+                openItem2.setWidth(200);
+                // set item title
+                openItem2.setTitle("删除");
+                // set item title fontsize
+                openItem2.setTitleSize(18);
+                // set item title font color
+                openItem2.setTitleColor(Color.WHITE);
+                // add to menu
+                menu.addMenuItem(openItem2);
+            }
+        };
+
+    }
+
+    @Override
+    public void initData() {
+        mvpPresenter.getFollowGoods();
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        ButterKnife.unbind(this);
+    }
+
+    @Override
+    public BaseActivity getMyContext() {
+        return activity;
+    }
+
+    @Override
+    public void showProgress(String msg) {
+
+    }
+
+    @Override
+    public void hideProgress() {
+
+    }
+
+    @Override
+    public void setFollowGoodsAdapter(List<FollowGoods> list) {
+        adapter.setMlist(list);
+        adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void deleteGoods(boolean delete) {
+        adapter.removeAdapterData(positiontag);
+    }
+
+}

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e0000000"
+    android:id="@+id/ll_screen_goods"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="100px"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                style="@style/text_screen_goods_title"
+                android:text="配 送" />
+
+
+            <com.a365vintagewine.widget.NoScrollGridView
+                android:paddingLeft="20px"
+                android:paddingRight="25px"
+                android:layout_marginTop="28px"
+                android:id="@+id/gvDelivery"
+                android:numColumns="3"
+                android:verticalSpacing="20px"
+                android:horizontalSpacing="20px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                style="@style/text_screen_goods_title"
+                android:text="价格区间" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="68px"
+                android:layout_marginTop="28px"
+                android:paddingLeft="20px"
+                android:paddingRight="25px"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_screen_start_price"
+                    style="@style/text_screen_goods"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:background="@drawable/btn_background_f4" />
+
+                <TextView
+                    android:layout_width="30px"
+                    android:layout_height="2px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:background="@color/line_back" />
+
+                <EditText
+                    android:id="@+id/et_screen_end_price"
+                    style="@style/text_screen_goods"
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:background="@drawable/btn_background_f4" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_screen_goods_title"
+                android:text="品 牌" />
+
+            <com.a365vintagewine.widget.NoScrollGridView
+                android:id="@+id/gv_screen_brand"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:layout_marginTop="28px"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:numColumns="3"
+                android:horizontalSpacing="24px"
+                android:verticalSpacing="26px"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20px"
+            android:background="@color/line_back"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_marginBottom="45px">
+            <Button
+                android:id="@+id/btn_screen_reset"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@color/white"
+                android:text="重 置"
+                android:textColor="@color/tv_red"/>
+            <Button
+                android:id="@+id/btn_screen_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@color/tv_red"
+                android:text="确 定"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

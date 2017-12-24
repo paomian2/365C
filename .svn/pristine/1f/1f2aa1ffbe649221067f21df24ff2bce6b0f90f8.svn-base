@@ -1,0 +1,140 @@
+package com.a365vintagewine.mvp.activity.personal;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.a365vintagewine.R;
+import com.a365vintagewine.adapter.MyIntegralAdapter;
+import com.a365vintagewine.mvp.bean.MyIntegral;
+import com.a365vintagewine.mvp.presenter.MyIntegralPresenter;
+import com.a365vintagewine.mvp.view.MyIntegralView;
+import com.commsdk.base.AppActivityManager;
+import com.commsdk.base.BaseActivity;
+import com.commsdk.base.view.BaseMVPActivity;
+import com.commsdk.common.UIHelper;
+
+import java.util.List;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+public class MyIntegralActivity extends BaseMVPActivity<MyIntegralPresenter> implements MyIntegralView {
+
+    @Bind(R.id.img_text_title_back)
+    RelativeLayout imgTextTitleBack;
+    @Bind(R.id.tv_text_title)
+    TextView tvTextTitle;
+    @Bind(R.id.ll_text_title)
+    RelativeLayout llTextTitle;
+    @Bind(R.id.lv_shop_integral)
+    ListView lvShopIntegral;
+
+    private TextView tvMyIntegralSum; //我的总积分
+    private ImageView imgPlatformIngegral; //平台头像
+    private TextView tvPlatformSumIntegral;//平台总积分
+    private LinearLayout llPlatformIntegral;//点击进入平台积分明细
+
+    private MyIntegralAdapter adapter;
+    private MyIntegral integral;
+    @Override
+
+    protected MyIntegralPresenter createPresenter() {
+        return new MyIntegralPresenter(this);
+    }
+
+    @Override
+    protected void setActivityView(Bundle bundle) {
+        setContentView(R.layout.act_my_integral);
+        ButterKnife.bind(this);
+    }
+
+    @Override
+    protected void initUI() {
+        tvTextTitle.setText("我的积分");
+        adapter = new MyIntegralAdapter(activity);
+        View headerView = View.inflate(this, R.layout.header_my_integral, null);
+        tvMyIntegralSum = (TextView) headerView.findViewById(R.id.tv_my_integral_sum);
+        imgPlatformIngegral = (ImageView) headerView.findViewById(R.id.img_platform_ingegral);
+        tvPlatformSumIntegral = (TextView) headerView.findViewById(R.id.tv_platform_sum_integral);
+        llPlatformIntegral = (LinearLayout) headerView.findViewById(R.id.ll_platform_integral);
+        lvShopIntegral.addHeaderView(headerView);
+        lvShopIntegral.setAdapter(adapter);
+        lvShopIntegral.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position > 0){
+                    Intent intent = new Intent(activity,IntegralDetailActivity.class);
+                    MyIntegral.ShopIntegral shop = integral.getShopList().get(position-1);
+                    intent.putExtra("shopname",shop.getShopName());
+                    intent.putExtra("logo",shop.getShopImg());
+                    intent.putExtra("integral",shop.getShopIntegral());
+                    AppActivityManager.getInstance().goTo(activity,intent);
+                }
+            }
+        });
+        llPlatformIntegral.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity,IntegralDetailActivity.class);
+                intent.putExtra("shopname",integral.getPlatformName());
+                intent.putExtra("logo",integral.getPlatformImg());
+                intent.putExtra("integral",integral.getPlatformIntegral());
+                AppActivityManager.getInstance().goTo(activity,intent);
+            }
+        });
+    }
+
+    @Override
+    protected void initData() {
+        mvpPresenter.getMyIntegral();
+    }
+
+    @Override
+    public BaseActivity getMyContext() {
+        return activity;
+    }
+
+    @Override
+    public void showProgress(String msg) {
+
+    }
+
+    @Override
+    public void hideProgress() {
+
+    }
+
+    /**
+     * 返回上级页面
+     */
+    @OnClick(R.id.img_text_title_back)
+    public void back() {
+        finish();
+    }
+
+    @Override
+    public void setSumIntegral(int sumIntegral) {
+        tvMyIntegralSum.setText(sumIntegral+"");
+    }
+
+    @Override
+    public void setPlatfrom(MyIntegral integral) {
+        this.integral = integral;
+        UIHelper.imageNet(activity,integral.getPlatformImg(),imgPlatformIngegral,true);
+        tvPlatformSumIntegral.setText(integral.getPlatformIntegral()+"积分");
+    }
+
+    @Override
+    public void setShopListAdapter(List<MyIntegral.ShopIntegral> list) {
+        adapter.setMlist(list);
+        adapter.notifyDataSetChanged();
+    }
+}

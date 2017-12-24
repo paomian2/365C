@@ -1,0 +1,24 @@
+// Generated code from Butter Knife. Do not modify!
+package com.a365vintagewine.mvp.fragment;
+
+import android.view.View;
+import butterknife.ButterKnife.Finder;
+import butterknife.ButterKnife.ViewBinder;
+
+public class ClassificationFragment$$ViewBinder<T extends com.a365vintagewine.mvp.fragment.ClassificationFragment> implements ViewBinder<T> {
+  @Override public void bind(final Finder finder, final T target, Object source) {
+    View view;
+    view = finder.findRequiredView(source, 2131755387, "field 'llClassification'");
+    target.llClassification = finder.castView(view, 2131755387, "field 'llClassification'");
+    view = finder.findRequiredView(source, 2131755386, "field 'scrollClassification'");
+    target.scrollClassification = finder.castView(view, 2131755386, "field 'scrollClassification'");
+    view = finder.findRequiredView(source, 2131755388, "field 'vpClassification'");
+    target.vpClassification = finder.castView(view, 2131755388, "field 'vpClassification'");
+  }
+
+  @Override public void unbind(T target) {
+    target.llClassification = null;
+    target.scrollClassification = null;
+    target.vpClassification = null;
+  }
+}

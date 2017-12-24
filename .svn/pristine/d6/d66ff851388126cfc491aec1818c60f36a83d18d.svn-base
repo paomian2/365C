@@ -1,0 +1,59 @@
+package com.a365vintagewine.mvp.presenter;
+
+import com.a365vintagewine.mvp.bean.FollowGoods;
+import com.a365vintagewine.mvp.model.FollowGoodsModel;
+import com.a365vintagewine.mvp.view.FollowGoodsView;
+import com.commsdk.base.presenter.BasePresenter;
+import com.commsdk.base.retrofit.ModelCallBack;
+
+import java.util.List;
+
+/**
+ * Created by Administrator on 2017/8/31 0031.
+ */
+
+public class FollowPresenter extends BasePresenter<FollowGoodsView,FollowGoodsModel> {
+    public FollowPresenter(FollowGoodsView mView) {
+        super(mView);
+    }
+
+    @Override
+    public FollowGoodsModel createModel() {
+        return new FollowGoodsModel();
+    }
+
+    /**
+     * 获取我关注的商品
+     */
+    public void getFollowGoods(){
+        mModel.getFoloowGoods(new ModelCallBack<List<FollowGoods>>() {
+
+            @Override
+            public void onSuccess(List<FollowGoods> model) {
+                mView.setFollowGoodsAdapter(model);
+            }
+
+            @Override
+            public void onFailure(String msg) {
+
+            }
+        });
+    }
+
+    /**
+     * 删除关注的商品
+     */
+    public void deleteGoods(String goodsId){
+        mModel.deleteGodds(goodsId, new ModelCallBack() {
+            @Override
+            public void onSuccess(Object model) {
+                mView.deleteGoods(true);
+            }
+
+            @Override
+            public void onFailure(String msg) {
+                mView.deleteGoods(false);
+            }
+        });
+    }
+}

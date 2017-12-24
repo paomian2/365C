@@ -1,0 +1,172 @@
+package com.a365vintagewine.mvp.activity.personal;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.a365vintagewine.R;
+import com.a365vintagewine.mvp.presenter.PersonalInfoPresenter;
+import com.a365vintagewine.mvp.view.PersonalInfoView;
+import com.a365vintagewine.widget.ChoosePhotoPw;
+import com.commsdk.base.AppActivityManager;
+import com.commsdk.base.BaseActivity;
+import com.commsdk.base.view.BaseMVPActivity;
+import com.commsdk.common.UIHelper;
+import com.commsdk.common.widget.CircleImageView;
+import com.imagepicker.ImagePicker;
+import com.imagepicker.data.ImageBean;
+
+import java.util.List;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+public class PersonalInformationActivity extends BaseMVPActivity<PersonalInfoPresenter> implements PersonalInfoView {
+
+    @Bind(R.id.img_text_title_back)
+    RelativeLayout imgTextTitleBack;
+    @Bind(R.id.tv_text_title)
+    TextView tvTextTitle;
+    @Bind(R.id.myself_msg)
+    ImageView myselfMsg;
+    @Bind(R.id.tv_myself_msgcount)
+    TextView tvMyselfMsgcount;
+    @Bind(R.id.rl_myself_msg)
+    RelativeLayout rlMyselfMsg;
+    @Bind(R.id.ll_text_title)
+    RelativeLayout llTextTitle;
+    @Bind(R.id.rl_person_info_head)
+    LinearLayout rlPersonInfoHead;
+    @Bind(R.id.tv_personal_info_nikename)
+    TextView tvPersonalInfoNikename;
+    @Bind(R.id.rl_person_info_nickname)
+    LinearLayout rlPersonInfoNickname;
+    @Bind(R.id.tv_personal_info_phone)
+    TextView tvPersonalInfoPhone;
+    @Bind(R.id.rl_person_info_phone)
+    LinearLayout rlPersonInfoPhone;
+    @Bind(R.id.tv_personal_info_weixin)
+    TextView tvPersonalInfoWeixin;
+    @Bind(R.id.rl_person_info_weixin)
+    LinearLayout rlPersonInfoWeixin;
+    @Bind(R.id.rl_person_info_blankcard)
+    LinearLayout rlPersonInfoBlankcard;
+    @Bind(R.id.rl_person_info_realname)
+    LinearLayout rlPersonInfoRealname;
+    @Bind(R.id.tv_personal_info_Invitationcode)
+    TextView tvPersonalInfoInvitationcode;
+    @Bind(R.id.rl_person_info_Invitationcode)
+    LinearLayout rlPersonInfoInvitationcode;
+    @Bind(R.id.img_person_user_head)
+    CircleImageView imgPersonUserHead;
+
+    @Override
+    protected PersonalInfoPresenter createPresenter() {
+        return new PersonalInfoPresenter(this);
+    }
+
+    @Override
+    protected void setActivityView(Bundle bundle) {
+        setContentView(R.layout.act_personal_information);
+        ButterKnife.bind(this);
+    }
+
+    @Override
+    protected void initUI() {
+        tvTextTitle.setText("个人信息");
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    public BaseActivity getMyContext() {
+        return null;
+    }
+
+    @Override
+    public void showProgress(String msg) {
+
+    }
+
+    @Override
+    public void hideProgress() {
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK && data != null) {
+            if (requestCode == ChoosePhotoPw.REQUEST_CODE_ALBUM || requestCode == ChoosePhotoPw.REQUEST_CODE_PHOTOGRAPH) {
+                //获取选择的图片数据
+                List<ImageBean> resultList = data.getParcelableArrayListExtra(ImagePicker.INTENT_RESULT_DATA);
+                UIHelper.imageNet(activity, resultList.get(0).getImagePath(), imgPersonUserHead, true);
+            }
+        }
+    }
+
+    /**
+     * 返回上级
+     */
+    @OnClick(R.id.img_text_title_back)
+    public void back() {
+        finish();
+    }
+
+    /**
+     * 修改头像
+     */
+    private ChoosePhotoPw choosePhotoPw;
+    @OnClick(R.id.rl_person_info_head)
+    public void personHead() {
+        choosePhotoPw = new ChoosePhotoPw(activity);
+        choosePhotoPw.showPopupWindow(rlPersonInfoHead);
+    }
+
+    /**
+     * 修改昵称
+     */
+    @OnClick(R.id.rl_person_info_nickname)
+    public void nickName(){
+        AppActivityManager.getInstance().goTo(activity,UpdateNickNameActivity.class);
+    }
+
+    /**
+     * 绑定微信号
+     */
+    @OnClick(R.id.rl_person_info_weixin)
+    public void personWeixin() {
+
+    }
+
+    /**
+     * 绑定银行卡
+     */
+    @OnClick(R.id.rl_person_info_blankcard)
+    public void personBlankCard() {
+
+    }
+
+    /**
+     * 实名认证
+     */
+    @OnClick(R.id.rl_person_info_realname)
+    public void personRealname() {
+        AppActivityManager.getInstance().goTo(activity,RealNameAuthenticationActivity.class);
+    }
+
+    /**
+     * 补填邀请码
+     */
+    @OnClick(R.id.rl_person_info_Invitationcode)
+    public void personInvitationCode() {
+        AppActivityManager.getInstance().goTo(activity,FillInInvitationCodeActivity.class);
+    }
+}

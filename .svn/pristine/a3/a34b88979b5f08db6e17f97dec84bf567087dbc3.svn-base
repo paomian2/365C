@@ -1,0 +1,37 @@
+package com.a365vintagewine.mvp.presenter;
+
+import com.a365vintagewine.mvp.bean.TwoLevelList;
+import com.a365vintagewine.mvp.model.ClassificationModel;
+import com.a365vintagewine.mvp.view.ClassificationView;
+import com.commsdk.base.presenter.BasePresenter;
+import com.commsdk.base.retrofit.ModelCallBack;
+
+/**
+ * Created by Administrator on 2017/8/24 0024.
+ */
+
+public class ClassificationPresenter extends BasePresenter<ClassificationView,ClassificationModel> {
+    public ClassificationPresenter(ClassificationView mView) {
+        super(mView);
+    }
+
+    @Override
+    public ClassificationModel createModel() {
+        return new ClassificationModel();
+    }
+
+    public void getThreeLevelList(){
+        mModel.getThreeLevelList(new ModelCallBack<TwoLevelList>() {
+
+            @Override
+            public void onSuccess(TwoLevelList model) {
+                mView.onSuccess(model);
+            }
+
+            @Override
+            public void onFailure(String msg) {
+                mView.onFail(msg);
+            }
+        });
+    }
+}

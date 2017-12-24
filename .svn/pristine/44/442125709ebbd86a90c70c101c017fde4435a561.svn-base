@@ -1,0 +1,174 @@
+package com.a365vintagewine.mvp.bean;
+import com.commsdk.common.StringUtils;
+
+import java.util.Date;
+
+/**
+ * 功能描述:
+ * 作者：Linxz
+ * E-mail：lin_xiao_zhang@13.com
+ * 版本信息：V1.0.0
+ * 时间：2017年04月11日  11:47.
+ **/
+public class VoucherBean {
+
+    /**
+     * couponsId : 1
+     * couponsActivityId : 1
+     * custid : 123
+     * branchId : 111
+     * couponsPrice : 20
+     * useStatus : 0
+     * usedPrice : 20
+     * createTime : 2017-04-10 11:08:42
+     * usedTime : null
+     * useEndTime : 2017-05-10 11:08:47
+     * createOrderId : 123456
+     * useOrderId : null
+     */
+
+    /**优惠券Id*/
+    private String coupons_id= StringUtils.EMPTY;
+    /**优惠券活动id*/
+    private String coupons_activity_id= StringUtils.EMPTY;
+    /**请求的商家Id*/
+    private String custid= StringUtils.EMPTY;
+    /**优惠券的分公司Id*/
+    private String branch_id= StringUtils.EMPTY;
+    /**优惠券名称*/
+    private String coupons_name=StringUtils.EMPTY;
+    /**优惠券的价格*/
+    private String coupons_price= StringUtils.EMPTY;
+    /**当前优惠券状态*/
+    private String use_status= StringUtils.EMPTY;
+    /**已使用的价格*/
+    private String used_price= StringUtils.EMPTY;
+    /**生成优惠券的时间*/
+    private String create_time= StringUtils.EMPTY;
+    /**优惠券的使用时间*/
+    private String used_time= StringUtils.EMPTY;
+    /**优惠券过期时间*/
+    private String use_end_time= StringUtils.EMPTY;
+    /**优惠券对于的订单id*/
+    private String create_order_id= StringUtils.EMPTY;
+    private String use_order_id= StringUtils.EMPTY;
+    /**优惠券说明详情*/
+    private String coupons_intro=StringUtils.EMPTY;
+
+    public String getCouponsId() {
+        return coupons_id;
+    }
+
+    public void setCouponsId(String couponsId) {
+        this.coupons_id = couponsId;
+    }
+
+    public String getCouponsActivityId() {
+        return coupons_activity_id;
+    }
+
+    public void setCouponsActivityId(String couponsActivityId) {
+        this.coupons_activity_id = couponsActivityId;
+    }
+
+    public String getCustid() {
+        return custid;
+    }
+
+    public void setCustid(String custid) {
+        this.custid = custid;
+    }
+
+    public String getBranchId() {
+        return branch_id;
+    }
+
+    public void setBranchId(String branchId) {
+        this.branch_id = branchId;
+    }
+
+    public String getCouponsName() {
+        return coupons_name;
+    }
+
+    public void setCouponsName(String couponsName) {
+        this.coupons_name = couponsName;
+    }
+
+    public String getCouponsPrice() {
+        if (StringUtils.isEmpty(coupons_price))
+            return "0";
+        return coupons_price;
+    }
+
+    public void setCouponsPrice(String couponsPrice) {
+        this.coupons_price = couponsPrice;
+    }
+
+    public String getUseStatus() {
+        return use_status;
+    }
+
+    public void setUseStatus(String useStatus) {
+        this.use_status = useStatus;
+    }
+
+    public String getUsedPrice() {
+        return used_price;
+    }
+
+    public void setUsedPrice(String usedPrice) {
+        this.used_price = usedPrice;
+    }
+
+    public String getCreateTime() {
+        return create_time;
+    }
+
+    public void setCreateTime(String createTime) {
+        this.create_time = createTime;
+    }
+
+    public Object getUsedTime() {
+        return used_time;
+    }
+
+    public void setUsedTime(String usedTime) {
+        this.used_time = usedTime;
+    }
+
+    public String getUseEndTime() {
+        if(StringUtils.isEmpty(use_end_time)){
+            return new Date().getTime()+"";
+        }
+        return use_end_time;
+    }
+
+    public void setUseEndTime(String useEndTime) {
+        this.use_end_time = useEndTime;
+    }
+
+    public String getCreateOrderId() {
+        return create_order_id;
+    }
+
+    public void setCreateOrderId(String createOrderId) {
+        this.create_order_id = createOrderId;
+    }
+
+    public Object getUseOrderId() {
+        return use_order_id;
+    }
+
+    public void setUseOrderId(String useOrderId) {
+        this.use_order_id = useOrderId;
+    }
+
+    public String getCouponsIntro() {
+        return coupons_intro;
+    }
+
+    public void setCouponsIntro(String couponsIntro) {
+        this.coupons_intro = couponsIntro;
+    }
+}

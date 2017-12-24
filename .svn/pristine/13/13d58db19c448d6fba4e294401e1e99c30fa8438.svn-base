@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "F:\\Project\\365VintageWine\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\myself_msg_roundback.png",
+        "source": "F:\\Project\\365VintageWine\\app\\src\\main\\res\\mipmap-xxhdpi\\myself_msg_roundback.png"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "F:\\Project\\365VintageWine\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher_round.png",
+        "source": "F:\\Project\\365VintageWine\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    }
+]

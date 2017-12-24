@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20px"
+    android:paddingRight="20px"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:background="#e0000000"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/btn_background_white">
+        <TextView
+            android:id="@+id/pw_choose_photograph"
+            android:layout_width="match_parent"
+            android:layout_height="114px"
+            android:text="拍照"
+            android:textSize="18sp"
+            android:textColor="#007aff"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line_back"/>
+        <TextView
+            android:id="@+id/pw_choose_album"
+            android:layout_width="match_parent"
+            android:layout_height="114px"
+            android:text="相册"
+            android:textSize="18sp"
+            android:textColor="#007aff"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pw_choosephoto_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="114px"
+        android:layout_marginTop="20px"
+        android:layout_marginBottom="60px"
+        android:background="@drawable/btn_background_white"
+        android:text="取消"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#007aff"
+        android:gravity="center"
+        />
+
+</LinearLayout>

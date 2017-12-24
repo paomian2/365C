@@ -1,0 +1,42 @@
+package com.commsdk.base.retrofit;
+
+import com.commsdk.common.LogUtil;
+
+import java.io.IOException;
+
+import okhttp3.Interceptor;
+import okhttp3.MediaType;
+import okhttp3.Request;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
+
+/**
+ * 描述：网络请求拦截器,主要用于打印日志调试
+ * 作者：Linxz
+ * E-mail:lin_xiao_zhang@163.com
+ * 时间:2017年07月13日  15:58
+ * 版本：3.0
+ */
+
+public class LoggingInterceptor implements Interceptor {
+
+    /**
+     * 在调用了response.body().string()方法之后，
+     * response中的流会被关闭，
+     * 我们需要创建出一个新的response给应用层处理
+     * */
+    @Override
+    public Response intercept(Chain chain) throws IOException {
+        Request request = chain.request();
+        long t1 = System.nanoTime();
+        LogUtil.d("","发送请求:"+request.url()+" headers:"+request.headers());
+        Response response = chain.proceed(request);
+        long t2 = System.nanoTime();
+        MediaType mediaType = response.body().contentType();
+        String responseContent=response.body().string();
+        LogUtil.d("","接收响应:"+response.request().url()+" "+(t2-t1)+"ms"+"  "+responseContent);
+        return response.newBuilder()
+                .body(ResponseBody.create(mediaType, responseContent))
+                .build();
+    }
+}

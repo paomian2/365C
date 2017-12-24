@@ -1,0 +1,215 @@
+package com.a365vintagewine.widget;
+
+import android.app.Activity;
+import android.content.Context;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.GridView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.RadioButton;
+
+import com.a365vintagewine.R;
+import com.a365vintagewine.adapter.ScreenBrandAdapter;
+import com.commsdk.common.LogUtil;
+import com.commsdk.common.ToastUtils;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
+/**
+ * Created by Administrator on 2017/9/3 0003.
+ */
+
+public class ScreenGoodsPw extends PopupWindow implements ScreenBrandAdapter.CallbackBranName {
+
+    public static final int SELFFEEDING = 1; //选择商家自送
+    public static final int PICKUP = 2; //选择到店取货
+    public static final int EXORESS = 3; //选择快递
+
+    private int distribution; //记录配送方式
+    private List<String> brandList = new ArrayList<>(); //记录选择的品牌
+
+    private Activity context;
+    private ViewHolderScreen viewHolder;
+    private ScreenBrandAdapter adapter;
+
+    public ScreenGoodsPw(final Activity context) {
+        this.context = context;
+        LayoutInflater inflater = (LayoutInflater) context
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View conentView = inflater.inflate(R.layout.pw_screen_goods, null);
+        int h = context.getWindowManager().getDefaultDisplay().getHeight();
+        int w = context.getWindowManager().getDefaultDisplay().getWidth();
+        // 设置SelectPicPopupWindow的View
+        this.setContentView(conentView);
+        setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+        // 设置SelectPicPopupWindow弹出窗体的宽
+        this.setWidth(w);
+        // 设置SelectPicPopupWindow弹出窗体的高
+        this.setHeight(h);
+        // 设置SelectPicPopupWindow弹出窗体可点击
+        this.setFocusable(true);
+        this.setOutsideTouchable(true);
+        // 刷新状态
+        this.update();
+        // 实例化一个ColorDrawable颜色为白色
+//        ColorDrawable dw = new ColorDrawable(context.getResources().getColor(R.color.white));
+//        // 点back键和其他地方使其消失,设置了这个才能触发OnDismisslistener ，设置其他控件变化等操作
+//        this.setBackgroundDrawable(dw);
+        // mPopupWindow.setAnimationStyle(android.R.style.Animation_Dialog);
+        // 设置SelectPicPopupWindow弹出窗体动画效果
+        this.setAnimationStyle(R.style.AnimationPreviewLeft);
+        viewHolder = new ViewHolderScreen(conentView);
+        OnClicks();
+    }
+
+    public void setAdapter(List<String> brandList) {
+        adapter = new ScreenBrandAdapter(context);
+        adapter.setMlist(brandList);
+        adapter.setCallbackBranName(this);
+        viewHolder.gvScreenBrand.setAdapter(adapter);
+    }
+
+    private void OnClicks() {
+        //商家自送按钮监听
+        viewHolder.radiobtnSelfFeeding.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                distribution = SELFFEEDING;
+                setDeliveryMode(viewHolder.radiobtnSelfFeeding);
+            }
+        });
+        //到店自取按钮监听
+        viewHolder.radiobtnPickUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                distribution = PICKUP;
+                setDeliveryMode(viewHolder.radiobtnPickUp);
+            }
+        });
+        //快递按钮监听
+        viewHolder.radiobtnExpress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                distribution = EXORESS;
+                setDeliveryMode(viewHolder.radiobtnExpress);
+            }
+        });
+        //重置按钮监听
+        viewHolder.btnScreenReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewHolder.etScreenEndPrice.setText("");
+                viewHolder.etScreenStartPrice.setText("");
+                adapter.notifyDataSetChanged();
+            }
+        });
+
+        //点击确定按钮回调
+        viewHolder.btnScreenConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (callbackSreenGoods != null) {
+                    String startPrice = (viewHolder.etScreenStartPrice.getText().toString().trim());
+                    String endPrice = viewHolder.etScreenEndPrice.getText().toString().trim();
+                    callbackSreenGoods.setSreenGoods(distribution, startPrice, endPrice, brandList);
+                }
+                dimissPopuwindow();
+            }
+        });
+        viewHolder.llScreenGoods.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dimissPopuwindow();
+            }
+        });
+    }
+
+    /**
+     * 根据点击的按钮显示不同的配送方式
+     */
+    public void setDeliveryMode(RadioButton button) {
+        viewHolder.radiobtnExpress.setTextColor(context.getResources().getColor(R.color.black));
+        viewHolder.radiobtnPickUp.setTextColor(context.getResources().getColor(R.color.black));
+        viewHolder.radiobtnSelfFeeding.setTextColor(context.getResources().getColor(R.color.black));
+        button.setTextColor(context.getResources().getColor(R.color.tv_red));
+    }
+
+    /**
+     * 隐藏popupWindow
+     */
+    public void dimissPopuwindow() {
+        if (this.isShowing()) {
+            this.dismiss();
+        }
+    }
+
+    /**
+     * 显示popupWindow
+     *
+     * @param parent
+     */
+    public void showPopupWindow(View parent) {
+        if (!this.isShowing()) {
+            // 以下拉方式显示popupwindow
+//            this.showAsDropDown(parent, parent.getLayoutParams().width / 2, 18);
+            this.showAtLocation(parent, Gravity.BOTTOM, 0, 0);
+        } else {
+            this.dismiss();
+        }
+    }
+
+    /**
+     * 选择品牌回调
+     */
+    @Override
+    public void oncallbackBranName(List<String> list) {
+        LogUtil.i("aaa", list.toString());
+        this.brandList = list;
+        ToastUtils.showToast(context, "" + list.size());
+    }
+
+    //点击确定回调
+    CallbackSreenGoods callbackSreenGoods;
+
+    public interface CallbackSreenGoods {
+        void setSreenGoods(int distribution, String startPrice, String endPrice, List<String> brandName);
+    }
+
+    public void setCallbackScreenGoods(CallbackSreenGoods callbackScreenGoods) {
+        this.callbackSreenGoods = callbackScreenGoods;
+    }
+
+    static class ViewHolderScreen {
+        @Bind(R.id.radiobtn_self_feeding)
+        RadioButton radiobtnSelfFeeding;
+        @Bind(R.id.radiobtn_pick_up)
+        RadioButton radiobtnPickUp;
+        @Bind(R.id.radiobtn_express)
+        RadioButton radiobtnExpress;
+        @Bind(R.id.et_screen_start_price)
+        EditText etScreenStartPrice;
+        @Bind(R.id.et_screen_end_price)
+        EditText etScreenEndPrice;
+        @Bind(R.id.gv_screen_brand)
+        GridView gvScreenBrand;
+        @Bind(R.id.btn_screen_reset)
+        Button btnScreenReset;
+        @Bind(R.id.btn_screen_confirm)
+        Button btnScreenConfirm;
+        @Bind(R.id.ll_screen_goods)
+        LinearLayout llScreenGoods;
+
+        ViewHolderScreen(View view) {
+            ButterKnife.bind(this, view);
+        }
+    }
+}

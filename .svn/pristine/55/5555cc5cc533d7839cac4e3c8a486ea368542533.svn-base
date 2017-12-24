@@ -1,0 +1,74 @@
+// Generated code from Butter Knife. Do not modify!
+package com.a365vintagewine.mvp.activity;
+
+import android.view.View;
+import butterknife.ButterKnife.Finder;
+import butterknife.ButterKnife.ViewBinder;
+
+public class HomeActivity$$ViewBinder<T extends com.a365vintagewine.mvp.activity.HomeActivity> implements ViewBinder<T> {
+  @Override public void bind(final Finder finder, final T target, Object source) {
+    View view;
+    view = finder.findRequiredView(source, 2131755182, "field 'vpHome'");
+    target.vpHome = finder.castView(view, 2131755182, "field 'vpHome'");
+    view = finder.findRequiredView(source, 2131755185, "field 'imgHomeHome'");
+    target.imgHomeHome = finder.castView(view, 2131755185, "field 'imgHomeHome'");
+    view = finder.findRequiredView(source, 2131755184, "field 'rlHomeHome' and method 'home'");
+    target.rlHomeHome = finder.castView(view, 2131755184, "field 'rlHomeHome'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.home();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755187, "field 'imgHomeClassification'");
+    target.imgHomeClassification = finder.castView(view, 2131755187, "field 'imgHomeClassification'");
+    view = finder.findRequiredView(source, 2131755186, "field 'rlHomeClassification' and method 'classification'");
+    target.rlHomeClassification = finder.castView(view, 2131755186, "field 'rlHomeClassification'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.classification();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755189, "field 'imgHomeOrder'");
+    target.imgHomeOrder = finder.castView(view, 2131755189, "field 'imgHomeOrder'");
+    view = finder.findRequiredView(source, 2131755188, "field 'rlHomeOrder' and method 'order'");
+    target.rlHomeOrder = finder.castView(view, 2131755188, "field 'rlHomeOrder'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.order();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755191, "field 'imgHomeMyself'");
+    target.imgHomeMyself = finder.castView(view, 2131755191, "field 'imgHomeMyself'");
+    view = finder.findRequiredView(source, 2131755190, "field 'rlHomeMyself' and method 'myself'");
+    target.rlHomeMyself = finder.castView(view, 2131755190, "field 'rlHomeMyself'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.myself();
+        }
+      });
+  }
+
+  @Override public void unbind(T target) {
+    target.vpHome = null;
+    target.imgHomeHome = null;
+    target.rlHomeHome = null;
+    target.imgHomeClassification = null;
+    target.rlHomeClassification = null;
+    target.imgHomeOrder = null;
+    target.rlHomeOrder = null;
+    target.imgHomeMyself = null;
+    target.rlHomeMyself = null;
+  }
+}

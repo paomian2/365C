@@ -1,0 +1,59 @@
+package com.a365vintagewine.mvp.presenter;
+
+import com.a365vintagewine.mvp.bean.FollowShop;
+import com.a365vintagewine.mvp.model.FollowShopModel;
+import com.a365vintagewine.mvp.view.FollowShopView;
+import com.commsdk.base.presenter.BasePresenter;
+import com.commsdk.base.retrofit.ModelCallBack;
+
+import java.util.List;
+
+/**
+ * Created by Administrator on 2017/8/31 0031.
+ */
+
+public class FollowShopPresenter extends BasePresenter<FollowShopView,FollowShopModel> {
+    public FollowShopPresenter(FollowShopView mView) {
+        super(mView);
+    }
+
+    @Override
+    public FollowShopModel createModel() {
+        return new FollowShopModel();
+    }
+
+    /**
+     * 获取我收藏的店铺信息
+     */
+    public void getFollowShop(){
+        mModel.getFollowShop(new ModelCallBack<List<FollowShop>>() {
+
+            @Override
+            public void onSuccess(List<FollowShop> model) {
+                mView.setFollowShopAdapter(model);
+            }
+
+            @Override
+            public void onFailure(String msg) {
+
+            }
+        });
+    }
+
+    /**
+     * 删除收藏的店铺
+     */
+    public void deleteShop(String shopId){
+        mModel.deleteShop(shopId, new ModelCallBack() {
+            @Override
+            public void onSuccess(Object model) {
+                mView.deleteShop(true);
+            }
+
+            @Override
+            public void onFailure(String msg) {
+                mView.deleteShop(false);
+            }
+        });
+    }
+}

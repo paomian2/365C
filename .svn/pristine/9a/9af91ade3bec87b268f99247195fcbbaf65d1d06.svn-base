@@ -1,0 +1,21 @@
+package com.a365vintagewine.mvp.view;
+
+import com.commsdk.base.view.BaseView;
+
+/**
+ * 描述：
+ * 作者：Linxz
+ * E-mail:lin_xiao_zhang@163.com
+ * 时间:2017年08月29日  9:40
+ * 版本：3.0
+ */
+
+public interface MyVoucherView extends BaseView{
+
+    /**获取优惠券三种状态对于的数据*/
+    public void getVoucherCount();
+
+    /**获取优惠券三种状态结果*/
+    public void onGetVoucherCountResult(boolean success);
+
+}

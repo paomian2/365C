@@ -1,0 +1,109 @@
+package com.a365vintagewine.adapter;
+
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.a365vintagewine.R;
+import com.a365vintagewine.mvp.bean.Brand;
+import com.a365vintagewine.mvp.bean.ThreeLevelList;
+import com.a365vintagewine.widget.NoScrollGridView;
+import com.commsdk.base.BaseAdapter2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
+/**
+ * Created by Administrator on 2017/8/24 0024.
+ */
+
+public class ClassificationTwoLevelAdapter extends BaseAdapter2<ThreeLevelList> {
+
+    public ClassificationTwoLevelAdapter(Context context) {
+        super(context);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder viewHolder = null;
+        if (convertView == null) {
+            convertView = inflater.inflate(R.layout.item_classification_twolevel, null);
+            viewHolder = new ViewHolder(convertView, context);
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (ViewHolder) convertView.getTag();
+        }
+        ThreeLevelList threeLevelList = getItem(position);
+        viewHolder.tvClassificationTwolevelname.setText(threeLevelList.getTwoLevelname());
+        List<Brand> brandList = threeLevelList.getBrandList();
+        if (brandList.size() > 3) {
+            List<Brand> brandList3 = new ArrayList<>();
+            for (int i = 0; i < 3; i++) {
+                brandList3.add(brandList.get(i));
+            }
+            viewHolder.adapter.setMlist(brandList3);
+            viewHolder.adapter.notifyDataSetChanged();
+            viewHolder.rlClassificationShowbrand.setVisibility(View.VISIBLE);
+        } else {
+            viewHolder.adapter.setMlist(brandList);
+            viewHolder.adapter.notifyDataSetChanged();
+            viewHolder.rlClassificationShowbrand.setVisibility(View.GONE);
+        }
+        onclicks(viewHolder, brandList);
+        return convertView;
+    }
+
+
+    private int showTag = 0;
+
+    private void onclicks(final ViewHolder viewHolder, final List<Brand> brandList) {
+        RelativeLayout rlClassificationShowbrand = viewHolder.rlClassificationShowbrand;
+        rlClassificationShowbrand.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (showTag == 0) {
+                    showTag = 1;
+                    viewHolder.imgClassificationShowbrand.setImageResource(R.mipmap.arrow_up);
+                    viewHolder.adapter.setMlist(brandList);
+                    viewHolder.adapter.notifyDataSetChanged();
+                } else {
+                    showTag = 0;
+                    viewHolder.imgClassificationShowbrand.setImageResource(R.mipmap.arrow_dowm);
+                    List<Brand> brandList3 = new ArrayList<>();
+                    for (int i = 0; i < 3; i++) {
+                        brandList3.add(brandList.get(i));
+                    }
+                    viewHolder.adapter.setMlist(brandList3);
+                    viewHolder.adapter.notifyDataSetChanged();
+                }
+            }
+        });
+    }
+
+    static class ViewHolder {
+        @Bind(R.id.tv_classification_twolevelname)
+        TextView tvClassificationTwolevelname;
+        @Bind(R.id.tv_classification_twolevelmore)
+        TextView tvClassificationTwolevelmore;
+        @Bind(R.id.gv_classification_brand)
+        NoScrollGridView gvClassificationBrand;
+        @Bind(R.id.rl_classification_showbrand)
+        RelativeLayout rlClassificationShowbrand;
+        @Bind(R.id.img_classification_showbrand)
+        ImageView imgClassificationShowbrand;
+
+        ClassificationBrandAdapter adapter;
+
+        ViewHolder(View view, Context context) {
+            adapter = new ClassificationBrandAdapter(context);
+            ButterKnife.bind(this, view);
+            gvClassificationBrand.setAdapter(adapter);
+        }
+    }
+}

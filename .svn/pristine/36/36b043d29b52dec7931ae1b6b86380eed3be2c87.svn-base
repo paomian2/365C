@@ -1,0 +1,38 @@
+package com.a365vintagewine.mvp.presenter.goods;
+
+import com.a365vintagewine.mvp.bean.GoodsDetail;
+import com.a365vintagewine.mvp.model.goods.GoodsDetailModel;
+import com.a365vintagewine.mvp.view.goods.GoodsDetailView;
+import com.commsdk.base.presenter.BasePresenter;
+import com.commsdk.base.retrofit.ModelCallBack;
+
+/**
+ * Created by Administrator on 2017/9/4 0004.
+ */
+
+public class GoodsDetailPresenter extends BasePresenter<GoodsDetailView,GoodsDetailModel> {
+    public GoodsDetailPresenter(GoodsDetailView mView) {
+        super(mView);
+    }
+
+    @Override
+    public GoodsDetailModel createModel() {
+        return new GoodsDetailModel();
+    }
+    /**
+     * 获取商品详情数据
+     */
+    public void getGoodeDetail(){
+        mModel.getGoodsDetail(new ModelCallBack<GoodsDetail>() {
+            @Override
+            public void onSuccess(GoodsDetail model) {
+                mView.initGoodsDetailData(model);
+            }
+
+            @Override
+            public void onFailure(String msg) {
+
+            }
+        });
+    }
+}

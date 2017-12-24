@@ -1,0 +1,55 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml:2:1-16:12
+INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml:2:1-16:12
+INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml:2:1-16:12
+INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml:2:1-16:12
+INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml:2:1-16:12
+INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml:2:1-16:12
+INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml:2:1-16:12
+	package
+		ADDED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml:3:5-35
+		INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml
+		INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml
+		INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml
+		INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml
+application
+ADDED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml:7:5-12:19
+activity#com.hyphenate.easeui.ui.EaseShowBigImageActivity
+ADDED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml:8:9-64
+	android:name
+		ADDED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml:8:19-62
+activity#com.hyphenate.easeui.ui.EaseShowNormalFileActivity
+ADDED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml:9:9-66
+	android:name
+		ADDED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml:9:19-64
+activity#com.hyphenate.easeui.ui.EaseBaiduMapActivity
+ADDED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml:10:9-60
+	android:name
+		ADDED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml:10:19-58
+activity#com.hyphenate.easeui.ui.EaseShowVideoActivity
+ADDED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml:11:9-61
+	android:name
+		ADDED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml:11:19-59
+uses-sdk
+INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml
+INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml
+INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml
+INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml
+		ADDED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml
+		INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml
+		ADDED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml
+		INJECTED from E:\AS_WorkSpace\365C\sdk_easeUI\src\main\AndroidManifest.xml

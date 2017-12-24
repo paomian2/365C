@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/black_deep</item>
+        <item name="android:listDivider">@drawable/divider</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--popuwindow上下弹窗动画-->
+    <style name="AnimationPreview">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <!--popuwindow左右弹窗动画-->
+    <style name="AnimationPreviewLeft">
+        <item name="android:windowEnterAnimation">@anim/fade_left</item>
+        <item name="android:windowExitAnimation">@anim/fade_right</item>
+    </style>
+
+    <style name="fiveRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_five</item>
+        <item name="android:minHeight">50px</item>
+        <item name="android:maxHeight">50px</item>
+
+    </style>
+
+</resources>

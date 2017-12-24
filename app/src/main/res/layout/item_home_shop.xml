@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    
+    <ImageView
+        android:scaleType="fitXY"
+        android:layout_marginTop="30px"
+        android:layout_marginLeft="20px"
+        android:src="@mipmap/img_def"
+        android:id="@+id/imgStore"
+        android:layout_width="140px"
+        android:layout_height="140px" />
+
+    <LinearLayout
+        android:layout_marginTop="30px"
+        android:id="@+id/layoutContent"
+        android:layout_toRightOf="@+id/imgStore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="28px">
+          <TextView
+              android:id="@+id/tvStoreName"
+              android:text="海天烟酒店"
+              android:textSize="32px"
+              android:textColor="@color/black"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_marginTop="18px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RatingBar
+                android:layout_gravity="center"
+                android:id="@+id/ratingbar"
+                style="@style/fiveRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_centerVertical="true"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="4"
+                android:stepSize="1"
+                android:visibility="visible" />
+            <TextView
+                android:id="@+id/tv_sale_no"
+                android:layout_marginLeft="25px"
+                android:layout_gravity="center"
+                android:textSize="20px"
+                android:text="销量 728"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tvDisScope"
+                android:gravity="right"
+                android:text="3.2km"
+                android:paddingRight="30px"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="14px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvMinFee"
+                android:textSize="20px"
+                android:text="起送 ¥15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tvDeliveryFee"
+                android:layout_marginLeft="32px"
+                android:textSize="20px"
+                android:text="配送费 ¥0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvManJian"
+            android:drawablePadding="10px"
+            android:gravity="center"
+            android:drawableLeft="@mipmap/icon_jian"
+            android:layout_marginTop="32px"
+            android:text="满25减5；满35减8；满60减9"
+            android:textSize="20px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+        <TextView
+            android:id="@+id/tvZheKou"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:drawablePadding="10px"
+            android:gravity="center"
+            android:drawableLeft="@mipmap/icon_business_sale"
+            android:layout_marginTop="10px"
+            android:text="新用户立减7元，首次使用银行卡最高支付100元减10元"
+            android:textSize="20px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="30px"
+        android:layout_below="@+id/layoutContent"
+        android:layout_marginLeft="10px"
+        android:background="@color/line_color"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+
+
+
+</RelativeLayout>

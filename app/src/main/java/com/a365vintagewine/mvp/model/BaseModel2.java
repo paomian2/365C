@@ -1,0 +1,22 @@
+package com.a365vintagewine.mvp.model;
+
+import com.a365vintagewine.conf.HttpStore;
+import com.commsdk.base.model.BaseModel;
+import com.commsdk.base.retrofit.ApiClient;
+/**
+ * 描述：
+ * 作者：Linxz
+ * E-mail:lin_xiao_zhang@163.com
+ * 时间:2017年07月12日  22:51
+ * 版本：3.0
+ */
+
+public class BaseModel2 extends BaseModel {
+
+    public static final HttpStore apiStore;
+    static{
+         apiStore= ApiClient.retrofit().create(HttpStore.class);
+    }
+
+
+}

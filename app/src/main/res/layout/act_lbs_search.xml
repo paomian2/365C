@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:layout_height="match_parent">
+    
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="80px">
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/icon_back"
+            android:layout_centerVertical="true"
+            android:layout_width="80px"
+            android:layout_height="60px" />
+
+        <EditText
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:imeOptions="actionSearch"
+            android:lines="1"
+            android:textSize="@dimen/font_common_size_small"
+            android:id="@+id/edtContent"
+            android:hint="搜索小区/学校/大夏等"
+            android:background="@color/white"
+            android:padding="3dp"
+            android:paddingLeft="20px"
+            android:drawableLeft="@drawable/icon_search"
+            android:drawablePadding="20px"
+            android:layout_marginRight="40px"
+            android:layout_marginLeft="20px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ivBack"
+            android:layout_width="match_parent"
+            android:layout_height="66px" />
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0"
+            android:id="@+id/tvConfirm"
+            android:layout_marginRight="30px"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/font_common_size_small"
+            android:gravity="center"
+            android:text="搜索"
+            android:layout_alignParentRight="true"
+            android:layout_width="120px"
+            android:layout_height="50px"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:divider="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lvAdress"/>
+
+</LinearLayout>

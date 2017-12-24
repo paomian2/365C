@@ -1,0 +1,31 @@
+package com.a365vintagewine.mvp.presenter;
+
+import com.a365vintagewine.mvp.model.MyselfModel;
+import com.a365vintagewine.mvp.view.MyselfView;
+import com.commsdk.base.presenter.BasePresenter;
+import com.commsdk.common.SharedPreferenceUtil;
+import com.commsdk.common.StringUtils;
+
+/**
+ * Created by Administrator on 2017/8/23 0023.
+ */
+
+public class MyselfPresenter extends BasePresenter<MyselfView,MyselfModel> {
+    public MyselfPresenter(MyselfView mView) {
+        super(mView);
+    }
+
+    @Override
+    public MyselfModel createModel() {
+        return new MyselfModel();
+    }
+
+    public void chekUserLogin(){
+        //判断本地是否有用户数据
+        if (!StringUtils.isEmpty(SharedPreferenceUtil.getInstance(mView.getMyContext()).getString(SharedPreferenceUtil.USERINFO))){
+            mView.checkUserLogin(true);
+        }else{
+            mView.checkUserLogin(false);
+        }
+    }
+}

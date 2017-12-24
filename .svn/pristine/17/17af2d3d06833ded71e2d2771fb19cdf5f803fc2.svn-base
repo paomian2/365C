@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.commsdk.common.widget.CircleImageView
+            android:id="@+id/img_myIntegral_shopImg"
+            android:layout_width="72px"
+            android:layout_height="72px"
+            android:layout_marginLeft="24px"
+            android:layout_marginRight="24px" />
+
+        <TextView
+            android:id="@+id/tv_myIntegral_shopname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="平台积分"
+            android:textColor="@color/corlor_666"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_myIntegral_shop_integral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30px"
+            android:drawablePadding="15px"
+            android:drawableRight="@mipmap/right_arrow"
+            android:text="1000"
+            android:textColor="@color/corlor_666"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_back"
+        android:layout_marginLeft="24px"/>
+</LinearLayout>

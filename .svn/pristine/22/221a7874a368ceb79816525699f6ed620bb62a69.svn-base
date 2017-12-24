@@ -1,0 +1,290 @@
+[
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_to_right.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\anim\\slide_out_to_right.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\anim_tv_marquee_out.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\anim_tv_marquee_out.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\head_out.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\anim\\head_out.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\slide_right_in.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\slide_right_in.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\push_bottom_in.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\push_bottom_in.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\slide_in_from_left.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\anim\\slide_in_from_left.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\push_right_out.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\push_right_out.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\shouquan_dialog_enter.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\shouquan_dialog_enter.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\launch_ad.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\launch_ad.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\scale_dialog_out_anim.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\scale_dialog_out_anim.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\anim_bottom_top.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\anim_bottom_top.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\head_in.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\anim\\head_in.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\listitem_img_in.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\listitem_img_in.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\share_act_out.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\share_act_out.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\dock_bottom_enter.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\dock_bottom_enter.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\fade_in.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\anim\\fade_in.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\slide_top_out.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\slide_top_out.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\photo_dialog_in_anim.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\photo_dialog_in_anim.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\push_top_in2.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\anim\\push_top_in2.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\anim_doudong.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\anim_doudong.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\pop_fade_in.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\pop_fade_in.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\anim_doudong2.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\anim_doudong2.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\photo_dialog_out_anim.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\photo_dialog_out_anim.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\dock_bottom_exit.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\dock_bottom_exit.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\cycle.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\cycle.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\popupwin_nearperson_exit.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\popupwin_nearperson_exit.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\menuhide.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\menuhide.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\anim_view_dismiss.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\anim_view_dismiss.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\push_bottom_out.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\push_bottom_out.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\push_right_in.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\push_right_in.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\anim_tv_marquee_in.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\anim_tv_marquee_in.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\push_top_out2.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\anim\\push_top_out2.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\pop_fade_out.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\pop_fade_out.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_to_left.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\anim\\slide_out_to_left.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\slide_right_out.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\slide_right_out.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\anim_jump.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\anim_jump.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\slide_in_from_right.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\anim\\slide_in_from_right.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\animator_set.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\animator_set.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\anim_top_to_bottom.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\anim_top_to_bottom.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\slide_in_from_bottom.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\slide_in_from_bottom.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\push_left_in.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\push_left_in.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\shake_7.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\shake_7.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\fade_out.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\anim\\fade_out.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\zoom_in.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\zoom_in.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\hold.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\anim\\hold.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\share_act_in.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\share_act_in.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\voice_from_icon.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\anim\\voice_from_icon.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\popupwin_nearperson_show.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\popupwin_nearperson_show.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_to_bottom.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\slide_out_to_bottom.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\slide_left_in.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\slide_left_in.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\push_top_in.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\anim\\push_top_in.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\slide_left_out.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\slide_left_out.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\push_left_out.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\push_left_out.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\voice_to_icon.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\anim\\voice_to_icon.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\scale_dialog_in_anim.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\scale_dialog_in_anim.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\shouquan_dialog_exit.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\shouquan_dialog_exit.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\push_top_out.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\bundles\\default\\res\\anim\\push_top_out.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\shake.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\shake.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\anim_view_show.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\anim_view_show.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\menushow.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\menushow.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\zoom_out.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\zoom_out.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\commsdk\\build\\intermediates\\res\\merged\\debug\\anim\\slide_bottom_in.xml",
+        "source": "F:\\Project\\365VintageWine\\commsdk\\src\\main\\res\\anim\\slide_bottom_in.xml"
+    }
+]

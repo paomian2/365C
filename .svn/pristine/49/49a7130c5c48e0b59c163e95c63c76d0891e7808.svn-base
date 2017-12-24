@@ -1,0 +1,52 @@
+package com.a365vintagewine.adapter;
+
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.a365vintagewine.R;
+import com.a365vintagewine.mvp.bean.Brand;
+import com.commsdk.base.BaseAdapter2;
+import com.commsdk.common.UIHelper;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
+/**
+ * Created by Administrator on 2017/8/24 0024.
+ */
+
+public class ClassificationBrandAdapter extends BaseAdapter2<Brand> {
+    public ClassificationBrandAdapter(Context context) {
+        super(context);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder viewHolder = null;
+        if (convertView == null) {
+            convertView = inflater.inflate(R.layout.item_classification_brand, null);
+            viewHolder = new ViewHolder(convertView);
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (ViewHolder) convertView.getTag();
+        }
+        Brand brand = getItem(position);
+        viewHolder.tvClassificationBrandname.setText(brand.getBrandName());
+        UIHelper.imageNet(context,brand.getBrandImgUrl(),viewHolder.imgClassificationBrandurl,false);
+        return convertView;
+    }
+
+    static class ViewHolder {
+        @Bind(R.id.img_classification_brandurl)
+        ImageView imgClassificationBrandurl;
+        @Bind(R.id.tv_classification_brandname)
+        TextView tvClassificationBrandname;
+
+        ViewHolder(View view) {
+            ButterKnife.bind(this, view);
+        }
+    }
+}

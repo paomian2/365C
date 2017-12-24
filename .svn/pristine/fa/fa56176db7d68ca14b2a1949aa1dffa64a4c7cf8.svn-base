@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/layout_text_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:paddingBottom="10px">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40px"
+            android:text="原支付密码："
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/et_update_paymentpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:inputType="textPassword"
+            android:hint="请输入6位支付密码"
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_back"
+        android:layout_marginLeft="20px"/>
+
+    <TextView
+        android:id="@+id/tv_update_forget_payment_pwd"
+        style="@style/forget_text"
+        android:layout_marginTop="20px"
+        android:layout_marginRight="40px"
+        android:text="忘记支付密码？"
+        />
+    <Button
+        android:id="@+id/btn_update_paymentpwd_next"
+        style="@style/btn_login_register"
+        android:layout_marginTop="100px"
+        android:text="下一步"
+        />
+</LinearLayout>

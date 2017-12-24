@@ -1,0 +1,60 @@
+package com.a365vintagewine.mvp.presenter.search;
+
+import com.a365vintagewine.mvp.bean.ShopGoods;
+import com.a365vintagewine.mvp.model.search.SearchSGModel;
+import com.a365vintagewine.mvp.view.search.SearchSGView;
+import com.commsdk.base.presenter.BasePresenter;
+import com.commsdk.base.retrofit.ModelCallBack;
+
+import java.util.List;
+
+/**
+ * Created by Administrator on 2017/9/1 0001.
+ */
+
+public class SearchSGPresenter extends BasePresenter<SearchSGView,SearchSGModel> {
+    public SearchSGPresenter(SearchSGView mView) {
+        super(mView);
+    }
+
+    @Override
+    public SearchSGModel createModel() {
+        return new SearchSGModel();
+    }
+
+    /**
+     * 获取商家商品信息
+     */
+    public void getShopGoods(){
+        mModel.getShopGoods(new ModelCallBack<List<ShopGoods>>() {
+
+            @Override
+            public void onSuccess(List<ShopGoods> model) {
+                mView.setShopGoodsAdapter(model);
+            }
+
+            @Override
+            public void onFailure(String msg) {
+
+            }
+        });
+    }
+
+    /**
+     * 获取筛选品牌数据
+     */
+    public void getBrand(){
+        mModel.getBrand(new ModelCallBack<List<String>>() {
+            @Override
+            public void onSuccess(List<String> model) {
+                mView.setBrandAdapter(model);
+            }
+
+            @Override
+            public void onFailure(String msg) {
+
+            }
+        });
+    }
+
+}

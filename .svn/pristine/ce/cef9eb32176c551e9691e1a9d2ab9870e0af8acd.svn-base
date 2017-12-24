@@ -1,0 +1,20 @@
+package com.a365vintagewine.mvp.presenter.order;
+
+import com.a365vintagewine.mvp.model.order.OrderDetailModel;
+import com.a365vintagewine.mvp.view.order.OrderDetailView;
+import com.commsdk.base.presenter.BasePresenter;
+
+/**
+ * Created by Administrator on 2017/9/6 0006.
+ */
+
+public class OrderDetailPresenter extends BasePresenter<OrderDetailView,OrderDetailModel> {
+    public OrderDetailPresenter(OrderDetailView mView) {
+        super(mView);
+    }
+
+    @Override
+    public OrderDetailModel createModel() {
+        return new OrderDetailModel();
+    }
+}

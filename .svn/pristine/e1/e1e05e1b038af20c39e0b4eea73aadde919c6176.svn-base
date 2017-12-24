@@ -1,0 +1,102 @@
+// Generated code from Butter Knife. Do not modify!
+package com.a365vintagewine.mvp.activity;
+
+import android.view.View;
+import butterknife.ButterKnife.Finder;
+import butterknife.ButterKnife.ViewBinder;
+
+public class ForgetPasswordActivity$$ViewBinder<T extends com.a365vintagewine.mvp.activity.ForgetPasswordActivity> implements ViewBinder<T> {
+  @Override public void bind(final Finder finder, final T target, Object source) {
+    View view;
+    view = finder.findRequiredView(source, 2131755169, "field 'imgForgetpasswordback' and method 'back'");
+    target.imgForgetpasswordback = finder.castView(view, 2131755169, "field 'imgForgetpasswordback'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.back();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755170, "field 'tvForgetpasswordTitle'");
+    target.tvForgetpasswordTitle = finder.castView(view, 2131755170, "field 'tvForgetpasswordTitle'");
+    view = finder.findRequiredView(source, 2131755172, "field 'etForgetpasswordPhone'");
+    target.etForgetpasswordPhone = finder.castView(view, 2131755172, "field 'etForgetpasswordPhone'");
+    view = finder.findRequiredView(source, 2131755173, "field 'tvForgetpasswordGetVerificationCode' and method 'getVerificationCode'");
+    target.tvForgetpasswordGetVerificationCode = finder.castView(view, 2131755173, "field 'tvForgetpasswordGetVerificationCode'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.getVerificationCode();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755174, "field 'etForgetpasswordVerificationCode'");
+    target.etForgetpasswordVerificationCode = finder.castView(view, 2131755174, "field 'etForgetpasswordVerificationCode'");
+    view = finder.findRequiredView(source, 2131755175, "field 'btnForgetpasswordNext' and method 'next'");
+    target.btnForgetpasswordNext = finder.castView(view, 2131755175, "field 'btnForgetpasswordNext'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.next();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755171, "field 'llForgetpasswordOne'");
+    target.llForgetpasswordOne = finder.castView(view, 2131755171, "field 'llForgetpasswordOne'");
+    view = finder.findRequiredView(source, 2131755177, "field 'etForgetpasswordPassword'");
+    target.etForgetpasswordPassword = finder.castView(view, 2131755177, "field 'etForgetpasswordPassword'");
+    view = finder.findRequiredView(source, 2131755178, "field 'imgForgetpasswordEye' and method 'passwordExpress'");
+    target.imgForgetpasswordEye = finder.castView(view, 2131755178, "field 'imgForgetpasswordEye'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.passwordExpress();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755179, "field 'etForgetpasswordConfirmPassword'");
+    target.etForgetpasswordConfirmPassword = finder.castView(view, 2131755179, "field 'etForgetpasswordConfirmPassword'");
+    view = finder.findRequiredView(source, 2131755180, "field 'imgForgetpasswordConfirmEye' and method 'confrimPasswordExpress'");
+    target.imgForgetpasswordConfirmEye = finder.castView(view, 2131755180, "field 'imgForgetpasswordConfirmEye'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.confrimPasswordExpress();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755181, "field 'btnForgetpasswordComplete' and method 'complete'");
+    target.btnForgetpasswordComplete = finder.castView(view, 2131755181, "field 'btnForgetpasswordComplete'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.complete();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755176, "field 'llForgetpasswordTwo'");
+    target.llForgetpasswordTwo = finder.castView(view, 2131755176, "field 'llForgetpasswordTwo'");
+  }
+
+  @Override public void unbind(T target) {
+    target.imgForgetpasswordback = null;
+    target.tvForgetpasswordTitle = null;
+    target.etForgetpasswordPhone = null;
+    target.tvForgetpasswordGetVerificationCode = null;
+    target.etForgetpasswordVerificationCode = null;
+    target.btnForgetpasswordNext = null;
+    target.llForgetpasswordOne = null;
+    target.etForgetpasswordPassword = null;
+    target.imgForgetpasswordEye = null;
+    target.etForgetpasswordConfirmPassword = null;
+    target.imgForgetpasswordConfirmEye = null;
+    target.btnForgetpasswordComplete = null;
+    target.llForgetpasswordTwo = null;
+  }
+}

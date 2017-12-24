@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="88px"
+    android:orientation="horizontal"
+    android:background="@color/titlebackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35px"
+        android:layout_marginRight="35px"
+        android:background="@drawable/rec_gray_search"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="240px"
+            android:layout_marginRight="20px"
+            android:src="@drawable/icon_search"/>
+        <TextView
+            android:id="@+id/tv_title_search"
+            android:layout_width="365px"
+            android:layout_height="65px"
+            android:gravity="center_vertical"
+            android:hint="搜索商家商品"
+            android:textSize="30px"/>
+    </LinearLayout>
+</LinearLayout>

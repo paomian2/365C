@@ -1,0 +1,130 @@
+package com.a365vintagewine.mvp.activity.personal;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.view.View;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.a365vintagewine.R;
+import com.a365vintagewine.adapter.IntegralDetailAdapter;
+import com.a365vintagewine.mvp.activity.setting.IntegralMallActivity;
+import com.a365vintagewine.mvp.bean.IntegralDetail;
+import com.a365vintagewine.mvp.presenter.IntegralDetailPresenter;
+import com.a365vintagewine.mvp.view.IntegralDetailView;
+import com.commsdk.base.AppActivityManager;
+import com.commsdk.base.BaseActivity;
+import com.commsdk.base.view.BaseMVPActivity;
+import com.commsdk.common.UIHelper;
+import com.commsdk.common.widget.CircleImageView;
+
+import java.util.List;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+public class IntegralDetailActivity extends BaseMVPActivity<IntegralDetailPresenter> implements IntegralDetailView {
+
+    @Bind(R.id.img_text_title_back)
+    RelativeLayout imgTextTitleBack;
+    @Bind(R.id.tv_text_title)
+    TextView tvTextTitle;
+    @Bind(R.id.ll_text_title)
+    RelativeLayout llTextTitle;
+    @Bind(R.id.lv_integral_detail)
+    ListView lvIntegralDetail;
+    @Bind(R.id.sf_integral_detail)
+    SwipeRefreshLayout sfIntegralDetail;
+
+    private IntegralDetailAdapter adapter;
+    private String shopName;
+    private String logo;
+    private int integral;
+    @Override
+    protected IntegralDetailPresenter createPresenter() {
+        return new IntegralDetailPresenter(this);
+    }
+
+    @Override
+    protected void setActivityView(Bundle bundle) {
+        setContentView(R.layout.act_integral_detail);
+        ButterKnife.bind(this);
+        Intent intent = getIntent();
+        shopName = intent.getStringExtra("shopname");
+        logo = intent.getStringExtra("logo");
+        integral = intent.getIntExtra("integral",0);
+    }
+
+    @Override
+    protected void initUI() {
+        tvTextTitle.setText("积分明细");
+        adapter = new IntegralDetailAdapter(activity);
+        View headerView = View.inflate(this, R.layout.header_integral_deail, null);
+        hederViewHolder = new ViewHolder(headerView);
+        hederViewHolder.tvIntegralDetailName.setText(shopName);
+        hederViewHolder.tvIntegralDetailSum.setText(integral+"");
+        UIHelper.imageNet(activity,logo,hederViewHolder.imgIntegralDetailLogo,true);
+        hederViewHolder.tvIntegralDetailExchange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppActivityManager.getInstance().goTo(activity, IntegralMallActivity.class);
+            }
+        });
+        lvIntegralDetail.addHeaderView(headerView);
+        lvIntegralDetail.setAdapter(adapter);
+    }
+
+    @Override
+    protected void initData() {
+        mvpPresenter.getIntegralDetail();
+    }
+
+    @Override
+    public BaseActivity getMyContext() {
+        return activity;
+    }
+
+    @Override
+    public void showProgress(String msg) {
+
+    }
+
+    @Override
+    public void hideProgress() {
+
+    }
+
+    /**
+     * 返回上一级页面
+     */
+    @OnClick(R.id.img_text_title_back)
+    public void back() {
+        finish();
+    }
+
+    @Override
+    public void setIntegralDetailAdapter(List<IntegralDetail> list) {
+        adapter.setMlist(list);
+        adapter.notifyDataSetChanged();
+    }
+
+    private ViewHolder hederViewHolder;
+
+    static class ViewHolder {
+        @Bind(R.id.img_integral_detail_logo)
+        CircleImageView imgIntegralDetailLogo;
+        @Bind(R.id.tv_integral_detail_name)
+        TextView tvIntegralDetailName;
+        @Bind(R.id.tv_integral_detail_sum)
+        TextView tvIntegralDetailSum;
+        @Bind(R.id.tv_integral_detail_exchange)
+        TextView tvIntegralDetailExchange;
+
+        ViewHolder(View view) {
+            ButterKnife.bind(this, view);
+        }
+    }
+}

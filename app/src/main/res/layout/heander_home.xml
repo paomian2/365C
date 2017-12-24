@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:focusableInTouchMode="true"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="450px">
+
+        <com.commsdk.common.widget.banner.BanerView
+            android:id="@+id/banner_home"
+            android:background="@drawable/banner_seckill"
+            android:layout_width="match_parent"
+            android:layout_height="540px"/>
+        <ImageView
+            android:layout_gravity="bottom"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_gudu"/>
+    </FrameLayout>
+
+    <com.commsdk.common.widget.MyGridView
+        android:layout_marginTop="28px"
+        android:id="@+id/gvIcon"
+        android:numColumns="4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_marginLeft="20px"
+        android:id="@+id/img_home_acivity"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="40px"
+        android:background="@drawable/banner_seckill"
+        android:layout_width="match_parent"
+        android:layout_height="210px" />
+
+    <ImageView
+        android:src="@drawable/img_wine_recommand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:background="#ffe1f5"
+        android:layout_width="match_parent"
+        android:layout_height="5px"/>
+
+     <com.commsdk.common.widget.MyGridView
+         android:paddingLeft="5px"
+         android:paddingRight="5px"
+         android:numColumns="3"
+         android:visibility="visible"
+         android:background="#ffe1f5"
+         android:horizontalSpacing="5px"
+         android:verticalSpacing="5px"
+         android:id="@+id/gridview_WineRecommand"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"/>
+    <View
+        android:background="#ffe1f5"
+        android:layout_width="match_parent"
+        android:layout_height="5px"/>
+
+
+    <ImageView
+        android:src="@drawable/img_near_shop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_search_comprehensive"
+            android:layout_width="match_parent"
+            android:layout_weight="1.0"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="28px"
+            android:textColor="@color/black"
+            android:text="综合排序"/>
+        <TextView
+            android:id="@+id/tv_search_salesvolume"
+            android:layout_width="match_parent"
+            android:layout_weight="1.0"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="28px"
+            android:textColor="@color/corlor_666"
+            android:text="销量最高"/>
+        <TextView
+            android:id="@+id/tv_search_evaluate"
+            android:layout_width="match_parent"
+            android:layout_weight="1.0"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="28px"
+            android:textColor="@color/corlor_666"
+            android:text="评价最好"/>
+        <LinearLayout
+            android:id="@+id/ll_search_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_search_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@mipmap/screen"
+                android:drawablePadding="10px"
+                android:gravity="center"
+                android:textSize="28px"
+                android:textColor="@color/corlor_666"
+                android:text="筛选"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,231 @@
+package com.a365vintagewine.mvp.search;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.a365vintagewine.R;
+import com.a365vintagewine.mvp.presenter.search.SearchPresenter;
+import com.a365vintagewine.mvp.view.search.SearchView;
+import com.a365vintagewine.utils.ShareStringUtils;
+import com.a365vintagewine.widget.HotSearchLayout;
+import com.commsdk.base.AppActivityManager;
+import com.commsdk.base.BaseActivity;
+import com.commsdk.base.view.BaseMVPActivity;
+import com.commsdk.common.SharedPreferenceUtil;
+import com.commsdk.common.ToastUtils;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+public class SearchActivity extends BaseMVPActivity<SearchPresenter> implements SearchView {
+
+    @Bind(R.id.img_text_title_back)
+    RelativeLayout imgTextTitleBack;
+    @Bind(R.id.et_title_search)
+    EditText etTitleSearch;
+    @Bind(R.id.tv_title_search)
+    RelativeLayout tvTitleSearch;
+    @Bind(R.id.hot_search_layout)
+    HotSearchLayout hotSearchLayout;
+    @Bind(R.id.rl_delete_history)
+    RelativeLayout rlDeleteHistory;
+    @Bind(R.id.ll_history)
+    LinearLayout llHistory;
+    @Bind(R.id.lv_search_history)
+    ListView lvSearchHistory;
+    private LayoutInflater mInflater;
+
+    /************
+     * 以上为流式标签相关
+     ************/
+    private List<String> mHistoryKeywords;//记录文本
+    private ArrayAdapter<String> mArrAdapter;//搜索历史适配器
+
+    @Override
+    protected SearchPresenter createPresenter() {
+        return new SearchPresenter(this);
+    }
+
+    @Override
+    protected void setActivityView(Bundle bundle) {
+        setContentView(R.layout.act_search);
+        ButterKnife.bind(this);
+    }
+
+    @Override
+    protected void initUI() {
+        mInflater = LayoutInflater.from(this);
+    }
+
+    /**
+     * 将数据放入流式布局
+     */
+    @Override
+    protected void initData() {
+        mHistoryKeywords = new ArrayList<String>();
+        mvpPresenter.getHotSearch();
+        mvpPresenter.getHistorySearch();
+        initHistoryView();
+    }
+
+    private void initHistoryView() {
+        etTitleSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String str = etTitleSearch.getText().toString().trim();
+                if (str.length() > 0){
+                    if (mHistoryKeywords.size() > 0) {
+                        llHistory.setVisibility(View.VISIBLE);
+                    } else {
+                        llHistory.setVisibility(View.GONE);
+                    }
+                }else{
+                    llHistory.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+
+        });
+    }
+
+    /**
+     * 储存搜索历史
+     */
+    public void save(String search) {
+        mvpPresenter.saveHistorySearch(search);
+    }
+
+    /**
+     * 清除历史纪录
+     */
+    public void cleanHistory() {
+        SharedPreferenceUtil.getInstance(activity).remove(ShareStringUtils.HISTORYSEARCH);
+        mHistoryKeywords.clear();
+        mArrAdapter.notifyDataSetChanged();
+        llHistory.setVisibility(View.GONE);
+        ToastUtils.showToast(this, "清楚搜索历史成功");
+    }
+
+    @Override
+    public void setHotsearchData(String[] hotsearch) {
+        for (int i = 0; i < hotsearch.length; i++) {
+            TextView tv = (TextView) mInflater.inflate(
+                    R.layout.search_label_tv, hotSearchLayout, false);
+            tv.setText(hotsearch[i]);
+            final String str = tv.getText().toString().trim();
+            //点击事件
+            tv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //加入搜索历史纪录记录
+                    save(str);
+                    ToastUtils.showToast(SearchActivity.this, str);
+                    gotoAct(str);
+                }
+            });
+            hotSearchLayout.addView(tv);
+        }
+    }
+
+    @Override
+    public void setHistorySearchData(String historySearch) {
+        if (TextUtils.isEmpty(historySearch)) {
+            llHistory.setVisibility(View.GONE);
+            return;
+        }
+        List<String> list = new ArrayList<String>();
+        for (Object o : historySearch.split(",")) {
+            list.add((String) o);
+        }
+        mHistoryKeywords = list;
+        mArrAdapter = new ArrayAdapter<String>(this, R.layout.item_search_history, mHistoryKeywords);
+        lvSearchHistory.setAdapter(mArrAdapter);
+        lvSearchHistory.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                gotoAct(mHistoryKeywords.get(i));
+            }
+        });
+        mArrAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void saveSearch(boolean isSaveSearch) {
+        if (isSaveSearch){
+            ToastUtils.showToast(activity,"保存成功");
+        }else{
+            ToastUtils.showToast(activity,"保存失败");
+        }
+    }
+
+    @Override
+    public BaseActivity getMyContext() {
+        return activity;
+    }
+
+    @Override
+    public void showProgress(String msg) {
+
+    }
+
+    @Override
+    public void hideProgress() {
+
+    }
+
+    @OnClick(R.id.img_text_title_back)
+    public void back(){
+        finish();
+    }
+
+    @OnClick(R.id.rl_delete_history)
+    public void setRlDeleteHistory(){
+        cleanHistory();
+    }
+
+    @OnClick(R.id.tv_title_search)
+    public void search(){
+        String keywords = etTitleSearch.getText().toString();
+        if (!TextUtils.isEmpty(keywords)) {
+            ToastUtils.showToast(this, keywords + "save成功");
+            save(keywords);
+            gotoAct(keywords);
+        } else {
+            ToastUtils.showToast(this, "请输入搜索内容");
+        }
+    }
+
+    /**
+     * 跳转到搜索店铺商品页面
+     */
+    public void gotoAct(String search){
+        Intent intent = new Intent(activity,SearchShopGoodsActivity.class);
+        intent.putExtra("search",search);
+        AppActivityManager.getInstance().goTo(activity,intent);
+    }
+}

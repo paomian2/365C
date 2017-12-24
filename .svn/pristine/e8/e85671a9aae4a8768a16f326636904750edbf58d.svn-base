@@ -1,0 +1,13 @@
+package com.a365vintagewine.mvp.view;
+
+import com.a365vintagewine.mvp.bean.TwoLevelList;
+import com.commsdk.base.view.BaseView;
+
+/**
+ * Created by Administrator on 2017/8/24 0024.
+ */
+
+public interface ClassificationView extends BaseView {
+    void onSuccess(TwoLevelList twoLevelList);
+    void onFail(String msg);
+}

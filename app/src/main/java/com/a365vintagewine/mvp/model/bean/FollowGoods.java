@@ -1,0 +1,44 @@
+package com.a365vintagewine.mvp.model.bean;
+
+/**
+ * Created by Administrator on 2017/8/31 0031.
+ */
+
+public class FollowGoods {
+    private String imgUrl;
+    private String goodsname;
+    private double price;
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+    public String getGoodsname() {
+        return goodsname;
+    }
+
+    public FollowGoods(String imgUrl, String goodsname, double price) {
+        this.imgUrl = imgUrl;
+        this.goodsname = goodsname;
+        this.price = price;
+    }
+
+    public void setGoodsname(String goodsname) {
+        this.goodsname = goodsname;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public FollowGoods() {
+    }
+}

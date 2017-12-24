@@ -1,0 +1,98 @@
+package com.commsdk.module.response.base;
+import com.commsdk.common.StringUtils;
+
+import java.io.Serializable;
+
+/**
+ * @Description 解释基础
+ * @author Created by qinxianyuzou on 2014-8-21.
+ */
+public class BaseResponse implements Serializable {
+
+	/** 序列号 */
+	private static final long serialVersionUID = 6945319206585873015L;
+
+	/** 状态编码 */
+	protected String code= StringUtils.EMPTY;
+	/** 介绍 */
+	protected String desc= StringUtils.EMPTY;
+	/**网络请求状态*/
+	protected String status=StringUtils.EMPTY;
+	/**操作成功或是不状态码*/
+	protected String ok;
+
+	/**
+	 * @Description
+	 * @author Created by wj on 2014-8-21.
+	 * @see #code
+	 * @return the code
+	 */
+	public String getCode() {
+		return code;
+	}
+
+	/**
+	 * @Description
+	 * @author Created by qinxianyuzou on 2014-8-21.
+	 * @see #code
+	 * @param code
+	 *            the code to set
+	 */
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	/**
+	 * @Description
+	 * @author Created by qinxianyuzou on 2014-8-21.
+	 * @see #desc
+	 * @return the desc
+	 */
+	public String getdesc() {
+		return desc;
+	}
+
+	/**
+	 * @Description
+	 * @author Created by qinxianyuzou on 2014-8-21.
+	 * @see #desc
+	 * @param desc
+	 *            the desc to set
+	 */
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
+	}
+
+	public String getOk() {
+		return ok;
+	}
+
+	public void setOk(String ok) {
+		this.ok = ok;
+	}
+
+	@Override
+	public String toString() {
+		return "Basedesc [code=" + code + ", desc=" + desc + "]";
+	}
+
+	public BaseResponse(){}
+
+	public BaseResponse(String code, String desc, String status) {
+		this.code = code;
+		this.desc = desc;
+		this.status = status;
+	}
+}

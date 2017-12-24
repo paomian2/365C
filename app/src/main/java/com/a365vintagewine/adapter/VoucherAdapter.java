@@ -1,0 +1,220 @@
+package com.a365vintagewine.adapter;
+
+import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.text.Html;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.a365vintagewine.R;
+import com.a365vintagewine.mvp.model.bean.VoucherBean;
+import com.a365vintagewine.utils.VerticalImageSpan;
+import com.commsdk.base.BaseAdapter2;
+import com.commsdk.common.StringUtils;
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 功能描述:返券列表
+ * 作者：Linxz
+ * E-mail：lin_xiao_zhang@13.com
+ * 版本信息：V1.0.0
+ * 时间：2017年04月08日  10:59.
+ **/
+public class VoucherAdapter extends BaseAdapter2<VoucherBean> {
+
+
+    public VoucherAdapter(Context context, String actionCode) {
+        super(context, actionCode);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder viewHolder = null;
+        if (convertView == null) {
+            convertView = inflater.inflate(R.layout.item_voucher, null);
+            viewHolder = new ViewHolder(convertView);
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (ViewHolder) convertView.getTag();
+        }
+        final VoucherBean voucherBean = getItem(position);
+        viewHolder.tvVoucherTittle.setText(voucherBean.getCouponName());
+        viewHolder.tvVoucherTime.setText(voucherBean.getBeginDate() + "-" + voucherBean.getEndDate());
+        viewHolder.tvVoucherPrice.setText(voucherBean.getCouponValue());
+        //隐藏不共用的控件
+        viewHolder.imgVoucherNew.setVisibility(View.GONE);
+        viewHolder.imgVoucherUsed.setVisibility(View.GONE);
+        viewHolder.tvUseAtOnce.setVisibility(View.INVISIBLE);
+        viewHolder.tvVoucherDetail.setVisibility(View.GONE);
+        viewHolder.tvVoucherDetailNotice.setText("0门槛");
+        Drawable drawableRightOpen = context.getResources().getDrawable(R.drawable.icon_voucher_open);//展开详情右侧图标
+        switch (actionCode) {
+            case "0":
+                //未使用
+                viewHolder.imgBgVoucher.setBackgroundResource(R.drawable.icon_voucher);
+                viewHolder.tvUseAtOnce.setVisibility(View.VISIBLE);
+                setTextViewDrawble(viewHolder.tvVoucherTittle, R.drawable.icon_voucher_return, "图标 "+voucherBean.getCouponName());
+                //判断当前券是否超过24小时 新券
+                /*if (!TimeUtil.timeOverOneDay(Long.parseLong(voucherBean.getCreateTime()), Long.parseLong(nowTime))) {
+                    viewHolder.imgVoucherNew.setVisibility(View.VISIBLE);
+                }else{
+                    viewHolder.imgVoucherNew.setVisibility(View.INVISIBLE);
+                }*/
+                //返券说明
+                if (!StringUtils.isEmpty(voucherBean.getCouponDesc())) {
+                    viewHolder.tvVoucherDetailNotice.setText("详细信息");
+                    drawableRightOpen.setBounds(0, 0, drawableRightOpen.getMinimumWidth(), drawableRightOpen.getMinimumHeight());
+                    viewHolder.tvVoucherDetailNotice.setCompoundDrawables(null, null, drawableRightOpen, null);
+                    viewHolder.tvVoucherDetail.setText(voucherBean.getCouponDesc());
+                }
+                break;
+            case  "1":
+                //使用记录
+                viewHolder.imgBgVoucher.setBackgroundResource(R.drawable.icon_voucher_gray);
+                viewHolder.imgVoucherUsed.setVisibility(View.VISIBLE);
+                setTextViewDrawble(viewHolder.tvVoucherTittle, R.drawable.icon_voucher_return_gray, "图标 "+voucherBean.getCouponName());
+                //返券说明
+                if (!StringUtils.isEmpty(voucherBean.getCouponDesc())) {
+                    viewHolder.tvVoucherDetailNotice.setText("详细信息");
+                    drawableRightOpen.setBounds(0, 0, drawableRightOpen.getMinimumWidth(), drawableRightOpen.getMinimumHeight());
+                    viewHolder.tvVoucherDetailNotice.setCompoundDrawables(null, null, drawableRightOpen, null);
+                    viewHolder.tvVoucherDetail.setText(voucherBean.getCouponDesc());
+                }
+                break;
+            case "2":
+                //已过期
+                //使用记录
+                viewHolder.imgBgVoucher.setBackgroundResource(R.drawable.icon_voucher_gray);
+                setTextViewDrawble(viewHolder.tvVoucherTittle, R.drawable.icon_voucher_return_gray, "图标 "+voucherBean.getCouponName());
+                //返券说明
+                if (!StringUtils.isEmpty(voucherBean.getCouponDesc())) {
+                    viewHolder.tvVoucherDetailNotice.setText("详细信息");
+                    drawableRightOpen.setBounds(0, 0, drawableRightOpen.getMinimumWidth(), drawableRightOpen.getMinimumHeight());
+                    viewHolder.tvVoucherDetailNotice.setCompoundDrawables(null, null, drawableRightOpen, null);
+                    viewHolder.tvVoucherDetail.setText(voucherBean.getCouponDesc());
+                }
+                break;
+            default:
+                break;
+        }
+        viewHolder.tvUseAtOnce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (voucherUseOnclickListener != null)
+                    voucherUseOnclickListener.onUseClick(voucherBean);
+            }
+        });
+        return convertView;
+    }
+
+    static class ViewHolder {
+        /**
+         * 返券左边背景
+         */
+        @Bind(R.id.imgBgVoucher)
+        ImageView imgBgVoucher;
+        /**
+         * 返券价格
+         */
+        @Bind(R.id.tvVoucherPrice)
+        TextView tvVoucherPrice;
+        /**
+         * 返券左边
+         */
+        @Bind(R.id.layoutBG)
+        RelativeLayout layoutBG;
+        /**
+         * 返券标题
+         */
+        @Bind(R.id.tvVoucherTittle)
+        TextView tvVoucherTittle;
+        /**
+         * 券适用时间
+         */
+        @Bind(R.id.tvVoucherTime)
+        TextView tvVoucherTime;
+        /**
+         * 立即使用
+         */
+        @Bind(R.id.tvUseAtOnce)
+        TextView tvUseAtOnce;
+        /**
+         * 券详情标签
+         */
+        @Bind(R.id.tvVoucherDetailNotice)
+        TextView tvVoucherDetailNotice;
+        /**
+         * 券详情
+         */
+        @Bind(R.id.tvVoucherDetail)
+        TextView tvVoucherDetail;
+        /**
+         * 新券
+         */
+        @Bind(R.id.imgVoucherNew)
+        ImageView imgVoucherNew;
+        @Bind(R.id.imgVoucherUsed)
+        ImageView imgVoucherUsed;
+
+        /**
+         * 查看该券适用详情
+         */
+        @OnClick(R.id.tvVoucherDetailNotice)
+        public void openDetail() {
+            if ("详细信息".equals(tvVoucherDetailNotice.getText()) && tvVoucherDetail.getVisibility() == View.GONE) {
+                tvVoucherDetail.setVisibility(View.VISIBLE);
+            } else if (tvVoucherDetail.getVisibility() == View.VISIBLE) {
+                tvVoucherDetail.setVisibility(View.GONE);
+            }
+        }
+
+        ViewHolder(View view) {
+            ButterKnife.bind(this, view);
+        }
+    }
+
+    private class VoucherImageGetter implements Html.ImageGetter {
+        public VoucherImageGetter() {
+        }
+
+        @Override
+        public Drawable getDrawable(String source) {
+            Drawable drawable = context.getResources().getDrawable(Integer.parseInt(source));
+            drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
+            return drawable;
+        }
+    }
+
+    private void setTextViewDrawble(TextView tv, final int drawble, String textContent) {
+        SpannableStringBuilder spannableString = new SpannableStringBuilder();
+        spannableString.append(textContent);
+        VerticalImageSpan imageSpan = new VerticalImageSpan(context, drawble);
+        //也可以这样
+        //Drawable drawable = getResources().getDrawable(R.mipmap.ic_launcher);
+        //drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
+        //ImageSpan imageSpan1 = new ImageSpan(drawable);
+        //将index为6、7的字符用图片替代
+        spannableString.setSpan(imageSpan, 0, 2, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        tv.setText(spannableString);
+    }
+
+    /**
+     * 立即使用控件点击监听
+     */
+    public interface VoucherUseOnclickListener {
+        public void onUseClick(VoucherBean voucherBean);
+    }
+
+    private VoucherUseOnclickListener voucherUseOnclickListener;
+
+    public void setVoucherUseOnclickListener(VoucherUseOnclickListener voucherUseOnclickListener) {
+        this.voucherUseOnclickListener = voucherUseOnclickListener;
+    }
+}

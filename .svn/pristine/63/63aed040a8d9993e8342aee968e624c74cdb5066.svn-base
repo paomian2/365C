@@ -1,0 +1,129 @@
+package com.a365vintagewine.adapter;
+
+import android.app.Activity;
+import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RatingBar;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.a365vintagewine.R;
+import com.a365vintagewine.mvp.activity.goods.GoodsDetailActivity;
+import com.a365vintagewine.mvp.bean.Brand;
+import com.a365vintagewine.mvp.bean.FollowGoods;
+import com.a365vintagewine.mvp.bean.ShopGoods;
+import com.a365vintagewine.widget.NoScrollListView;
+import com.a365vintagewine.widget.NoScrollViewPager;
+import com.commsdk.base.AppActivityManager;
+import com.commsdk.base.BaseAdapter2;
+import com.commsdk.common.UIHelper;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
+/**
+ * Created by Administrator on 2017/9/1 0001.
+ */
+
+public class SearchSGAdapter extends BaseAdapter2<ShopGoods> {
+
+    public SearchSGAdapter(Context context) {
+        super(context);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder viewHolder = null;
+        if (null == convertView) {
+            convertView = inflater.inflate(R.layout.item_search_shop, null);
+            viewHolder = new ViewHolder(convertView,context);
+            convertView.setTag(viewHolder);
+        } else {
+            viewHolder = (ViewHolder) convertView.getTag();
+        }
+        ShopGoods shop = getItem(position);
+        UIHelper.imageNet(context, shop.getShop().getImgUrl(), viewHolder.imgSearchShop, true);
+        viewHolder.rbSearchShopStar.setRating(shop.getShop().getStar());
+        viewHolder.tvSearchShopDistance.setText(shop.getShop().getShopDistance() + "m");
+        viewHolder.tvSearchShopName.setText(shop.getShop().getShopname());
+        List<FollowGoods> goodses = shop.getGoodsList();
+        if (goodses.size() > 3){
+            List<FollowGoods> goodses3 = new ArrayList<>();
+            for (int i = 0; i < 3; i++) {
+                goodses3.add(goodses.get(i));
+            }
+            viewHolder.adapter.setMlist(goodses3);
+            viewHolder.adapter.notifyDataSetChanged();
+            viewHolder.rlSearchShopGoodsShowbrand.setVisibility(View.VISIBLE);
+        }else{
+            viewHolder.adapter.setMlist(goodses);
+            viewHolder.adapter.notifyDataSetChanged();
+            viewHolder.rlSearchShopGoodsShowbrand.setVisibility(View.GONE);
+        }
+        onCLicks(viewHolder,goodses);
+        return convertView;
+    }
+
+    private int showTag = 0;
+    private void onCLicks(final ViewHolder viewHolder, final List<FollowGoods> goodses) {
+        viewHolder.rlSearchShopGoodsShowbrand.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (showTag == 0) {
+                    showTag = 1;
+                    viewHolder.adapter.setMlist(goodses);
+                    viewHolder.adapter.notifyDataSetChanged();
+                    viewHolder.imgSearchShopGoodsShowbrand.setImageResource(R.mipmap.arrow_up);
+                } else {
+                    showTag = 0;
+                    List<FollowGoods> goodses3 = new ArrayList<>();
+                    for (int i = 0; i < 3; i++) {
+                        goodses3.add(goodses.get(i));
+                    }
+                    viewHolder.adapter.setMlist(goodses3);
+                    viewHolder.adapter.notifyDataSetChanged();
+                    viewHolder.imgSearchShopGoodsShowbrand.setImageResource(R.mipmap.arrow_dowm);
+                }
+            }
+        });
+        viewHolder.NoLvSearchShopGoods.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                AppActivityManager.getInstance().goTo((Activity) context, GoodsDetailActivity.class);
+            }
+        });
+    }
+
+    static class ViewHolder {
+        @Bind(R.id.img_search_shop)
+        ImageView imgSearchShop;
+        @Bind(R.id.rb_search_shop_star)
+        RatingBar rbSearchShopStar;
+        @Bind(R.id.tv_search_shop_distance)
+        TextView tvSearchShopDistance;
+        @Bind(R.id.tv_search_shopname)
+        TextView tvSearchShopName;
+        @Bind(R.id.no_lv_search_shop_goods)
+        NoScrollListView NoLvSearchShopGoods;
+        @Bind(R.id.img_search_shop_goods_showbrand)
+        ImageView imgSearchShopGoodsShowbrand;
+        @Bind(R.id.rl_search_shop_goods_showbrand)
+        RelativeLayout rlSearchShopGoodsShowbrand;
+
+        SearchGoodsAdapter adapter;
+        ViewHolder(View view,Context context) {
+            adapter = new SearchGoodsAdapter(context);
+            ButterKnife.bind(this, view);
+            NoLvSearchShopGoods.setAdapter(adapter);
+        }
+    }
+
+}

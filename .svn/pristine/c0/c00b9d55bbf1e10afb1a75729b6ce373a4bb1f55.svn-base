@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/layoutLoading"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dip"
+            android:indeterminateDrawable="@drawable/animdraw2"
+            android:indeterminateDuration="1500" />
+        <TextView
+            android:textColor="@color/tv_hint"
+            android:textSize="@dimen/font_common_size_small"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:text="拼命加载中..."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/ViewDistance"
+        android:layout_width="match_parent"
+        android:layout_height="20px"/>
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_below="@+id/ViewDistance"
+            android:id="@+id/refrenshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+               <ListView
+                   android:visibility="visible"
+                   android:scrollbars="none"
+                   android:divider="@color/white"
+                   android:id="@+id/lv_common"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    <!--暂无数据-->
+    <!--<include-->
+        <!--layout="@layout/include_data_empty"/>-->
+</RelativeLayout>

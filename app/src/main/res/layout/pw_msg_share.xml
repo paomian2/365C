@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="145px"
+    android:layout_height="330px"
+    android:orientation="vertical"
+    android:background="@drawable/pw_background_alpha">
+
+    <TextView
+        android:id="@+id/tv_pw_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:textSize="26px"
+        android:textColor="@color/white"
+        android:text="消息"/>
+
+    <TextView
+        android:id="@+id/tv_pw_customer_service"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:textSize="26px"
+        android:textColor="@color/white"
+        android:text="客服"/>
+
+    <TextView
+        android:id="@+id/tv_pw_share"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:textSize="26px"
+        android:textColor="@color/white"
+        android:text="分享"/>
+
+</LinearLayout>

@@ -1,0 +1,192 @@
+-- Merging decision tree log ---
+manifest
+ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:2:1-29:12
+	package
+		ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:3:5-34
+		INJECTED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml
+		INJECTED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml
+		INJECTED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml
+		INJECTED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml
+application
+ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:5:5-27:19
+MERGED from [365VintageWine:commsdk:unspecified] F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\AndroidManifest.xml:14:5-29:19
+MERGED from [com.githang:status-bar-compat:0.3] C:\Users\Administrator\.android\build-cache\61b791bc54e36a075cdb50e637f6185535cf57fe\output\AndroidManifest.xml:12:5-20
+MERGED from [365VintageWine:sdk_imagepicker:unspecified] F:\Project\365VintageWine\sdk_imagepicker\build\intermediates\bundles\default\AndroidManifest.xml:12:5-31:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Administrator\.android\build-cache\e6bb2ca3d88855cc9216ae1cf1a5448549a2801f\output\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:25.3.1] C:\Users\Administrator\.android\build-cache\5c99af1e561e4231a88f90b3bff0d5deefab7551\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Administrator\.android\build-cache\7160720b55599b54f0490b81d55aa81f539a16ea\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Administrator\.android\build-cache\d93dce2c6322075bc200d4ff9fb4e4f53e3178e8\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Administrator\.android\build-cache\0edfbfba84ef86e9727c6ab797f918f768ed68fe\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Administrator\.android\build-cache\5d7bf57b458e1f7819eaf830ab5797199d5774d2\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Administrator\.android\build-cache\9f6fbaa0400a3b582deda7a0698c798b6b80daa9\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Administrator\.android\build-cache\0a8a5d5a09f97b72f84d50e3bcea0d625c9f1d9b\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Administrator\.android\build-cache\0b7c9b9b30fab63d6dddf58d28de14af927f6bef\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Administrator\.android\build-cache\22e91a7339008ace9e20a0935b46e634502959c6\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Administrator\.android\build-cache\902abf3906eecabc254443823166eea496883e3c\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Administrator\.android\build-cache\650f12d3489654d63e6a5b23e45eae96ef006c6a\output\AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:8:9-41
+	android:supportsRtl
+		ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:10:9-35
+	android:roundIcon
+		ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:9:9-54
+	android:allowBackup
+		ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:6:9-35
+	android:icon
+		ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:7:9-43
+	android:theme
+		ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.a365vintagewine.mvp.activity.LaunchActivity
+ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:12:19-62
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:16:27-74
+activity#com.a365vintagewine.mvp.activity.RegisterActivity
+ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:19:9-67
+	android:name
+		ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:19:19-64
+activity#com.a365vintagewine.mvp.activity.LoginActivity
+ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:20:9-64
+	android:name
+		ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:20:19-61
+activity#com.a365vintagewine.mvp.activity.GuideActivity
+ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:21:9-64
+	android:name
+		ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:21:19-61
+activity#com.a365vintagewine.mvp.activity.HomeActivity
+ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:22:9-63
+	android:name
+		ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:22:19-60
+activity#com.a365vintagewine.mvp.activity.ForgetPasswordActivity
+ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:23:9-26:56
+	android:label
+		ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:25:13-67
+	android:theme
+		ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:26:13-44
+	android:name
+		ADDED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml:24:13-64
+uses-sdk
+INJECTED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\Administrator\.android\build-cache\cd6513fd583c077137a0919f7b8828fbf9aced91\output\AndroidManifest.xml:18:5-42
+MERGED from [365VintageWine:commsdk:unspecified] F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
+MERGED from [com.githang:status-bar-compat:0.3] C:\Users\Administrator\.android\build-cache\61b791bc54e36a075cdb50e637f6185535cf57fe\output\AndroidManifest.xml:8:5-10:41
+MERGED from [io.reactivex:rxandroid:1.1.0] C:\Users\Administrator\.android\build-cache\9952940365255067e8b4a173210d1b21d65d5270\output\AndroidManifest.xml:19:5-43
+MERGED from [365VintageWine:easeUI:unspecified] F:\Project\365VintageWine\easeUI\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
+MERGED from [365VintageWine:sdk_imagepicker:unspecified] F:\Project\365VintageWine\sdk_imagepicker\build\intermediates\bundles\default\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Administrator\.android\build-cache\e6bb2ca3d88855cc9216ae1cf1a5448549a2801f\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:25.3.1] C:\Users\Administrator\.android\build-cache\5c99af1e561e4231a88f90b3bff0d5deefab7551\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Administrator\.android\build-cache\7160720b55599b54f0490b81d55aa81f539a16ea\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Administrator\.android\build-cache\d93dce2c6322075bc200d4ff9fb4e4f53e3178e8\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Administrator\.android\build-cache\0edfbfba84ef86e9727c6ab797f918f768ed68fe\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Administrator\.android\build-cache\3a71cff8b1154764224e4f128e60df89d3137145\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Administrator\.android\build-cache\5d7bf57b458e1f7819eaf830ab5797199d5774d2\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Administrator\.android\build-cache\9f6fbaa0400a3b582deda7a0698c798b6b80daa9\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Administrator\.android\build-cache\0a8a5d5a09f97b72f84d50e3bcea0d625c9f1d9b\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Administrator\.android\build-cache\0b7c9b9b30fab63d6dddf58d28de14af927f6bef\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Administrator\.android\build-cache\22e91a7339008ace9e20a0935b46e634502959c6\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Administrator\.android\build-cache\902abf3906eecabc254443823166eea496883e3c\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Administrator\.android\build-cache\650f12d3489654d63e6a5b23e45eae96ef006c6a\output\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Administrator\.android\build-cache\5c99af1e561e4231a88f90b3bff0d5deefab7551\output\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml
+		INJECTED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml
+		INJECTED from F:\Project\365VintageWine\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.CALL_PHONE
+ADDED from [365VintageWine:commsdk:unspecified] F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\AndroidManifest.xml:11:5-69
+	android:name
+		ADDED from [365VintageWine:commsdk:unspecified] F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\AndroidManifest.xml:11:22-66
+uses-permission#android.permission.INTERNET
+ADDED from [365VintageWine:commsdk:unspecified] F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\AndroidManifest.xml:12:5-67
+	android:name
+		ADDED from [365VintageWine:commsdk:unspecified] F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\AndroidManifest.xml:12:22-64
+meta-data#design_width
+ADDED from [365VintageWine:commsdk:unspecified] F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\AndroidManifest.xml:19:9-21:35
+	android:value
+		ADDED from [365VintageWine:commsdk:unspecified] F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\AndroidManifest.xml:21:13-32
+	android:name
+		ADDED from [365VintageWine:commsdk:unspecified] F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\AndroidManifest.xml:20:13-40
+meta-data#design_height
+ADDED from [365VintageWine:commsdk:unspecified] F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\AndroidManifest.xml:22:9-24:36
+	android:value
+		ADDED from [365VintageWine:commsdk:unspecified] F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\AndroidManifest.xml:24:13-33
+	android:name
+		ADDED from [365VintageWine:commsdk:unspecified] F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\AndroidManifest.xml:23:13-41
+activity#com.commsdk.common.sdk_qrqcoder.MainActivity
+ADDED from [365VintageWine:commsdk:unspecified] F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\AndroidManifest.xml:26:9-81
+	android:name
+		ADDED from [365VintageWine:commsdk:unspecified] F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\AndroidManifest.xml:26:19-78
+activity#com.commsdk.common.sdk_qrqcoder.CommonScanActivity
+ADDED from [365VintageWine:commsdk:unspecified] F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\AndroidManifest.xml:27:9-87
+	android:name
+		ADDED from [365VintageWine:commsdk:unspecified] F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\AndroidManifest.xml:27:19-84
+activity#com.commsdk.common.sdk_qrqcoder.CreateCodeActivity
+ADDED from [365VintageWine:commsdk:unspecified] F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\AndroidManifest.xml:28:9-87
+	android:name
+		ADDED from [365VintageWine:commsdk:unspecified] F:\Project\365VintageWine\commsdk\build\intermediates\bundles\default\AndroidManifest.xml:28:19-84
+activity#com.imagepicker.ui.crop.ImageCropActivity
+ADDED from [365VintageWine:sdk_imagepicker:unspecified] F:\Project\365VintageWine\sdk_imagepicker\build\intermediates\bundles\default\AndroidManifest.xml:16:9-78
+	android:name
+		ADDED from [365VintageWine:sdk_imagepicker:unspecified] F:\Project\365VintageWine\sdk_imagepicker\build\intermediates\bundles\default\AndroidManifest.xml:16:19-75
+activity#com.imagepicker.ui.grid.view.ImageDataActivity
+ADDED from [365VintageWine:sdk_imagepicker:unspecified] F:\Project\365VintageWine\sdk_imagepicker\build\intermediates\bundles\default\AndroidManifest.xml:17:9-83
+	android:name
+		ADDED from [365VintageWine:sdk_imagepicker:unspecified] F:\Project\365VintageWine\sdk_imagepicker\build\intermediates\bundles\default\AndroidManifest.xml:17:19-80
+activity#com.imagepicker.ui.pager.view.ImagePagerActivity
+ADDED from [365VintageWine:sdk_imagepicker:unspecified] F:\Project\365VintageWine\sdk_imagepicker\build\intermediates\bundles\default\AndroidManifest.xml:18:9-85
+	android:name
+		ADDED from [365VintageWine:sdk_imagepicker:unspecified] F:\Project\365VintageWine\sdk_imagepicker\build\intermediates\bundles\default\AndroidManifest.xml:18:19-82
+provider#android.support.v4.content.FileProvider
+ADDED from [365VintageWine:sdk_imagepicker:unspecified] F:\Project\365VintageWine\sdk_imagepicker\build\intermediates\bundles\default\AndroidManifest.xml:20:9-30:20
+	android:authorities
+		ADDED from [365VintageWine:sdk_imagepicker:unspecified] F:\Project\365VintageWine\sdk_imagepicker\build\intermediates\bundles\default\AndroidManifest.xml:22:13-71
+	android:grantUriPermissions
+		ADDED from [365VintageWine:sdk_imagepicker:unspecified] F:\Project\365VintageWine\sdk_imagepicker\build\intermediates\bundles\default\AndroidManifest.xml:24:13-47
+	android:exported
+		ADDED from [365VintageWine:sdk_imagepicker:unspecified] F:\Project\365VintageWine\sdk_imagepicker\build\intermediates\bundles\default\AndroidManifest.xml:23:13-37
+	tools:replace
+		ADDED from [365VintageWine:sdk_imagepicker:unspecified] F:\Project\365VintageWine\sdk_imagepicker\build\intermediates\bundles\default\AndroidManifest.xml:25:13-48
+	android:name
+		ADDED from [365VintageWine:sdk_imagepicker:unspecified] F:\Project\365VintageWine\sdk_imagepicker\build\intermediates\bundles\default\AndroidManifest.xml:21:13-67
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [365VintageWine:sdk_imagepicker:unspecified] F:\Project\365VintageWine\sdk_imagepicker\build\intermediates\bundles\default\AndroidManifest.xml:26:13-29:52
+	android:resource
+		ADDED from [365VintageWine:sdk_imagepicker:unspecified] F:\Project\365VintageWine\sdk_imagepicker\build\intermediates\bundles\default\AndroidManifest.xml:28:17-57
+	tools:replace
+		ADDED from [365VintageWine:sdk_imagepicker:unspecified] F:\Project\365VintageWine\sdk_imagepicker\build\intermediates\bundles\default\AndroidManifest.xml:29:17-49
+	android:name
+		ADDED from [365VintageWine:sdk_imagepicker:unspecified] F:\Project\365VintageWine\sdk_imagepicker\build\intermediates\bundles\default\AndroidManifest.xml:27:17-67
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.1] C:\Users\Administrator\.android\build-cache\5c99af1e561e4231a88f90b3bff0d5deefab7551\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Administrator\.android\build-cache\7160720b55599b54f0490b81d55aa81f539a16ea\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Administrator\.android\build-cache\d93dce2c6322075bc200d4ff9fb4e4f53e3178e8\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Administrator\.android\build-cache\0edfbfba84ef86e9727c6ab797f918f768ed68fe\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\Administrator\.android\build-cache\3a71cff8b1154764224e4f128e60df89d3137145\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\Administrator\.android\build-cache\5d7bf57b458e1f7819eaf830ab5797199d5774d2\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Administrator\.android\build-cache\9f6fbaa0400a3b582deda7a0698c798b6b80daa9\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Administrator\.android\build-cache\0a8a5d5a09f97b72f84d50e3bcea0d625c9f1d9b\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Administrator\.android\build-cache\0b7c9b9b30fab63d6dddf58d28de14af927f6bef\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\Administrator\.android\build-cache\22e91a7339008ace9e20a0935b46e634502959c6\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Administrator\.android\build-cache\902abf3906eecabc254443823166eea496883e3c\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\Administrator\.android\build-cache\650f12d3489654d63e6a5b23e45eae96ef006c6a\output\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Administrator\.android\build-cache\5c99af1e561e4231a88f90b3bff0d5deefab7551\output\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.1] C:\Users\Administrator\.android\build-cache\5c99af1e561e4231a88f90b3bff0d5deefab7551\output\AndroidManifest.xml:26:9-47

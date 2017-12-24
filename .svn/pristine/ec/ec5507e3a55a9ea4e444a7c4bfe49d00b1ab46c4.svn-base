@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+    <RelativeLayout
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="59dp">
+        <ImageView
+            android:id="@+id/imgPlatform"
+            android:src="@drawable/ease_default_avatar"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:layout_width="100px"
+            android:layout_height="100px" />
+        <TextView
+            android:textColor="@color/black_deep"
+            android:layout_marginLeft="40px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imgPlatform"
+            android:id="@+id/tvPlatform"
+            android:text="平台消息"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+    <RelativeLayout
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="59dp">
+        <ImageView
+            android:id="@+id/imgCompany"
+            android:src="@drawable/ease_default_avatar"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:layout_width="100px"
+            android:layout_height="100px" />
+        <TextView
+            android:textColor="@color/black_deep"
+            android:layout_marginLeft="40px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imgCompany"
+            android:id="@+id/tvCompany"
+            android:text="公司消息"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+
+</LinearLayout>

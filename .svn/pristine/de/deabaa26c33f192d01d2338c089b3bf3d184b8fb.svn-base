@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <include layout="@layout/layout_text_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180px"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <com.commsdk.common.widget.CircleImageView
+            android:id="@+id/img_profit_detail"
+            android:layout_width="92px"
+            android:layout_height="92px"
+            android:layout_marginLeft="24px"
+            android:src="@mipmap/profit_detail_head"/>
+
+        <TextView
+            android:id="@+id/tv_profit_detail_nikename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18px"
+            android:textSize="30px"
+            android:textColor="@color/black"
+            android:text="昵称"/>
+        <TextView
+            android:id="@+id/tv_profit_detail_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18px"
+            android:textSize="30px"
+            android:textColor="#e7373f"
+            android:text="¥ 333"/>
+    </LinearLayout>
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10px">
+        <ListView
+            android:id="@+id/lv_profit_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

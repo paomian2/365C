@@ -1,0 +1,42 @@
+package com.a365vintagewine.mvp.presenter;
+
+
+import com.a365vintagewine.mvp.bean.MyIntegral;
+import com.a365vintagewine.mvp.model.MyIntegralModel;
+import com.a365vintagewine.mvp.view.MyIntegralView;
+import com.commsdk.base.presenter.BasePresenter;
+import com.commsdk.base.retrofit.ModelCallBack;
+
+/**
+ * Created by Administrator on 2017/8/28 0028.
+ */
+
+public class MyIntegralPresenter extends BasePresenter<MyIntegralView,MyIntegralModel> {
+    public MyIntegralPresenter(MyIntegralView mView) {
+        super(mView);
+    }
+
+    @Override
+    public MyIntegralModel createModel() {
+        return new MyIntegralModel();
+    }
+
+    /**
+     * 获取我的积分
+     */
+    public void getMyIntegral(){
+        mModel.getMyIntegral(new ModelCallBack<MyIntegral>() {
+            @Override
+            public void onSuccess(MyIntegral model) {
+                mView.setSumIntegral(model.getSumIntegral());
+                mView.setPlatfrom(model);
+                mView.setShopListAdapter(model.getShopList());
+            }
+
+            @Override
+            public void onFailure(String msg) {
+
+            }
+        });
+    }
+}

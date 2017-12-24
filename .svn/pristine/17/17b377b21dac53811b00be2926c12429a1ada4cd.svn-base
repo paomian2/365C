@@ -1,0 +1,71 @@
+package com.a365vintagewine.mvp.model.search;
+
+import android.app.Activity;
+
+import com.a365vintagewine.mvp.model.BaseModel2;
+import com.a365vintagewine.utils.ShareStringUtils;
+import com.commsdk.base.retrofit.ModelCallBack;
+import com.commsdk.common.SharedPreferenceUtil;
+import com.commsdk.common.StringUtils;
+import com.lidroid.xutils.db.annotation.Id;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by Administrator on 2017/9/1 0001.
+ */
+
+public class SearchModel extends BaseModel2 {
+
+    /**
+     * 获取热门搜索
+     */
+    public void getHotSearch(ModelCallBack callBack){
+        String[] mVals = new String[]{"泸州老窖", "白酒", "余立斯", "红星二锅头",
+                "红酒", "鸡尾酒", "牛栏山二锅头", "江小白",
+                "杜康", "五粮液", "茅台"};//数据模拟，实际应从网络获取此数据
+        callBack.onSuccess(mVals);
+    }
+
+    /**
+     * 获取历史搜索记录
+     */
+    public void getHistorySearch(Activity activity,ModelCallBack callBack){
+        SharedPreferenceUtil share = SharedPreferenceUtil.getInstance(activity);
+        String searchStr = share.getString(ShareStringUtils.HISTORYSEARCH);
+        callBack.onSuccess(searchStr);
+    }
+
+    /**
+     * 存储历史搜索记录
+     */
+    public void putHistorySearch(String search, Activity activity, ModelCallBack callBack){
+        SharedPreferenceUtil share = SharedPreferenceUtil.getInstance(activity);
+        String searchStr = share.getString(ShareStringUtils.HISTORYSEARCH);
+        if (StringUtils.isEmpty(searchStr)){
+            share.putString(ShareStringUtils.HISTORYSEARCH,search);
+        }else{
+            List<String> list = new ArrayList<String>();
+            for (Object o : searchStr.split(",")) {
+                if (!search.equals((String)o)){
+                    list.add((String) o);
+                }
+            }
+
+            if (list.size() >= 10){
+                list.remove(0);
+                searchStr = "";
+                for (int i = 0; i < list.size(); i++) {
+                    if (i == list.size()-1){
+                        searchStr += list.get(i);
+                        break;
+                    }
+                    searchStr += list.get(i)+",";
+                }
+            }
+            share.putString(ShareStringUtils.HISTORYSEARCH,searchStr+","+search);
+        }
+        callBack.onSuccess(true);
+    }
+}

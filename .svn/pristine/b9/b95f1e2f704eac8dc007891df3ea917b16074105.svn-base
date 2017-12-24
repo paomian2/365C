@@ -1,0 +1,42 @@
+package com.a365vintagewine.mvp.presenter;
+
+import com.a365vintagewine.mvp.bean.CumulativeDetail;
+import com.a365vintagewine.mvp.model.CumulativeProfitModel;
+import com.a365vintagewine.mvp.view.CumulativeProfitView;
+import com.commsdk.base.presenter.BasePresenter;
+import com.commsdk.base.retrofit.ModelCallBack;
+
+import java.util.List;
+
+/**
+ * Created by Administrator on 2017/8/30 0030.
+ */
+
+public class CumulativeProfitPresenter extends BasePresenter<CumulativeProfitView,CumulativeProfitModel> {
+    public CumulativeProfitPresenter(CumulativeProfitView mView) {
+        super(mView);
+    }
+
+    @Override
+    public CumulativeProfitModel createModel() {
+        return new CumulativeProfitModel();
+    }
+
+    /**
+     * 获取累计收益详情
+     */
+    public void getCumulativeDetail(){
+        mModel.getCumulativeDetail(new ModelCallBack<List<CumulativeDetail>>() {
+
+            @Override
+            public void onSuccess(List<CumulativeDetail> model) {
+                mView.setCumulativeAdapter(model);
+            }
+
+            @Override
+            public void onFailure(String msg) {
+
+            }
+        });
+    }
+}

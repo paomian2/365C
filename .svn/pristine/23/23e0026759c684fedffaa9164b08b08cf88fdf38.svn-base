@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#999999</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="background">#f4f4f4</color>
+    <color name="titlebackground">#f9f9f9</color>
+
+    <!--365C端专用-->
+    <!--平台余额选中-->
+    <color name="balance_select">#ffaa76</color>
+    <color name="tv_submit">#0196ff</color>
+
+    <color name="tv_red">#e73d3f</color>
+
+    <!--商品详情中积分颜色-->
+    <color name="tv_integral">#ffaa76</color>
+    <color name="tv_blue_goodsdetail">#6393ff</color>
+</resources>

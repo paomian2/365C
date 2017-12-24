@@ -1,0 +1,29 @@
+package com.a365vintagewine.mvp.view;
+import com.a365vintagewine.mvp.bean.StoreBean;
+import com.a365vintagewine.mvp.bean.TeamUserBean;
+import com.commsdk.base.view.BaseView;
+
+import java.util.List;
+
+/**
+ * 描述：
+ * 作者：Linxz
+ * E-mail:lin_xiao_zhang@163.com
+ * 时间:2017年08月29日  15:34
+ * 版本：3.0
+ */
+
+public interface BalanceFragmentView extends BaseView{
+
+    /**获取平台余额列表*/
+   public void getPlatformBanlanceList(int page ,int size);
+
+    /**获取平台余额列表结果*/
+    public void onGetPlatformBanlanceListResult(boolean success, List<TeamUserBean> teamUserBeanList);
+
+    /**获取充值余额列表*/
+    public void getRechargeBanlance(int page ,int size);
+
+    /**获取充值余额列表结果*/
+    public void onGetRechargeBanlanceResult(boolean success, List<StoreBean> storeBeanList);
+}

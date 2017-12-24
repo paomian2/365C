@@ -1,0 +1,52 @@
+package com.a365vintagewine.adapter;
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.a365vintagewine.R;
+import com.a365vintagewine.mvp.bean.AddressSearchTextEntity;
+import com.commsdk.base.BaseAdapter2;
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
+public class LbsAdressAdapter extends BaseAdapter2 {
+    public LbsAdressAdapter(Context context) {
+        super(context);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder viewHolder;
+        if (convertView == null) {
+            convertView = inflater.inflate(R.layout.item_lbs_adress_list, null);
+            viewHolder=new ViewHolder(convertView);
+            convertView.setTag(viewHolder);
+        }else{
+            viewHolder= (ViewHolder) convertView.getTag();
+        }
+        AddressSearchTextEntity addressSearchTextEntity= (AddressSearchTextEntity) getItem(position);
+        viewHolder.tvTittle.setText(addressSearchTextEntity.getTittle());
+        viewHolder.tvAdress.setText(addressSearchTextEntity.getAdress());
+        if (addressSearchTextEntity.isChoose()){
+            viewHolder.ivChoose.setVisibility(View.VISIBLE);
+        }else{
+            viewHolder.ivChoose.setVisibility(View.GONE);
+        }
+        return convertView;
+    }
+
+     class ViewHolder {
+        @Bind(R.id.tvTittle)
+        TextView tvTittle;
+        @Bind(R.id.tvAdress)
+        TextView tvAdress;
+        @Bind(R.id.ivChoose)
+        ImageView ivChoose;
+
+        ViewHolder(View view) {
+            ButterKnife.bind(this, view);
+        }
+    }
+}

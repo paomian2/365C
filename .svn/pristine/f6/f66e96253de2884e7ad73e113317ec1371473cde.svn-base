@@ -1,0 +1,20 @@
+package com.a365vintagewine.mvp.presenter;
+
+import com.a365vintagewine.mvp.model.MyWalletModel;
+import com.a365vintagewine.mvp.view.MyWalletView;
+import com.commsdk.base.presenter.BasePresenter;
+
+/**
+ * Created by Administrator on 2017/8/28 0028.
+ */
+
+public class MyWalletPresenter extends BasePresenter<MyWalletView,MyWalletModel> {
+    public MyWalletPresenter(MyWalletView mView) {
+        super(mView);
+    }
+
+    @Override
+    public MyWalletModel createModel() {
+        return new MyWalletModel();
+    }
+}

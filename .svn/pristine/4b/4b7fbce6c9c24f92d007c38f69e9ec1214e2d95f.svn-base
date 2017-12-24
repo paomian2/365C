@@ -1,0 +1,18 @@
+package com.a365vintagewine.mvp.view.search;
+
+import com.commsdk.base.view.BaseView;
+
+/**
+ * Created by Administrator on 2017/9/1 0001.
+ */
+
+public interface SearchView extends BaseView {
+    //适配热门搜索数据
+    void setHotsearchData(String[] hotsearch);
+
+    //适配搜索历史数据
+    void setHistorySearchData(String historySearch);
+
+    //保存搜索数据是否成功
+    void saveSearch(boolean isSaveSearch);
+}

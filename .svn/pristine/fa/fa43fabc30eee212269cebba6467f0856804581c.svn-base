@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:paddingLeft="24px"
+        android:paddingRight="30px"
+        android:paddingTop="44px"
+        android:layout_width="match_parent"
+        android:layout_height="180px">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/custImg"
+            android:layout_width="92px"
+            android:layout_height="92px"
+            android:src="@color/background"/>
+        <TextView
+            android:layout_marginLeft="26px"
+            android:layout_toRightOf="@+id/custImg"
+            android:layout_centerVertical="true"
+            android:id="@+id/tvCustName"
+            android:textSize="30px"
+            android:textColor="@color/tv_hint"
+            android:text="海天烟酒店"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/tv_submit"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/tvGoBuy"
+            android:textSize="28px"
+            android:text="去购物 >"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</LinearLayout>

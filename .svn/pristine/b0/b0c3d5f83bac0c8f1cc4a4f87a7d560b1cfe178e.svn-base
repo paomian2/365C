@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\res\\merged\\release\\menu\\em_delete_message.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\src\\main\\res\\menu\\em_delete_message.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\res\\merged\\release\\menu\\em_multi_device_menu_item.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\src\\main\\res\\menu\\em_multi_device_menu_item.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\res\\merged\\release\\menu\\em_context_contact_list.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\src\\main\\res\\menu\\em_context_contact_list.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\res\\merged\\release\\menu\\em_delete_contact.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\src\\main\\res\\menu\\em_delete_contact.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\res\\merged\\release\\menu\\em_context_tab_contact.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\src\\main\\res\\menu\\em_context_tab_contact.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\easeUI\\build\\intermediates\\res\\merged\\release\\menu\\em_remove_from_blacklist.xml",
+        "source": "F:\\Project\\365VintageWine\\easeUI\\src\\main\\res\\menu\\em_remove_from_blacklist.xml"
+    }
+]

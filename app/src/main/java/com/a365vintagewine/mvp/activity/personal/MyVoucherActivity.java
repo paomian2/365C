@@ -1,0 +1,192 @@
+package com.a365vintagewine.mvp.activity.personal;
+
+import android.graphics.Color;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.view.ViewPager;
+import android.util.TypedValue;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import com.a365vintagewine.R;
+import com.a365vintagewine.mvp.model.bean.VoucherCountBean;
+import com.a365vintagewine.mvp.model.bean.VoucherTypeStatusEnum;
+import com.a365vintagewine.mvp.fragment.VoucherFragment;
+import com.a365vintagewine.mvp.presenter.MyVoucherPresenter;
+import com.a365vintagewine.mvp.view.MyVoucherView;
+import com.a365vintagewine.utils.SharePreferenceUtils2;
+import com.commsdk.base.BaseActivity;
+import com.commsdk.base.view.BaseMVPActivity;
+import com.commsdk.common.UIHelper;
+import com.commsdk.common.widget.PagerTabStrip;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 功能描述:
+ * 作者：Linxz
+ * E-mail：lin_xiao_zhang@13.com
+ * 版本信息：V1.0.0
+ * 时间：2017年04月08日  10:09.
+ **/
+public class MyVoucherActivity extends BaseMVPActivity<MyVoucherPresenter> implements MyVoucherView {
+
+    @Bind(R.id.tv_text_title)
+    TextView tv_text_title;
+    /**
+     * 导航栏
+     */
+    @Bind(R.id.pageTabStrip)
+    PagerTabStrip pageTabStrip;
+    @Bind(R.id.viewPager)
+    ViewPager viewPager;
+
+    private List<VoucherTypeStatusEnum> voucherList = new ArrayList<>();
+    private List<String> voucherListCount = new ArrayList<>();
+
+    @Override
+    protected MyVoucherPresenter createPresenter() {
+        return new MyVoucherPresenter(this);
+    }
+
+    @Override
+    protected void setActivityView(Bundle bundle) {
+        setContentView(R.layout.act_myvoucher);
+        ButterKnife.bind(this);
+    }
+
+    @Override
+    protected void initUI() {
+        tv_text_title.setText("优惠券");
+        String[] vouchers = new String[]{"未使用", "使用记录", "已过期"};
+        for (String voucher : vouchers) {
+            voucherList.add(VoucherTypeStatusEnum.statusNameToOrderStatusEnum(voucher));
+        }
+    }
+
+    @Override
+    protected void initData() {
+        GetUserCouponNum();
+    }
+
+    @Override
+    public String setTag() {
+        return null;
+    }
+
+
+
+    @Override
+    public BaseActivity getMyContext() {
+        return activity;
+    }
+
+    @Override
+    public void showProgress(String msg) {
+
+    }
+
+    @Override
+    public void hideProgress() {
+
+    }
+
+    @Override
+    public void GetUserCouponNum() {
+        Map<String,Object> params=new HashMap<>();
+        params.put("Client_Id", SharePreferenceUtils2.getClient_Id(activity));
+        mvpPresenter.GetUserCouponNum(params);
+    }
+
+    @Override
+    public void GetUserCouponNumResult(boolean success, String msg, VoucherCountBean voucherCountBean) {
+        if (success) {
+            voucherListCount.add(voucherCountBean.getNotUsedCouponNum());
+            voucherListCount.add(voucherCountBean.getUsedCouponNum());
+            voucherListCount.add(voucherCountBean.getExpiredCouponNum());
+        } else {
+            voucherListCount.add("0");
+            voucherListCount.add("0");
+            voucherListCount.add("0");
+        }
+        VoucherAdapter voucherAdapter = new VoucherAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(voucherAdapter);
+        initTabsValue();
+    }
+
+    /**
+     * mPagerSlidingTabStrip默认值配置
+     */
+    private void initTabsValue() {
+        //tab平均分
+        pageTabStrip.setViewPager(viewPager);
+        // 底部游标颜色
+        pageTabStrip.setIndicatorColor(ContextCompat.getColor(activity, R.color.red));
+        // tab的分割线颜色
+        pageTabStrip.setDividerColor(Color.TRANSPARENT);
+        // tab背景
+        pageTabStrip.setBackgroundColor(Color.parseColor("#FFFFFF"));
+        // tab底线高度
+        pageTabStrip.setUnderlineHeight(1);
+        // 游标高度
+        pageTabStrip.setIndicatorHeight((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                3, getResources().getDisplayMetrics()));
+        // 选中的文字颜色
+        pageTabStrip.setSelectedTextColor(ContextCompat.getColor(activity, R.color.red));
+        // 正常文字颜色
+        pageTabStrip.setTextColor(ContextCompat.getColor(activity, R.color.black));
+        //设置tab文字大小
+        pageTabStrip.setTextSize(UIHelper.dip2px(activity, 14));
+        //设置游标边距
+        pageTabStrip.setIndicatorMargin(UIHelper.dip2px(activity, 7));
+        pageTabStrip.setVisibility(View.VISIBLE);
+    }
+
+    /**
+     * 返券适配器
+     */
+    private class VoucherAdapter extends FragmentPagerAdapter {
+
+        private VoucherAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return voucherList.get(position).getStatusStr() + "(" + voucherListCount.get(position) + ")";
+        }
+
+        @Override
+        public int getCount() {
+            return voucherList.size();
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return Fragment.instantiate(activity, VoucherFragment.class.getName());
+        }
+
+        @Override
+        public Object instantiateItem(ViewGroup container, int position) {
+            VoucherFragment f = (VoucherFragment) super.instantiateItem(container, position);
+            Bundle bundle = new Bundle();
+            bundle.putString("status", voucherList.get(position).getStatusStr());
+            f.onGetBundle(bundle);
+            return f;
+        }
+    }
+
+    @OnClick(R.id.img_text_title_back)
+    public void back() {
+        finish();
+    }
+}

@@ -1,0 +1,31 @@
+package com.a365vintagewine.mvp.model;
+
+import com.a365vintagewine.mvp.bean.CumulativeDetail;
+import com.commsdk.base.retrofit.ModelCallBack;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by Administrator on 2017/8/30 0030.
+ */
+
+public class CumulativeProfitModel extends BaseModel2 {
+    /**
+     * 获取累计收益详情
+     */
+    public void getCumulativeDetail(ModelCallBack callBack){
+        List<CumulativeDetail> detailList = new ArrayList<>();
+        CumulativeDetail detail1 = new CumulativeDetail("","小张","07-20",11.2,true);
+        CumulativeDetail detail2 = new CumulativeDetail("","小赵","07-21",10.8,false);
+        CumulativeDetail detail3 = new CumulativeDetail("","小李","08-05",9.2,true);
+        CumulativeDetail detail4 = new CumulativeDetail("","小王","08-10",8.5,false);
+        CumulativeDetail detail5 = new CumulativeDetail("","小霸王","08-20",6.2,false);
+        detailList.add(detail1);
+        detailList.add(detail2);
+        detailList.add(detail3);
+        detailList.add(detail4);
+        detailList.add(detail5);
+        callBack.onSuccess(detailList);
+    }
+}

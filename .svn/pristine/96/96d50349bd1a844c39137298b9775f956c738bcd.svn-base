@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px">
+        <ImageView
+            android:id="@+id/img_loginback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/goback"
+            android:layout_marginLeft="25px"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_login_register_title"
+        android:text="@string/login"
+        />
+
+    <EditText
+        android:id="@+id/et_login_username"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="44px"
+        android:layout_marginRight="30px"
+        android:drawableLeft="@mipmap/login_phone"
+        android:drawablePadding="16px"
+        android:inputType="number"
+        android:hint="请输入手机号"/>
+
+    <EditText
+        android:id="@+id/et_login_password"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="44px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="20px"
+        android:maxLength="25"
+        android:drawableLeft="@mipmap/login_password"
+        android:drawablePadding="16px"
+        android:inputType="textPassword"
+        android:hint="请输入登录密码"/>
+
+    <TextView
+        android:id="@+id/tv_login_forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30px"
+        android:layout_gravity="right"
+        android:text="忘记密码？"
+        android:textColor="#4abff8"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_marginTop="80px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@color/line_back"
+        android:enabled="false"
+        android:text="登  录"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/tv_login_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:layout_marginRight="30px"
+        android:layout_gravity="right"
+        android:text="新用户注册"
+        android:textColor="@color/corlor_666"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150px"
+        android:gravity="center_horizontal"
+        android:text="其它方式登录"
+        android:textColor="#7bd4ff"
+        android:textSize="14sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/img_login_qq"
+            android:layout_width="76px"
+            android:layout_height="76px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="146px"
+            android:src="@mipmap/login_qq"/>
+        <ImageView
+            android:id="@+id/img_login_weibo"
+            android:layout_width="76px"
+            android:layout_height="76px"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="82px"
+            android:src="@mipmap/login_weibo"/>
+        <ImageView
+            android:id="@+id/img_login_weixin"
+            android:layout_width="76px"
+            android:layout_height="76px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="146px"
+            android:src="@mipmap/login_weixin"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

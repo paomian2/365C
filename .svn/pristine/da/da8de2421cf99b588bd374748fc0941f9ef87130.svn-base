@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="text_login_register_title" >
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:layout_marginLeft">30px</item>
+        <item name="android:layout_marginTop">50px</item>
+        <item name="android:layout_marginBottom">120px</item>
+    </style>
+</resources>

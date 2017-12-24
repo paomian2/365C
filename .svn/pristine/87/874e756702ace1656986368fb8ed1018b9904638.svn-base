@@ -1,0 +1,23 @@
+<resources>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="useragreement"><u>《用户协议》</u></string>
+    <string name="title_activity_forget_password">ForgetPasswordActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="myself_shop">我的店铺</string>
+    <string name="title_activity_personal_information">PersonalInformationActivity</string>
+    <string name="real_name_text">真实姓名</string>
+    <string name="IDnumber_text">身份证号</string>
+    <string name="photograph_prompt">1.字迹清晰。\n2.证件必须真实拍摄，不能使用复印件。</string>
+    <string name="again_authenticaion"><u>重新认证</u></string>
+    <string name="seller_audit_in">审核时间为1-2个工作日，请保持电话畅通！</string>
+    <string name="seller_audit_success">恭喜您！成功入驻365平台</string>
+    <string name="seller_audit_success_pc">进入店铺内完善信息、发布商品，请使用电脑访问\nwww.linajiutech.com</string>
+    <string name="distribution_requirement">1.购物满500元\n2.邀请5个好友加入名酒汇\n3.连续18天将名酒汇分享到朋友圈\n4.在某商店充值800元</string>
+    <string name="follow_goods_text">关注商品</string>
+    <string name="follow_shop_text">关注店铺</string>
+    <string name="my_follow">我的关注</string>
+    <string name="text_collection">收藏</string>
+</resources>

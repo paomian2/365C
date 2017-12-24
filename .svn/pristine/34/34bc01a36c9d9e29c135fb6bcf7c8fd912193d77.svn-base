@@ -1,0 +1,318 @@
+package com.a365vintagewine.mvp.activity.goods;
+
+import android.graphics.Paint;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.a365vintagewine.R;
+import com.a365vintagewine.adapter.GoodsAttributeAdapter;
+import com.a365vintagewine.mvp.bean.GoodsDetail;
+import com.a365vintagewine.mvp.fragment.GoodsDetailFragment;
+import com.a365vintagewine.mvp.fragment.GoodsEvaluateFragment;
+import com.a365vintagewine.mvp.presenter.goods.GoodsDetailPresenter;
+import com.a365vintagewine.mvp.view.goods.GoodsDetailView;
+import com.a365vintagewine.widget.ImgTextView;
+import com.a365vintagewine.widget.MsgSharePw;
+import com.a365vintagewine.widget.NoScrollGridView;
+import com.commsdk.base.BaseActivity;
+import com.commsdk.base.view.BaseMVPActivity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+public class GoodsDetailActivity extends BaseMVPActivity<GoodsDetailPresenter> implements GoodsDetailView {
+
+    @Bind(R.id.tv_text_title)
+    TextView tvTextTitle;
+    @Bind(R.id.img_title_right)
+    ImageView imgTitleRight;
+    @Bind(R.id.tv_goodsDetail_collection)
+    TextView tvGoodsDetailCollection;
+    @Bind(R.id.tv_goodsDetail_goodsname)
+    ImgTextView tvGoodsDetailGoodsname;
+    @Bind(R.id.tv_goodsDetail_sellout)
+    TextView tvGoodsDetailSellout;
+    @Bind(R.id.tv_goodsDetail_goodsPrice)
+    TextView tvGoodsDetailGoodsPrice;
+    @Bind(R.id.tv_goodsDetail_proposal_price)
+    TextView tvGoodsDetailProposalPrice;
+    @Bind(R.id.ll_goodsDetail_jion_shopcart)
+    LinearLayout llGoodsDetailJionShopcart;
+    @Bind(R.id.tv_goodsDetail_monthly_sales)
+    TextView tvGoodsDetailMonthlySales;
+    @Bind(R.id.ll_goodsDetail_goodsprice)
+    LinearLayout llGoodsDetailGoodsprice;
+    @Bind(R.id.tv_goodsDetail_integral)
+    TextView tvGoodsDetailIntegral;
+    @Bind(R.id.btn_goodsDetail_exchange)
+    LinearLayout btnGoodsDetailExchange;
+    @Bind(R.id.ll_goodsDetail_exchange)
+    LinearLayout llGoodsDetailExchange;
+    @Bind(R.id.gv_goodsDetail_goodsinfo)
+    NoScrollGridView gvGoodsDetailGoodsinfo;
+    @Bind(R.id.tv_goodsDetail_moreinfo)
+    TextView tvGoodsDetailMoreinfo;
+    @Bind(R.id.img_goodsDetail_morearrow)
+    ImageView imgGoodsDetailMorearrow;
+    @Bind(R.id.ll_goodsDetail_moreinfo)
+    LinearLayout llGoodsDetailMoreinfo;
+    @Bind(R.id.tv_goodsDetail_goodsDetail)
+    TextView tvGoodsDetailGoodsDetail;
+    @Bind(R.id.tv_goodsDetail_evaluate)
+    TextView tvGoodsDetailEvaluate;
+    @Bind(R.id.ll_goodsDetail_join_fragmeng)
+    LinearLayout llGoodsDetailJoinFragmeng;
+
+    GoodsDetailFragment goodsDetailFragment; //商品详情
+    GoodsEvaluateFragment goodsEvaluateFragment; //商品评价
+
+    FragmentManager fragmentManager;
+    FragmentTransaction transaction;
+    @Bind(R.id.tv_goodsDetail_goodsnum)
+    TextView tvGoodsDetailGoodsnum;
+    @Bind(R.id.tv_goodsDetail_totalprice)
+    TextView tvGoodsDetailTotalprice;
+    @Bind(R.id.tv_goodsDetail_shippingfee)
+    TextView tvGoodsDetailShippingfee;
+    @Bind(R.id.img_goodsDetail_goodscart)
+    ImageView imgGoodsDetailGoodscart;
+
+    private GoodsDetail goodsDetail;
+    private GoodsAttributeAdapter adapter;
+
+    @Override
+    protected GoodsDetailPresenter createPresenter() {
+        return new GoodsDetailPresenter(this);
+    }
+
+    @Override
+    protected void setActivityView(Bundle bundle) {
+        setContentView(R.layout.act_goods_detail);
+        ButterKnife.bind(this);
+    }
+
+    @Override
+    protected void initUI() {
+        adapter = new GoodsAttributeAdapter(activity);
+        gvGoodsDetailGoodsinfo.setAdapter(adapter);
+        tvTextTitle.setText("商品详情");
+        goodsDetailFragment = new GoodsDetailFragment();
+        goodsEvaluateFragment = new GoodsEvaluateFragment();
+        fragmentManager = getSupportFragmentManager();
+        transaction = fragmentManager.beginTransaction();
+        transaction.add(R.id.ll_goodsDetail_join_fragmeng, goodsDetailFragment);
+        transaction.commit();
+    }
+
+    @Override
+    protected void initData() {
+        mvpPresenter.getGoodeDetail();
+    }
+
+    @Override
+    public BaseActivity getMyContext() {
+        return activity;
+    }
+
+    @Override
+    public void showProgress(String msg) {
+
+    }
+
+    @Override
+    public void hideProgress() {
+
+    }
+
+    /**
+     * 显示商品详情和商品评价
+     */
+    public void showGoodsDetailOrGoodsEvaluate(int i) {
+        transaction = fragmentManager.beginTransaction();
+        switch (i) {
+            case 1:
+                transaction.replace(R.id.ll_goodsDetail_join_fragmeng, goodsDetailFragment);
+                break;
+            case 2:
+                transaction.replace(R.id.ll_goodsDetail_join_fragmeng, goodsEvaluateFragment);
+                break;
+            default:
+                break;
+        }
+        transaction.commit();
+    }
+
+    /**
+     * 初始化网络请求成功返回数据
+     */
+    @Override
+    public void initGoodsDetailData(GoodsDetail goodsDetail) {
+        this.goodsDetail = goodsDetail;
+        if (goodsDetail.getGoodsAttribute().size() > 6){
+            llGoodsDetailMoreinfo.setVisibility(View.VISIBLE);
+            List<String> list = new ArrayList<>();
+            for (int i = 0; i < 6; i++) {
+                list.add(goodsDetail.getGoodsAttribute().get(i));
+            }
+            setGoodsAttributeAdapter(list);
+        }else{
+            llGoodsDetailMoreinfo.setVisibility(View.GONE);
+            setGoodsAttributeAdapter(goodsDetail.getGoodsAttribute());
+        }
+        tvGoodsDetailGoodsname.setText(goodsDetail.getGoodsName());
+        tvGoodsDetailGoodsPrice.setText("¥  " + goodsDetail.getGoodsPrice());
+        tvGoodsDetailProposalPrice.setText("¥" + goodsDetail.getRecommendedPrice());
+        tvGoodsDetailProposalPrice.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
+        tvGoodsDetailTotalprice.setText("¥"+goodsDetail.getGoodsTotalPrice());
+        tvGoodsDetailShippingfee.setText(""+goodsDetail.getShippingfee());
+        tvGoodsDetailMonthlySales.setText(""+goodsDetail.getMonthSell());
+        showShopCartnum(goodsDetail.getGoodsCartNum());
+        isCollection();
+    }
+
+    /**
+     * 显示购物车数量
+     */
+    public void showShopCartnum(int number){
+        if (number > 0){
+            tvGoodsDetailGoodsnum.setVisibility(View.VISIBLE);
+            tvGoodsDetailGoodsnum.setText(number+"");
+            return;
+        }
+        tvGoodsDetailGoodsnum.setVisibility(View.GONE);
+    }
+
+    /**
+     * 适配商品信息数据
+     */
+    public void setGoodsAttributeAdapter(List<String> list) {
+        adapter.setMlist(list);
+        adapter.notifyDataSetChanged();
+    }
+
+    /**
+     * 是否收藏该商品
+     */
+    public void isCollection(){
+        if (goodsDetail.isCollect()){
+            Drawable nav_up=getResources().getDrawable(R.mipmap.collection);
+            nav_up.setBounds(0, 0, nav_up.getMinimumWidth(), nav_up.getMinimumHeight());
+            tvGoodsDetailCollection.setCompoundDrawables(null, nav_up, null, null);
+        }else{
+            Drawable nav_up=getResources().getDrawable(R.mipmap.no_collection);
+            nav_up.setBounds(0, 0, nav_up.getMinimumWidth(), nav_up.getMinimumHeight());
+            tvGoodsDetailCollection.setCompoundDrawables(null, nav_up, null, null);
+        }
+    }
+
+    /**
+     * 返回上一级界面
+     */
+    @OnClick(R.id.img_text_title_back)
+    public void back() {
+        finish();
+    }
+
+    /**
+     * 点击查看消息、分享、客服
+     */
+    @OnClick(R.id.img_title_right)
+    public void rightTitle(){
+        MsgSharePw pw = new MsgSharePw(activity);
+        pw.showPopupWindow(imgTitleRight);
+    }
+
+    /**
+     * 点击展开更多商品信息
+     */
+    private boolean moreTag = false;
+    @OnClick(R.id.ll_goodsDetail_moreinfo)
+    public void moreGoodsInfo(){
+        if (moreTag){
+            moreTag = false;
+            List<String> list = new ArrayList<>();
+            for (int i = 0; i < 6; i++) {
+                list.add(goodsDetail.getGoodsAttribute().get(i));
+            }
+            setGoodsAttributeAdapter(list);
+            tvGoodsDetailMoreinfo.setText("展开更多");
+            imgGoodsDetailMorearrow.setImageResource(R.mipmap.arrow_dowm);
+        }else{
+            moreTag = true;
+            setGoodsAttributeAdapter(goodsDetail.getGoodsAttribute());
+            tvGoodsDetailMoreinfo.setText("收起");
+            imgGoodsDetailMorearrow.setImageResource(R.mipmap.arrow_up);
+        }
+    }
+
+    /**
+     * 收藏商品点击
+     */
+    @OnClick(R.id.tv_goodsDetail_collection)
+    public void collection(){
+        if (goodsDetail.isCollect()){
+            goodsDetail.setCollect(false);
+        }else{
+            goodsDetail.setCollect(true);
+        }
+        isCollection();
+    }
+
+    /**
+     * 查看商品详情
+     */
+    @OnClick(R.id.tv_goodsDetail_goodsDetail)
+    public void showGoodsDetail() {
+        showGoodsDetailOrGoodsEvaluate(1);
+        tvGoodsDetailGoodsDetail.setTextColor(getResources().getColor(R.color.tv_blue_goodsdetail));
+        tvGoodsDetailEvaluate.setTextColor(getResources().getColor(R.color.corlor_666));
+    }
+
+    /**
+     * 查看商品评价
+     */
+    @OnClick(R.id.tv_goodsDetail_evaluate)
+    public void showEvaluate() {
+        showGoodsDetailOrGoodsEvaluate(2);
+        tvGoodsDetailEvaluate.setTextColor(getResources().getColor(R.color.tv_blue_goodsdetail));
+        tvGoodsDetailGoodsDetail.setTextColor(getResources().getColor(R.color.corlor_666));
+    }
+
+    /**
+     * 加入购物车
+     */
+    @OnClick(R.id.ll_goodsDetail_jion_shopcart)
+    public void jionShopcart(){
+        goodsDetail.setGoodsCartNum(goodsDetail.getGoodsCartNum()+1);
+        showShopCartnum(goodsDetail.getGoodsCartNum());
+    }
+
+    /**
+     * 点击查看购物车
+     */
+    @OnClick(R.id.rl_goodsDetail_goodscart)
+    public void showgoodsCart() {
+
+    }
+
+    /**
+     * 去结算
+     */
+    @OnClick(R.id.btn_goodsDetail_settlement)
+    public void settlement(){
+
+    }
+
+}

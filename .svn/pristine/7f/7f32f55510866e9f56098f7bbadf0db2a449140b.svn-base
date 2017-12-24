@@ -1,0 +1,92 @@
+package com.a365vintagewine.mvp.bean;
+
+/**
+ * Created by Administrator on 2017/9/5 0005.
+ */
+
+public class UserData {
+    private boolean Result;
+    private String State;
+    private String Msg;
+    private User Data;
+
+    public boolean isResult() {
+        return Result;
+    }
+
+    public void setResult(boolean result) {
+        Result = result;
+    }
+
+    public String getState() {
+        return State;
+    }
+
+    public void setState(String state) {
+        State = state;
+    }
+
+    public String getMsg() {
+        return Msg;
+    }
+
+    public void setMsg(String msg) {
+        Msg = msg;
+    }
+
+    public User getData() {
+        return Data;
+    }
+
+    public void setData(User data) {
+        Data = data;
+    }
+
+    public class User{
+        private int Client_Id;
+        private String ClientName;
+        private String Nikename;
+        private String UserHeadImgUrl;
+        private String Mobile;
+
+        public int getClient_Id() {
+            return Client_Id;
+        }
+
+        public void setClient_Id(int client_Id) {
+            Client_Id = client_Id;
+        }
+
+        public String getClientName() {
+            return ClientName;
+        }
+
+        public void setClientName(String clientName) {
+            ClientName = clientName;
+        }
+
+        public String getNikename() {
+            return Nikename;
+        }
+
+        public void setNikename(String nikename) {
+            Nikename = nikename;
+        }
+
+        public String getUserHeadImgUrl() {
+            return UserHeadImgUrl;
+        }
+
+        public void setUserHeadImgUrl(String userHeadImgUrl) {
+            UserHeadImgUrl = userHeadImgUrl;
+        }
+
+        public String getMobile() {
+            return Mobile;
+        }
+
+        public void setMobile(String mobile) {
+            Mobile = mobile;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+package com.a365vintagewine.mvp.view;
+
+import com.a365vintagewine.mvp.bean.MyIntegral;
+import com.commsdk.base.view.BaseView;
+
+import java.util.List;
+
+/**
+ * Created by Administrator on 2017/8/28 0028.
+ */
+
+public interface MyIntegralView extends BaseView {
+    //设置总积分
+    void setSumIntegral(int sumIntegral);
+    //设置平台头像、积分
+    void setPlatfrom(MyIntegral integral);
+    //适配在商家获得的积分列表数据
+    void setShopListAdapter(List<MyIntegral.ShopIntegral> list);
+}

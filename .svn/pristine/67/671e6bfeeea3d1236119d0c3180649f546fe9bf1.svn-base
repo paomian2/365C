@@ -1,0 +1,20 @@
+package com.a365vintagewine.mvp.presenter;
+
+import com.a365vintagewine.mvp.model.PersonalInfoModel;
+import com.a365vintagewine.mvp.view.PersonalInfoView;
+import com.commsdk.base.presenter.BasePresenter;
+
+/**
+ * Created by Administrator on 2017/8/25 0025.
+ */
+
+public class PersonalInfoPresenter extends BasePresenter<PersonalInfoView,PersonalInfoModel> {
+    public PersonalInfoPresenter(PersonalInfoView mView) {
+        super(mView);
+    }
+
+    @Override
+    public PersonalInfoModel createModel() {
+        return new PersonalInfoModel();
+    }
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:padding="10px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgGoodsLeft"
+            android:layout_centerHorizontal="true"
+            android:background="@color/red"
+            android:layout_width="315px"
+            android:layout_height="315px"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"/>
+        <TextView
+            android:id="@+id/tvGoodsNameleft"
+            android:layout_marginTop="40px"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="28px"
+            android:text="商品介绍商品介绍商品介绍商品介绍商品介绍"
+            android:layout_alignLeft="@+id/imgGoodsLeft"
+            android:layout_alignRight="@+id/imgGoodsLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgGoodsLeft" />
+
+        <TextView
+            android:layout_below="@+id/tvGoodsNameleft"
+            android:layout_alignRight="@+id/imgGoodsLeft"
+            android:layout_marginTop="34px"
+            android:layout_alignLeft="@+id/imgGoodsLeft"
+            android:id="@+id/tvGoodsPriceLeft"
+            android:textColor="#1a191e"
+            android:textSize="36px"
+            android:text="¥139"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/imgShoppingCarLeft"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvGoodsNameleft"
+            android:layout_marginTop="34px"
+            android:layout_alignLeft="@+id/imgGoodsLeft"
+            android:src="@mipmap/icon_shopping_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:padding="10px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgGoodsRight"
+            android:layout_centerHorizontal="true"
+            android:background="@color/red"
+            android:layout_width="315px"
+            android:layout_height="315px"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"/>
+        <TextView
+            android:id="@+id/tvGoodsNameRight"
+            android:layout_marginTop="40px"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="28px"
+            android:text="商品介绍商品介绍商品介绍商品介绍商品介绍"
+            android:layout_alignLeft="@+id/imgGoodsRight"
+            android:layout_alignRight="@+id/imgGoodsRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgGoodsRight" />
+
+        <TextView
+            android:layout_below="@+id/tvGoodsNameRight"
+            android:layout_alignRight="@+id/imgGoodsRight"
+            android:layout_marginTop="34px"
+            android:layout_alignLeft="@+id/imgGoodsRight"
+            android:id="@+id/tvGoodsPriceRight"
+            android:textColor="#1a191e"
+            android:textSize="36px"
+            android:text="¥139"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/imgShoppingCarRight"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvGoodsNameRight"
+            android:layout_marginTop="34px"
+            android:layout_alignLeft="@+id/imgGoodsRight"
+            android:src="@mipmap/icon_shopping_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+</LinearLayout>

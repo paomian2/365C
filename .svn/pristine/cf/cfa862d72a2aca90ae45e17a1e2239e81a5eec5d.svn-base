@@ -1,0 +1,42 @@
+package com.a365vintagewine.mvp.presenter;
+
+import com.a365vintagewine.mvp.bean.IntegralDetail;
+import com.a365vintagewine.mvp.model.IntegralDetailModel;
+import com.a365vintagewine.mvp.view.IntegralDetailView;
+import com.commsdk.base.presenter.BasePresenter;
+import com.commsdk.base.retrofit.ModelCallBack;
+
+import java.util.List;
+
+/**
+ * Created by Administrator on 2017/8/28 0028.
+ */
+
+public class IntegralDetailPresenter extends BasePresenter<IntegralDetailView,IntegralDetailModel> {
+    public IntegralDetailPresenter(IntegralDetailView mView) {
+        super(mView);
+    }
+
+    @Override
+    public IntegralDetailModel createModel() {
+        return new IntegralDetailModel();
+    }
+
+    /**
+     * 获取积分详情数据
+     */
+    public void getIntegralDetail(){
+        mModel.getIntegralDetail(new ModelCallBack<List<IntegralDetail>>() {
+
+            @Override
+            public void onSuccess(List<IntegralDetail> model) {
+                mView.setIntegralDetailAdapter(model);
+            }
+
+            @Override
+            public void onFailure(String msg) {
+
+            }
+        });
+    }
+}

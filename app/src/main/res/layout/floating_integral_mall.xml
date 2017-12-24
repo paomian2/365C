@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginTop="10px"
+        android:layout_width="match_parent"
+        android:layout_height="82px"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/ll_integral_mall_sales_volume"
+            android:layout_width="match_parent"
+            android:layout_weight="1.0"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_integral_mall_sales_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="销量"
+                android:textSize="14sp"
+                android:textColor="@color/font_black"/>
+            <ImageView
+                android:id="@+id/img_integral_mall_sales_volume"
+                android:layout_width="25px"
+                android:layout_height="25px"
+                android:layout_marginLeft="10px"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/sort_down"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_integral_mall_sort_integral"
+            android:layout_width="match_parent"
+            android:layout_weight="1.0"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_integral_mall_sort_integral"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="积分"
+                android:textSize="14sp"
+                android:textColor="@color/font_black"/>
+            <ImageView
+                android:id="@+id/img_integral_mall_sort_integral"
+                android:layout_width="25px"
+                android:layout_height="25px"
+                android:layout_marginLeft="10px"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/sort_down"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

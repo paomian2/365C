@@ -1,0 +1,42 @@
+package com.a365vintagewine.mvp.presenter;
+
+import com.a365vintagewine.mvp.bean.BalanceBean;
+import com.a365vintagewine.mvp.model.BalanceModel;
+import com.a365vintagewine.mvp.view.BalanceHomeView;
+import com.commsdk.base.presenter.BasePresenter;
+import com.commsdk.base.retrofit.ModelCallBack;
+
+/**
+ * 描述：
+ * 作者：Linxz
+ * E-mail:lin_xiao_zhang@163.com
+ * 时间:2017年08月29日  13:18
+ * 版本：3.0
+ */
+
+public class BalanceHomePresenter extends BasePresenter<BalanceHomeView,BalanceModel>{
+
+    public BalanceHomePresenter(BalanceHomeView mView) {
+        super(mView);
+    }
+
+    @Override
+    public BalanceModel createModel() {
+        return new BalanceModel();
+    }
+
+    /**获取整余额信息*/
+    public void getBalanceInfo(){
+       mModel.getBalanceInfo(new ModelCallBack<BalanceBean>() {
+           @Override
+           public void onSuccess(BalanceBean model) {
+                mView.onGetBalanceInfoResult(true,model);
+           }
+
+           @Override
+           public void onFailure(String msg) {
+
+           }
+       });
+    }
+}

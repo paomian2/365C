@@ -1,0 +1,22 @@
+package com.a365vintagewine.mvp.view;
+
+import com.a365vintagewine.mvp.bean.BalanceDetaileBean;
+import com.commsdk.base.view.BaseView;
+
+import java.util.List;
+
+/**
+ * 描述：
+ * 作者：Linxz
+ * E-mail:lin_xiao_zhang@163.com
+ * 时间:2017年08月29日  19:25
+ * 版本：3.0
+ */
+
+public interface BalanceDetailedView extends BaseView{
+
+    /**获取指定商家的余额明细*/
+    public void getBalanceDetailedList(int page,int size);
+    /**获取指定商家的余额明细结果*/
+    public void onGetBalanceDetailedListResult(boolean success, List<BalanceDetaileBean> balanceDetaileBeanList);
+}

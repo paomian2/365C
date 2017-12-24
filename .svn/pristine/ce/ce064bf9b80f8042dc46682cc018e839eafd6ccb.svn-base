@@ -1,0 +1,60 @@
+package com.a365vintagewine.mvp.presenter;
+
+import com.a365vintagewine.mvp.bean.AdressBean;
+import com.a365vintagewine.mvp.model.AdressModel;
+import com.a365vintagewine.mvp.view.AdressHomeView;
+import com.commsdk.base.presenter.BasePresenter;
+import com.commsdk.base.retrofit.ModelCallBack;
+
+import java.util.List;
+
+/**
+ * 描述：
+ * 作者：Linxz
+ * E-mail:lin_xiao_zhang@163.com
+ * 时间:2017年08月30日  2:48
+ * 版本：3.0
+ */
+
+public class AdressHomePresenter extends BasePresenter<AdressHomeView,AdressModel>{
+
+    public AdressHomePresenter(AdressHomeView mView) {
+        super(mView);
+    }
+
+    @Override
+    public AdressModel createModel() {
+        return new AdressModel();
+    }
+
+    /**获取地址列表*/
+    public void getAdressList(String userId){
+        mModel.getAdressList(userId, new ModelCallBack<List<AdressBean>>() {
+            @Override
+            public void onSuccess(List<AdressBean> model) {
+                mView.onGetAdressListResult(true,model);
+            }
+
+            @Override
+            public void onFailure(String msg) {
+                mView.onGetAdressListResult(false,null);
+            }
+        });
+    }
+
+    /**删除地址列表*/
+    public void deleteAdressRecord(String userId){
+        mModel.deleteAdressRecord(userId, new ModelCallBack() {
+            @Override
+            public void onSuccess(Object model) {
+                mView.onDeleteAdressRecordResult(true);
+            }
+
+            @Override
+            public void onFailure(String msg) {
+                mView.onDeleteAdressRecordResult(false);
+            }
+        });
+    }
+
+}

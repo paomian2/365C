@@ -1,0 +1,66 @@
+// Generated code from Butter Knife. Do not modify!
+package com.a365vintagewine.mvp.activity;
+
+import android.view.View;
+import butterknife.ButterKnife.Finder;
+import butterknife.ButterKnife.ViewBinder;
+
+public class LoginActivity$$ViewBinder<T extends com.a365vintagewine.mvp.activity.LoginActivity> implements ViewBinder<T> {
+  @Override public void bind(final Finder finder, final T target, Object source) {
+    View view;
+    view = finder.findRequiredView(source, 2131755197, "field 'btnLogin' and method 'login'");
+    target.btnLogin = finder.castView(view, 2131755197, "field 'btnLogin'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.login();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755193, "field 'imgLoginback'");
+    target.imgLoginback = finder.castView(view, 2131755193, "field 'imgLoginback'");
+    view = finder.findRequiredView(source, 2131755194, "field 'etLoginUsername'");
+    target.etLoginUsername = finder.castView(view, 2131755194, "field 'etLoginUsername'");
+    view = finder.findRequiredView(source, 2131755195, "field 'etLoginPassword'");
+    target.etLoginPassword = finder.castView(view, 2131755195, "field 'etLoginPassword'");
+    view = finder.findRequiredView(source, 2131755196, "field 'tvLoginForgetPassword' and method 'forgetPassword'");
+    target.tvLoginForgetPassword = finder.castView(view, 2131755196, "field 'tvLoginForgetPassword'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.forgetPassword();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755198, "field 'tvLoginRegister' and method 'register'");
+    target.tvLoginRegister = finder.castView(view, 2131755198, "field 'tvLoginRegister'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.register();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755199, "field 'imgLoginQq'");
+    target.imgLoginQq = finder.castView(view, 2131755199, "field 'imgLoginQq'");
+    view = finder.findRequiredView(source, 2131755200, "field 'imgLoginWeibo'");
+    target.imgLoginWeibo = finder.castView(view, 2131755200, "field 'imgLoginWeibo'");
+    view = finder.findRequiredView(source, 2131755201, "field 'imgLoginWeixin'");
+    target.imgLoginWeixin = finder.castView(view, 2131755201, "field 'imgLoginWeixin'");
+  }
+
+  @Override public void unbind(T target) {
+    target.btnLogin = null;
+    target.imgLoginback = null;
+    target.etLoginUsername = null;
+    target.etLoginPassword = null;
+    target.tvLoginForgetPassword = null;
+    target.tvLoginRegister = null;
+    target.imgLoginQq = null;
+    target.imgLoginWeibo = null;
+    target.imgLoginWeixin = null;
+  }
+}

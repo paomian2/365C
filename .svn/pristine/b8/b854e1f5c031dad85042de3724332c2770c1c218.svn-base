@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/titlebackground">
+        <RelativeLayout
+            android:id="@+id/img_text_title_back"
+            android:layout_width="100px"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="20px"
+                android:layout_height="40px"
+                android:layout_marginLeft="20px"
+                android:src="@mipmap/goback"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="修改昵称"
+            android:textColor="@color/black"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:id="@+id/tv_update_nikename_complete"
+            android:layout_width="150px"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="完成"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_update_nikename"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:background="@color/white"
+        android:paddingLeft="40px"
+        android:layout_marginTop="20px"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:textColor="@color/black"/>
+
+</LinearLayout>

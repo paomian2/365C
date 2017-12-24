@@ -1,0 +1,88 @@
+package com.a365vintagewine.adapter;
+
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.a365vintagewine.R;
+import com.commsdk.base.BaseAdapter2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
+/**
+ * Created by Administrator on 2017/9/3 0003.
+ */
+
+public class ScreenBrandAdapter extends BaseAdapter2<String> {
+
+    private List<String> brandList = new ArrayList<>();
+    public ScreenBrandAdapter(Context context) {
+        super(context);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder viewHolder = null;
+        if (null == null){
+            convertView = inflater.inflate(R.layout.item_screen_brand, null);
+            viewHolder = new ViewHolder(convertView);
+            convertView.setTag(viewHolder);
+        }else{
+            viewHolder = (ViewHolder) convertView.getTag();
+        }
+        String brandName = getItem(position);
+        viewHolder.tvScreenBrandname.setText(brandName);
+        viewHolder.tvScreenBrandname.setTag(false);
+        onClicks(viewHolder);
+        return convertView;
+    }
+
+    private void onClicks(final ViewHolder viewHolder) {
+        final TextView tvBrandName =  viewHolder.tvScreenBrandname;
+        tvBrandName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean tag = (boolean) tvBrandName.getTag();
+                if (tag){
+                    for (int i = 0; i < brandList.size(); i++) {
+                        if (brandList.get(i).equals(tvBrandName.getText().toString())){
+                            brandList.remove(i);
+                        }
+                    }
+                    tvBrandName.setTag(false);
+                    tvBrandName.setBackgroundResource(R.drawable.btn_background_ddd);
+                }else{
+                    brandList.add(tvBrandName.getText().toString());
+                    tvBrandName.setTag(true);
+                    tvBrandName.setBackgroundResource(R.drawable.screen_seletor_checked);
+                }
+                if (callbackBranName != null){
+                    callbackBranName.oncallbackBranName(brandList);
+                }
+            }
+        });
+    }
+
+    static class ViewHolder {
+        @Bind(R.id.tv_screen_brandname)
+        TextView tvScreenBrandname;
+
+        ViewHolder(View view) {
+            ButterKnife.bind(this, view);
+        }
+    }
+
+    CallbackBranName callbackBranName;
+    public interface CallbackBranName{
+        void oncallbackBranName(List<String> list);
+    }
+
+    public void setCallbackBranName(CallbackBranName callbackBranName){
+        this.callbackBranName = callbackBranName;
+    }
+}

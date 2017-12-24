@@ -1,0 +1,116 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        multiDexEnabled true
+    }
+    defaultConfig {
+        applicationId "com.a365vintagewine"
+        minSdkVersion 14
+        targetSdkVersion 18
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //flavor dimension 它的维度就是该版本号，这样维度就是都是统一的了
+        flavorDimensions "versionCode"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+    }
+    //解决字文字适配问题(第三方库有多种国家的文字，自己的一般只写一个，从而导致的打包问题，跳过错误继续编译)
+    lintOptions {
+        disable 'MissingTranslation'
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    //签名配置
+    signingConfigs {
+        // 生产环境统一使用的正式签名文件
+        release {
+            storeFile file('../keystore/mjh365_C.jks')
+            keyAlias '365mjh'
+            keyPassword '365mjh'
+            storePassword '365mjh'
+        }
+        // 不同环境下debug也统一使用的签名文件，主要解决高德地图依赖签名文件生成的专用key问题
+        debug {
+            storeFile file('../keystore/debug.keystore')
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storePassword 'android'
+        }
+    }
+
+    //打包后自动生成自定义的apk名称
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "365C端.apk"
+        }
+    }
+
+    buildTypes {
+        //生产环境配置
+        release {
+            debuggable true
+            //true：表示混淆代码，在proguard-rules.pro文件中配置混淆规则
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            buildConfigField "String", "API_SERVER_URL", "\"http://erp-api.mingpin365.cn/\""
+            buildConfigField "String", "IMAGE_SERVER_URL", "\"http://erp.mingpin365.cn\""
+        }
+
+        debug {
+            debuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            buildConfigField "String", "API_SERVER_URL", "\"http://lianjiu-api.iwms.xin/\""
+            buildConfigField "String", "IMAGE_SERVER_URL", "\"http://lianjiu.iwms.xin/\""
+        }
+    }
+
+    //动态配置
+    productFlavors {
+        //正式打包的高德地图的Key配置
+        dev {
+            manifestPlaceholders = [
+                    AMAP_APIKEY_VALUE   : "b0d76f0e7b942f6a6a526cbefad4398b",
+                    PROVIDER_NAME : "com.lianjiu.salesman"
+            ]
+        }
+        //通用的Debug环境下高德地图的Key配置
+        generic {
+            manifestPlaceholders = [
+                    AMAP_APIKEY_VALUE   : "cef93e03678providerName4334c8e8b29bd7205db49",
+                    PROVIDER_NAME : "com.lianjiu.salesman"
+            ]
+        }
+    }}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.jakewharton:butterknife:7.0.0'
+    debugCompile project(path: ':commsdk', configuration: 'debug')
+    releaseCompile project(path: ':commsdk', configuration: 'release')
+    compile project(':sdk_imagepicker')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'liji.library.dev:citypickerview:0.7.0'
+    compile 'com.bartoszlipinski.recyclerviewheader:library:1.2.0'
+    testCompile 'junit:junit:4.12'
+    compile 'com.baoyz.swipemenulistview:library:1.3.0'
+    compile files('libs/AMap3DMap_4.1.3_AMapSearch_4.0.0_AMapLocation_3.2.1_20170111.jar')
+    compile 'com.zhy:base-rvadapter:3.0.3'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    compile project(':sdk_easeUI')
+    compile project(path: ':commsdk')
+}

@@ -1,0 +1,77 @@
+package com.a365vintagewine.mvp.bean;
+
+import com.commsdk.common.StringUtils;
+
+import java.io.Serializable;
+
+/**
+ * 描述：地址实体
+ * 作者：Linxz
+ * E-mail:lin_xiao_zhang@163.com
+ * 时间:2017年08月30日  2:44
+ * 版本：3.0
+ */
+
+public class AdressBean implements Serializable{
+
+    /**地址id*/
+    private String id= StringUtils.EMPTY;
+    /**地址省市区*/
+    private String proviceCity=StringUtils.EMPTY;
+    /**详细地址*/
+    private String detail=StringUtils.EMPTY;
+    /**地址经纬度*/
+    private String lntLong=StringUtils.EMPTY;
+    /**收货人姓名*/
+    private String consignee=StringUtils.EMPTY;
+    /**收货人手机号*/
+    private String phone=StringUtils.EMPTY;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getProviceCity() {
+        return proviceCity;
+    }
+
+    public void setProviceCity(String proviceCity) {
+        this.proviceCity = proviceCity;
+    }
+
+    public String getDetail() {
+        return detail;
+    }
+
+    public void setDetail(String detail) {
+        this.detail = detail;
+    }
+
+    public String getLntLong() {
+        return lntLong;
+    }
+
+    public void setLntLong(String lntLong) {
+        this.lntLong = lntLong;
+    }
+
+    public String getConsignee() {
+        return consignee;
+    }
+
+    public void setConsignee(String consignee) {
+        this.consignee = consignee;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+}

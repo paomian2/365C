@@ -1,0 +1,23 @@
+package com.a365vintagewine.mvp.model;
+
+import com.a365vintagewine.mvp.bean.UserData;
+
+import okhttp3.RequestBody;
+import retrofit2.Call;
+import retrofit2.http.Body;
+import retrofit2.http.POST;
+import rx.Observable;
+
+/**
+ * 描述：
+ * 作者：Linxz
+ * E-mail:lin_xiao_zhang@163.com
+ * 时间:2017年07月12日  22:25
+ * 版本：3.0
+ */
+
+public interface HttpStore {
+    //登录
+    @POST("api/Client/Login")
+    Observable<UserData> getLoginInfo(@Body RequestBody requestBody);
+}

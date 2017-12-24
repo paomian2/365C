@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:paddingLeft="30px"
+        android:paddingTop="28px"
+        android:layout_width="match_parent"
+        android:layout_height="140px">
+        <TextView
+            android:id="@+id/tvTittle"
+            android:text="消费"
+            android:textSize="28px"
+            android:textColor="@color/tv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="16px"
+            android:layout_below="@+id/tvTittle"
+            android:id="@+id/tvOrderNO"
+            android:textColor="#999999"
+            android:textSize="24px"
+            android:text="订单号：2017082900101"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvBalancePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="46px"
+            android:layout_marginTop="48px"
+            android:text="+12"
+            android:textColor="@color/black"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvBalancePrice"
+            android:layout_marginRight="46px"
+            android:layout_marginTop="16px"
+            android:text="07-12"
+            android:textColor="@color/line_back"
+            android:textSize="24px" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="40px"
+            android:background="@color/line_back" />
+    </RelativeLayout>
+    
+</LinearLayout>

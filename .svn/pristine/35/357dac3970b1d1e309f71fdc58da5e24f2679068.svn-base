@@ -1,0 +1,20 @@
+package com.a365vintagewine.mvp.presenter;
+
+import com.a365vintagewine.mvp.model.UpdateNikeNameModel;
+import com.a365vintagewine.mvp.view.UpdateNikeNameView;
+import com.commsdk.base.presenter.BasePresenter;
+
+/**
+ * Created by Administrator on 2017/8/25 0025.
+ */
+
+public class UpdateNikeNamePresenter extends BasePresenter<UpdateNikeNameView,UpdateNikeNameModel> {
+    public UpdateNikeNamePresenter(UpdateNikeNameView mView) {
+        super(mView);
+    }
+
+    @Override
+    public UpdateNikeNameModel createModel() {
+        return new UpdateNikeNameModel();
+    }
+}

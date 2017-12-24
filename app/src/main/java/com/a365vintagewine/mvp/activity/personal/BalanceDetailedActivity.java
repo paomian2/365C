@@ -1,0 +1,153 @@
+package com.a365vintagewine.mvp.activity.personal;
+import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+import com.a365vintagewine.R;
+import com.a365vintagewine.adapter.BalanceDetailedAdapter;
+import com.a365vintagewine.mvp.model.bean.BalanceDetaileBean;
+import com.a365vintagewine.mvp.presenter.BalanceDetailedPresenter;
+import com.a365vintagewine.mvp.view.BalanceDetailedView;
+import com.commsdk.base.BaseActivity;
+import com.commsdk.base.view.BaseMVPActivity;
+import com.commsdk.common.UIHelper;
+import com.commsdk.common.widget.PagedLoader;
+import java.util.List;
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import static com.a365vintagewine.R.layout.item_headview_balance_detail;
+
+/**
+ * 描述：
+ * 作者：Linxz
+ * E-mail:lin_xiao_zhang@163.com
+ * 时间:2017年08月29日  19:24
+ * 版本：3.0
+ */
+
+public class BalanceDetailedActivity extends BaseMVPActivity<BalanceDetailedPresenter> implements BalanceDetailedView, SwipeRefreshLayout.OnRefreshListener, PagedLoader.OnLoadListener {
+
+    /**
+     * 余额明细标题
+     */
+    @Bind(R.id.tv_text_title)
+    TextView tvTextTitle;
+    /**
+     * 数据列表
+     */
+    @Bind(R.id.lv_common)
+    ListView lvCommon;
+    /**
+     * 刷新组件
+     */
+    @Bind(R.id.layoutRefresh)
+    SwipeRefreshLayout layoutRefresh;
+    /**
+     * 加载更多组件
+     */
+    private PagedLoader pagedLoader;
+    /**
+     * 数据列表适配器
+     */
+    private BalanceDetailedAdapter balanceDetailedAdapter;
+    private int page = 1;
+    private int size = 5;
+    private boolean refresh;
+
+    @Override
+    protected BalanceDetailedPresenter createPresenter() {
+        return new BalanceDetailedPresenter(this);
+    }
+
+    @Override
+    protected void setActivityView(Bundle bundle) {
+        setContentView(R.layout.act_comm_list);
+        ButterKnife.bind(this);
+    }
+
+    @Override
+    protected void initUI() {
+        tvTextTitle.setText("余额明细");
+        UIHelper.initRefreshView(layoutRefresh);
+        layoutRefresh.setOnRefreshListener(this);
+        pagedLoader = PagedLoader.from(lvCommon).setOnLoadListener(this).builder();
+        balanceDetailedAdapter = new BalanceDetailedAdapter(activity);
+        pagedLoader.setAdapter(balanceDetailedAdapter);
+        lvCommon.setAdapter(balanceDetailedAdapter);
+
+        View headview=getLayoutInflater().inflate(item_headview_balance_detail,null);
+        ImageView custImg= (ImageView) headview.findViewById(R.id.custImg);
+        TextView tvCustName= (TextView) headview.findViewById(R.id.tvCustName);
+        headview.findViewById(R.id.tvGoBuy).setOnClickListener(mOnClickListener);
+        String url="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504011825823&di=51d4cf90f2f3a84558b40155822699dc&imgtype=0&src=http%3A%2F%2Fwww.jianiang.cn%2Fuploads%2F150721%2F8495-150H1141I13X.jpg";
+        UIHelper.imageNet(activity,url,custImg,false);
+        tvCustName.setText("自在烟酒店");
+        lvCommon.addHeaderView(headview);
+    }
+
+    @Override
+    protected void initData() {
+        getBalanceDetailedList(page,size);
+    }
+
+    @Override
+    public BaseActivity getMyContext() {
+        return activity;
+    }
+
+    @Override
+    public void showProgress(String msg) {
+
+    }
+
+    @Override
+    public void hideProgress() {
+
+    }
+
+    @Override
+    public void getBalanceDetailedList(int page, int size) {
+        mvpPresenter.getCustBalanceList("商家id",page,size);
+    }
+
+    @Override
+    public void onGetBalanceDetailedListResult(boolean success, List<BalanceDetaileBean> balanceDetaileBeanList) {
+        pagedLoader.setLoading(false);
+        layoutRefresh.setRefreshing(false);
+        if (success) {
+            if (refresh)
+                balanceDetailedAdapter.clearAdapter();
+            balanceDetailedAdapter.addAdapterData(balanceDetaileBeanList);
+            page++;
+        }
+    }
+
+    @Override
+    public void onRefresh() {
+        refresh=true;
+        page=1;
+        getBalanceDetailedList(page,size);
+    }
+
+    @Override
+    public void onLoading(PagedLoader pagedLoader, boolean isAutoLoad) {
+        refresh=false;
+        getBalanceDetailedList(page,size);
+    }
+
+    /**去购物*/
+    private View.OnClickListener mOnClickListener=new View.OnClickListener(){
+        @Override
+        public void onClick(View v) {
+            showToast("去商家首页购物");
+        }
+    };
+    /**返回*/
+    @OnClick(R.id.img_text_title_back)
+    public void back(){
+        finish();
+    }
+}

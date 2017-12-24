@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.a365vintagewine">
+
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!--图片选择器-->
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <!--环信即时通讯-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <!-- GCM required, remember replace "com.hyphenate.chatuidemo" to your own package -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <uses-permission android:name="com.hyphenate.chatuidemo.permission.C2D_MESSAGE" />
+
+    <uses-permission android:name="com.hyphenate.chatuidemo.permission.MIPUSH_RECEIVE" />
+
+    <application
+        android:name=".AppApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        tools:replace="android:name"
+        android:theme="@style/AppTheme">
+
+        <!-- 高德地图 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="49e55ab98acbe380a813c740df97a66a" />
+        <!-- 高德地图定位 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <!-- 设置环信应用的AppKey -->
+        <meta-data android:name="EASEMOB_APPKEY"  android:value="lcx#365mjh" />
+        <!-- 声明SDK所需的service SDK核心功能-->
+        <service android:name="com.hyphenate.chat.EMChatService" android:exported="true"/>
+        <service android:name="com.hyphenate.chat.EMJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true"
+            />
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".mvp.activity.LaunchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".mvp.activity.RegisterActivity" />
+        <activity android:name=".mvp.activity.LoginActivity" />
+        <activity android:name=".mvp.activity.GuideActivity" />
+        <activity android:name=".mvp.activity.HomeActivity" />
+        <activity android:name=".mvp.activity.setting.AccountSecurityActivity" />
+        <activity android:name=".mvp.activity.setting.SeetingActivity" />
+        <activity android:name=".mvp.activity.setting.FeedBackActivity" />
+        <activity android:name=".mvp.activity.setting.SettingLoginPasswordActivity" />
+        <activity
+            android:name=".mvp.activity.ForgetPasswordActivity"
+            android:label="@string/title_activity_forget_password"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".mvp.activity.setting.SettingPaymentPasswordActivity" />
+        <activity android:name=".mvp.activity.setting.ModifyPaymentPwdActivity" />
+        <activity
+            android:name=".mvp.activity.personal.PersonalInformationActivity"
+            android:label="@string/title_activity_personal_information"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".mvp.activity.personal.UpdateNickNameActivity" />
+        <activity android:name=".mvp.activity.personal.RealNameAuthenticationActivity" />
+        <activity android:name=".mvp.activity.personal.FillInInvitationCodeActivity" />
+        <activity android:name=".mvp.activity.setting.IntegralMallActivity" />
+        <activity android:name=".mvp.activity.setting.MerchantsSettledActivity" />
+        <activity android:name=".mvp.activity.setting.SellerAuditStatusActivity" />
+        <activity android:name=".mvp.activity.personal.MyWalletActivity" />
+        <activity android:name=".mvp.activity.personal.MyIntegralActivity" />
+        <activity android:name=".mvp.activity.personal.IntegralDetailActivity" />
+        <activity android:name=".mvp.activity.setting.ExchangeRecordActivity" />
+        <activity android:name=".mvp.activity.personal.MyVoucherActivity" />
+        <activity android:name=".mvp.activity.personal.MyTeamActivity" />
+        <activity android:name=".mvp.activity.personal.BalanceHomeActivity" />
+        <activity android:name=".mvp.activity.personal.BalanceDetailedActivity" />
+        <activity android:name=".mvp.activity.personal.CumulativeProfitDetailActivity" />
+        <activity android:name=".mvp.activity.personal.ProfitDetailActivity" />
+        <activity android:name=".mvp.activity.personal.AdressHomeActivcity" />
+        <activity android:name=".mvp.activity.personal.AdressEditActivity" />
+        <activity android:name=".mvp.activity.personal.LBSLatLngLocationActivity" />
+        <activity android:name=".mvp.activity.personal.LBSSearchActivity" />
+        <activity android:name=".mvp.activity.personal.AboutUsActivity" />
+        <activity android:name=".mvp.activity.personal.MyFollowActivity" />
+        <activity android:name=".mvp.activity.search.SearchActivity" />
+        <activity android:name=".mvp.activity.search.SearchShopGoodsActivity"></activity>
+        <activity android:name=".mvp.activity.business.BusinessHomeActivity"/>
+        <activity android:name=".mvp.activity.goods.GoodsDetailActivity" />
+        <activity android:name=".mvp.activity.order.OrderDetailActivity"></activity>
+        <activity android:name=".mvp.activity.WebActivity"/>
+        <!--环信即使通讯-->
+        <activity android:name=".mvp.activity.MsgActivity"/>
+        <activity android:name=".mvp.activity.EaseChatActivity"/>
+    </application>
+
+</manifest>

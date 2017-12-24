@@ -1,0 +1,24 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.a365vintagewine.mvp.fragment.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/inflate_emptydata"/>
+        <com.a365vintagewine.widget.SwipeRefreshLayoutCompat
+            android:id="@+id/layoutRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+            <ListView
+                android:id="@+id/storeLists"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.a365vintagewine.widget.SwipeRefreshLayoutCompat>
+    </RelativeLayout>
+    <include layout="@layout/inflate_index_actionbar"/>
+</FrameLayout>

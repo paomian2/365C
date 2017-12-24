@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--带图标的TextView-->
+    <declare-styleable name="ImgTextView">
+        <attr name="mTextDrawble" format="reference"/>
+        <attr name="mTextContent" format="string"/>
+        <attr name="positionStart" format="boolean"/>
+    </declare-styleable>
+
+</resources>

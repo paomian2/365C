@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/layoutBG"
+        android:layout_width="240px"
+        android:layout_height="230px"
+        android:layout_marginLeft="20px">
+
+         <ImageView
+            android:id="@+id/imgBgVoucher"
+            android:layout_width="240px"
+            android:layout_height="230px"
+            android:background="@drawable/icon_voucher" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_common_size_medium" />
+
+            <TextView
+                android:id="@+id/tvVoucherPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:text="300"
+                android:textColor="@color/white"
+                android:textSize="32dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="230px"
+        android:layout_marginRight="20px"
+        android:layout_toRightOf="@+id/layoutBG"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="20px">
+
+        <TextView
+            android:lineSpacingMultiplier="1.3"
+            android:gravity="center_vertical"
+            android:id="@+id/tvVoucherTittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="双十一葡萄特惠返券双十一葡萄特惠返券双十一葡萄特惠返券" />
+
+        <TextView
+            android:id="@+id/tvVoucherTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvVoucherTittle"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="30px"
+            android:text="2017.03.30-2017.04.08"
+            android:textColor="@color/tv_hint"
+            android:textSize="@dimen/font_common_size_small" />
+
+        <TextView
+            android:id="@+id/tvUseAtOnce"
+            android:layout_width="120px"
+            android:layout_height="45px"
+            android:layout_alignBaseline="@+id/tvVoucherTime"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:background="@drawable/rec_edt_bule"
+            android:gravity="center"
+            android:text="立即使用"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font_common_size_small" />
+
+        <View
+            android:layout_marginBottom="46px"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginRight="10px"
+            android:layout_marginTop="17px"
+            android:background="@color/page_bg" />
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/tvVoucherDetailNotice"
+            android:layout_width="match_parent"
+            android:layout_height="45px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="20px"
+            android:text="详细信息"
+            android:textColor="@color/tv_hint"
+            android:textSize="@dimen/font_common_size_small" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvVoucherDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutBG"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="1px"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingBottom="30px"
+        android:paddingLeft="20px"
+        android:paddingTop="30px"
+        android:text="限品类：仅可购买葡萄酒类商品"
+        android:textSize="@dimen/font_common_size_small"></TextView>
+
+    <ImageView
+        android:id="@+id/imgVoucherNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20px"
+        android:background="@drawable/icon_voucher_new" />
+
+    <ImageView
+        android:id="@+id/imgVoucherUsed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20px"
+        android:background="@drawable/icon_voucher_used" />
+
+
+</RelativeLayout>

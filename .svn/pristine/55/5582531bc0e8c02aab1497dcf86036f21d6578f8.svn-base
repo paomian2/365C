@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/page_bg">
+
+    <include layout="@layout/layout_msg_title" />
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:layout_marginTop="20px"
+        android:id="@+id/lv_address_swipemenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"/>
+
+    <RelativeLayout
+        android:layout_weight="0"
+        android:id="@+id/layoutAdressAdd"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="98px">
+        <TextView
+            android:gravity="center"
+            android:textColor="#333333"
+            android:drawablePadding="32px"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@mipmap/icon_adress_add"
+            android:id="@+id/btn_address_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32px"
+            android:text="新建地址"/>
+    </RelativeLayout>
+
+</LinearLayout>

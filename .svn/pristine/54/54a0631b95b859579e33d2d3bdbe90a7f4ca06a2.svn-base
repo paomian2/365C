@@ -1,0 +1,21 @@
+package com.a365vintagewine.mvp.presenter;
+
+import com.a365vintagewine.mvp.model.RegisterModel;
+import com.a365vintagewine.mvp.view.RegisterView;
+import com.commsdk.base.presenter.BasePresenter;
+
+/**
+ * Created by Administrator on 2017/8/22 0022.
+ */
+
+public class RegisterPresenter extends BasePresenter<RegisterView, RegisterModel> {
+
+    public RegisterPresenter(RegisterView mView) {
+        super(mView);
+    }
+
+    @Override
+    public RegisterModel createModel() {
+        return new RegisterModel();
+    }
+}

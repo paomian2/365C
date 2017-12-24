@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="88px"
+    android:background="@color/titlebackground">
+
+    <RelativeLayout
+        android:id="@+id/img_text_title_back"
+        android:layout_width="100px"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="20px"
+            android:layout_height="40px"
+            android:layout_centerVertical="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginLeft="20px"
+            android:src="@mipmap/goback" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="526px"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/rec_gray_search"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:src="@drawable/icon_search" />
+
+        <EditText
+            android:id="@+id/et_title_search"
+            android:layout_width="365px"
+            android:layout_height="65px"
+            android:background="@color/line_back"
+            android:gravity="center_vertical"
+            android:hint="搜索商家商品"
+            android:textSize="30px" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/tv_title_search"
+        android:layout_width="100px"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="搜 索"
+            android:textColor="@color/corlor_666"
+            android:textSize="28px" />
+    </RelativeLayout>
+</RelativeLayout>

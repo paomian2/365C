@@ -1,0 +1,45 @@
+package com.a365vintagewine.adapter;
+
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.a365vintagewine.R;
+import com.commsdk.base.BaseAdapter2;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
+/**
+ * Created by Administrator on 2017/9/5 0005.
+ */
+
+public class GoodsAttributeAdapter extends BaseAdapter2<String> {
+    public GoodsAttributeAdapter(Context context) {
+        super(context);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder viewHolder = null;
+        if (null == convertView){
+            convertView = inflater.inflate(R.layout.item_goods_attribute, null);
+            viewHolder = new ViewHolder(convertView);
+            convertView.setTag(viewHolder);
+        }else{
+            viewHolder = (ViewHolder) convertView.getTag();
+        }
+        viewHolder.tvGoodsAttrobute.setText(getItem(position));
+        return convertView;
+    }
+
+    static class ViewHolder {
+        @Bind(R.id.tv_goods_attrobute)
+        TextView tvGoodsAttrobute;
+
+        ViewHolder(View view) {
+            ButterKnife.bind(this, view);
+        }
+    }
+}

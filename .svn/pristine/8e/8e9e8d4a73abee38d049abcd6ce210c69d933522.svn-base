@@ -1,0 +1,52 @@
+package com.a365vintagewine.mvp.model;
+
+import com.a365vintagewine.mvp.bean.AdressBean;
+import com.commsdk.base.retrofit.ModelCallBack;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 描述：
+ * 作者：Linxz
+ * E-mail:lin_xiao_zhang@163.com
+ * 时间:2017年08月30日  2:48
+ * 版本：3.0
+ */
+
+public class AdressModel extends BaseModel2{
+
+    /**获取地址列表*/
+    public void getAdressList(String userId, ModelCallBack modelCallBack){
+        List<AdressBean> adressBeanList=new ArrayList<>();
+        for (int i=0;i<3;i++){
+            AdressBean adressBean=new AdressBean();
+            if (i==0){
+                adressBean.setId("");
+                adressBean.setProviceCity("北京市市辖区朝阳区");
+                adressBean.setDetail("百子湾10号电力小区");
+                adressBean.setConsignee("王小明");
+                adressBean.setPhone("18778048491");
+            }else if (i==1){
+                adressBean.setId("");
+                adressBean.setProviceCity("广西南宁市青秀区");
+                adressBean.setDetail("万达广场");
+                adressBean.setConsignee("郑耀国");
+                adressBean.setPhone("18778048499");
+            }else{
+                adressBean.setId("");
+                adressBean.setProviceCity("四川成都金牛区");
+                adressBean.setDetail("金牛区蜀汉路一品天下大街180号");
+                adressBean.setConsignee("李云龙");
+                adressBean.setPhone("18778048499");
+            }
+            adressBeanList.add(adressBean);
+        }
+        modelCallBack.onSuccess(adressBeanList);
+    }
+
+    /**删除地址*/
+    public void deleteAdressRecord(String userId,ModelCallBack modelCallBack){
+        modelCallBack.onSuccess(null);
+    }
+}

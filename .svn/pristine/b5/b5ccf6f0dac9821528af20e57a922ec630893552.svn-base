@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/layout_title_et_search"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40px"
+        android:layout_marginTop="20px"
+        android:text="热门搜索"
+        android:textSize="28px"
+        android:textColor="@color/corlor_666"/>
+
+    <com.a365vintagewine.widget.HotSearchLayout
+        android:id="@+id/hot_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px">
+
+    </com.a365vintagewine.widget.HotSearchLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40px"
+        android:layout_marginTop="76px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="历史搜索"
+            android:textColor="@color/corlor_666"
+            android:textSize="28px" />
+
+        <RelativeLayout
+            android:id="@+id/rl_delete_history"
+            android:layout_width="100px"
+            android:layout_height="40px">
+
+            <ImageView
+                android:layout_width="34px"
+                android:layout_height="36px"
+                android:src="@mipmap/search_delete" />
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_back"
+        android:layout_marginLeft="40px"
+        android:layout_marginTop="20px"/>
+    <ListView
+        android:id="@+id/lv_search_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40px"
+        android:dividerHeight="1px">
+    </ListView>
+
+</LinearLayout>

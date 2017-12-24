@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/inflate_emptydata" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refrenshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ViewDistance">
+
+        <ListView
+            android:id="@+id/lv_common"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/page_bg"
+            android:dividerHeight="10px"
+            android:scrollbars="none"
+            android:visibility="visible" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

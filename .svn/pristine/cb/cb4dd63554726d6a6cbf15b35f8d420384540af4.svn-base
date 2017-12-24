@@ -1,0 +1,57 @@
+package com.a365vintagewine.widget;
+
+import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.util.AttributeSet;
+
+import com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader;
+
+/**
+ * Created by Administrator on 2017/8/29 0029.
+ */
+
+public class MyRecyclerViewHeader extends RecyclerViewHeader {
+
+    private int mCurrentScroll;
+
+    public MyRecyclerViewHeader(Context context) {
+        super(context);
+    }
+
+    public MyRecyclerViewHeader(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    public MyRecyclerViewHeader(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+    }
+    public interface OnScrollTopListener {
+        void onTop(boolean isTop);
+    }
+
+    public OnScrollTopListener mOnScrollTopListener;
+
+    public void setOnScrollTopListener(OnScrollTopListener onScrollTopListener) {
+        mOnScrollTopListener = onScrollTopListener;
+    }
+    private void setupHeader(final RecyclerView recycler) {
+        recycler.setOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                mCurrentScroll = mCurrentScroll;
+                mCurrentScroll += dy;
+                MyRecyclerViewHeader.this.setTranslationY(-mCurrentScroll);
+
+                // 增加时候滚动的顶部回调
+                if (mOnScrollTopListener != null) {
+                    if (mCurrentScroll > 0) {
+                        mOnScrollTopListener.onTop(false);
+                    } else {
+                        mOnScrollTopListener.onTop(true);
+                    }
+                }
+            }
+        });
+    }
+}

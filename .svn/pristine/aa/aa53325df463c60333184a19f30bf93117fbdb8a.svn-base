@@ -1,0 +1,20 @@
+package com.a365vintagewine.mvp.presenter;
+
+import com.a365vintagewine.mvp.model.MerchantsSettledModel;
+import com.a365vintagewine.mvp.view.MerchantsSettledView;
+import com.commsdk.base.presenter.BasePresenter;
+
+/**
+ * Created by Administrator on 2017/8/28 0028.
+ */
+
+public class MerchantsSettledPresenter extends BasePresenter<MerchantsSettledView,MerchantsSettledModel> {
+    public MerchantsSettledPresenter(MerchantsSettledView mView) {
+        super(mView);
+    }
+
+    @Override
+    public MerchantsSettledModel createModel() {
+        return new MerchantsSettledModel();
+    }
+}

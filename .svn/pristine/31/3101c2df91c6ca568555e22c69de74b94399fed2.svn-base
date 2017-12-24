@@ -1,0 +1,18 @@
+package com.a365vintagewine.mvp.view.search;
+
+import com.a365vintagewine.mvp.bean.ShopGoods;
+import com.commsdk.base.view.BaseView;
+
+import java.util.List;
+
+/**
+ * Created by Administrator on 2017/9/1 0001.
+ */
+
+public interface SearchSGView extends BaseView {
+    //适配搜索成功之后商家商品列表数据
+    void setShopGoodsAdapter(List<ShopGoods> list);
+
+    //适配筛选中品牌数据
+    void setBrandAdapter(List<String> brandlist);
+}

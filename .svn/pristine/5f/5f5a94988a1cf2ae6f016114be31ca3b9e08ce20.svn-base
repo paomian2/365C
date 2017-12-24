@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\imagepicker_actionbar_dismiss.xml",
+        "source": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\bundles\\debug\\res\\anim\\imagepicker_actionbar_dismiss.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\imagepicker_actionbar_show.xml",
+        "source": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\bundles\\debug\\res\\anim\\imagepicker_actionbar_show.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\imagepicker_bottom_show.xml",
+        "source": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\bundles\\debug\\res\\anim\\imagepicker_bottom_show.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\imagepicker_pop_slide_out.xml",
+        "source": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\bundles\\debug\\res\\anim\\imagepicker_pop_slide_out.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\imagepicker_pop_slide_in.xml",
+        "source": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\bundles\\debug\\res\\anim\\imagepicker_pop_slide_in.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\imagepicker_bottom_dismiss.xml",
+        "source": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\bundles\\debug\\res\\anim\\imagepicker_bottom_dismiss.xml"
+    },
+    {
+        "merged": "F:\\Project\\365VintageWine\\sdk_imagepicker\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\7160720b55599b54f0490b81d55aa81f539a16ea\\output\\res\\anim\\abc_slide_out_top.xml"
+    }
+]

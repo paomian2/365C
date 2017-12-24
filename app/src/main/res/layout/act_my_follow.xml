@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_text_title"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_back"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="118px"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tv_myfollow_goods"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:textSize="32px"
+            android:textColor="@color/tv_red"
+            android:text="@string/follow_goods_text"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="1px"
+            android:layout_height="40px"
+            android:background="@color/line_back"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/tv_myfollow_shop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:textSize="32px"
+            android:textColor="@color/corlor_666"
+            android:text="@string/follow_shop_text"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_my_follow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10px"
+        android:orientation="horizontal"/>
+
+</LinearLayout>

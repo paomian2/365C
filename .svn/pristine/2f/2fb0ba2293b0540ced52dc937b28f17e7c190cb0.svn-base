@@ -1,0 +1,21 @@
+// Generated code from Butter Knife. Do not modify!
+package com.a365vintagewine.adapter;
+
+import android.view.View;
+import butterknife.ButterKnife.Finder;
+import butterknife.ButterKnife.ViewBinder;
+
+public class ClassificationBrandAdapter$ViewHolder$$ViewBinder<T extends com.a365vintagewine.adapter.ClassificationBrandAdapter.ViewHolder> implements ViewBinder<T> {
+  @Override public void bind(final Finder finder, final T target, Object source) {
+    View view;
+    view = finder.findRequiredView(source, 2131755431, "field 'imgClassificationBrandurl'");
+    target.imgClassificationBrandurl = finder.castView(view, 2131755431, "field 'imgClassificationBrandurl'");
+    view = finder.findRequiredView(source, 2131755432, "field 'tvClassificationBrandname'");
+    target.tvClassificationBrandname = finder.castView(view, 2131755432, "field 'tvClassificationBrandname'");
+  }
+
+  @Override public void unbind(T target) {
+    target.imgClassificationBrandurl = null;
+    target.tvClassificationBrandname = null;
+  }
+}

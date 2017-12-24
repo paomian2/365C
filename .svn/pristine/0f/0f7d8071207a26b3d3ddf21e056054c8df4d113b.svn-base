@@ -1,0 +1,51 @@
+package com.a365vintagewine.mvp.model;
+
+
+import com.a365vintagewine.mvp.bean.UserData;
+import com.commsdk.base.retrofit.ApiCallback;
+import com.commsdk.base.retrofit.BaseRequesBody;
+import com.commsdk.base.retrofit.ModelCallBack;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
+
+/**
+ * 描述：
+ * 作者：Linxz
+ * E-mail:lin_xiao_zhang@163.com
+ * 时间:2017年08月11日  9:38
+ * 版本：3.0
+ */
+
+public class LoginModel extends BaseModel2{
+
+    /**
+     * 服务器端登录
+     * */
+    public void login(String userName, String userPwd, final ModelCallBack modelCallBack){
+        Map<String,String> params = new HashMap<>();
+        params.put("UserName", userName);
+        params.put("UserPwd", userPwd);
+        addSubscription(apiStore.getLoginInfo(BaseRequesBody.setJsonString(params)), new ApiCallback<UserData>() {
+            @Override
+            public void onSuccess(UserData model) {
+                modelCallBack.onSuccess(model);
+            }
+
+            @Override
+            public void onFailure(String msg) {
+                modelCallBack.onFailure(msg);
+            }
+
+            @Override
+            public void onFinish() {
+            }
+        });
+    }
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="38px"
+    android:paddingRight="46px"
+    android:paddingTop="30px"
+    android:paddingBottom="30px">
+
+
+    <ImageView
+        android:id="@+id/imgGoods"
+        android:layout_width="164px"
+        android:layout_height="164px"
+        android:scaleType="fitXY"
+        android:src="@mipmap/img_def"/>
+
+    <TextView
+        android:id="@+id/tvGoodsName"
+        android:layout_marginTop="12px"
+        android:layout_marginLeft="68px"
+        android:textSize="@dimen/font_common_size_small"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="商品名称"
+        android:layout_toRightOf="@+id/imgGoods"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tvGoodsPrice"
+        android:text="￥0.00"
+        android:layout_marginLeft="68px"
+        android:textSize="@dimen/font_common_size_small"
+        android:layout_below="@+id/tvGoodsName"
+        android:layout_toRightOf="@+id/imgGoods"
+        android:layout_marginTop="66px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/tvGoodsQuantity"
+        android:textSize="@dimen/font_common_size_small"
+        android:text="X 2"
+        android:layout_below="@+id/tvGoodsName"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="66px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+</RelativeLayout>

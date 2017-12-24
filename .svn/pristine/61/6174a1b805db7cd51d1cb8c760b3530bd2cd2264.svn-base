@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:orientation="vertical">
+    
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+          <ImageView
+              android:layout_gravity="center_vertical"
+              android:id="@+id/ivBack"
+              android:layout_marginLeft="10px"
+              android:scaleType="centerInside"
+              android:layout_width="80px"
+              android:layout_height="80px"
+              android:src="@drawable/icon_back"/>
+            <TextView
+                android:textSize="24px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="30px"
+                android:gravity="left|center_vertical"
+                android:layout_centerInParent="true"
+                android:background="@drawable/rec_gray_search"
+                android:id="@+id/ivSearch"
+                android:drawablePadding="20px"
+                android:drawableLeft="@drawable/icon_search"
+                android:layout_centerVertical="true"
+                android:hint="搜索小区/学校/大夏等"
+                android:layout_width="match_parent"
+                android:layout_height="66px" />
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0"
+            android:id="@+id/tvConfirm"
+            android:layout_marginRight="30px"
+            android:layout_centerVertical="true"
+            android:background="@color/red"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_common_size_small"
+            android:gravity="center"
+            android:text="确定"
+            android:layout_alignParentRight="true"
+            android:layout_width="120px"
+            android:layout_height="50px"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="4" >
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </com.amap.api.maps.MapView>
+        <ImageView
+            android:layout_gravity="center"
+            android:background="@drawable/icon_lbs_location_advance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_location"/>
+
+        <ImageView
+            android:id="@+id/lvCurrentLocation"
+            android:layout_marginBottom="40px"
+            android:layout_marginRight="40px"
+            android:layout_gravity="left|bottom"
+            android:layout_marginLeft="30px"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/icon_lbs_dingwei"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:paddingTop="40px"
+        android:background="@color/white"
+        android:layout_weight="4"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ListView
+            android:id="@+id/lvPoi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</LinearLayout>

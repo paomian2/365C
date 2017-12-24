@@ -1,0 +1,189 @@
+// Generated code from Butter Knife. Do not modify!
+package com.a365vintagewine.mvp.fragment;
+
+import android.view.View;
+import butterknife.ButterKnife.Finder;
+import butterknife.ButterKnife.ViewBinder;
+
+public class MyselfFragment$$ViewBinder<T extends com.a365vintagewine.mvp.fragment.MyselfFragment> implements ViewBinder<T> {
+  @Override public void bind(final Finder finder, final T target, Object source) {
+    View view;
+    view = finder.findRequiredView(source, 2131755391, "field 'tvMyselfMsgcount'");
+    target.tvMyselfMsgcount = finder.castView(view, 2131755391, "field 'tvMyselfMsgcount'");
+    view = finder.findRequiredView(source, 2131755389, "field 'rlMyselfMsg'");
+    target.rlMyselfMsg = finder.castView(view, 2131755389, "field 'rlMyselfMsg'");
+    view = finder.findRequiredView(source, 2131755392, "field 'imgMyselfSetting'");
+    target.imgMyselfSetting = finder.castView(view, 2131755392, "field 'imgMyselfSetting'");
+    view = finder.findRequiredView(source, 2131755393, "field 'imgMyselfHeadportrait'");
+    target.imgMyselfHeadportrait = finder.castView(view, 2131755393, "field 'imgMyselfHeadportrait'");
+    view = finder.findRequiredView(source, 2131755394, "field 'tvMyselfLoginOrRegister' and method 'loginOrRegister'");
+    target.tvMyselfLoginOrRegister = finder.castView(view, 2131755394, "field 'tvMyselfLoginOrRegister'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.loginOrRegister();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755396, "field 'tvMyselfLoginUsername'");
+    target.tvMyselfLoginUsername = finder.castView(view, 2131755396, "field 'tvMyselfLoginUsername'");
+    view = finder.findRequiredView(source, 2131755397, "field 'tvMyselfLoginPersonalinformation'");
+    target.tvMyselfLoginPersonalinformation = finder.castView(view, 2131755397, "field 'tvMyselfLoginPersonalinformation'");
+    view = finder.findRequiredView(source, 2131755395, "field 'llMyselfLogin'");
+    target.llMyselfLogin = finder.castView(view, 2131755395, "field 'llMyselfLogin'");
+    view = finder.findRequiredView(source, 2131755398, "field 'imgMyselfInvitationCode' and method 'invitationCode'");
+    target.imgMyselfInvitationCode = finder.castView(view, 2131755398, "field 'imgMyselfInvitationCode'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.invitationCode();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755400, "field 'tvMyselfIntegral'");
+    target.tvMyselfIntegral = finder.castView(view, 2131755400, "field 'tvMyselfIntegral'");
+    view = finder.findRequiredView(source, 2131755402, "field 'imgMyselfNewIntegral'");
+    target.imgMyselfNewIntegral = finder.castView(view, 2131755402, "field 'imgMyselfNewIntegral'");
+    view = finder.findRequiredView(source, 2131755399, "field 'llMyselfIntegral' and method 'integral'");
+    target.llMyselfIntegral = finder.castView(view, 2131755399, "field 'llMyselfIntegral'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.integral();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755404, "field 'tvMyselfCoupcon'");
+    target.tvMyselfCoupcon = finder.castView(view, 2131755404, "field 'tvMyselfCoupcon'");
+    view = finder.findRequiredView(source, 2131755406, "field 'imgMyselfNewCoupcontext'");
+    target.imgMyselfNewCoupcontext = finder.castView(view, 2131755406, "field 'imgMyselfNewCoupcontext'");
+    view = finder.findRequiredView(source, 2131755403, "field 'llMyselfCoupcon' and method 'coupcon'");
+    target.llMyselfCoupcon = finder.castView(view, 2131755403, "field 'llMyselfCoupcon'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.coupcon();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755408, "field 'tvMyselfBalance'");
+    target.tvMyselfBalance = finder.castView(view, 2131755408, "field 'tvMyselfBalance'");
+    view = finder.findRequiredView(source, 2131755410, "field 'imgMyselfNewBalancetext'");
+    target.imgMyselfNewBalancetext = finder.castView(view, 2131755410, "field 'imgMyselfNewBalancetext'");
+    view = finder.findRequiredView(source, 2131755407, "field 'llMyselfBalance' and method 'balance'");
+    target.llMyselfBalance = finder.castView(view, 2131755407, "field 'llMyselfBalance'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.balance();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755411, "field 'llMyselfWallet' and method 'wallet'");
+    target.llMyselfWallet = finder.castView(view, 2131755411, "field 'llMyselfWallet'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.wallet();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755413, "field 'tvMyselfApplyShop'");
+    target.tvMyselfApplyShop = finder.castView(view, 2131755413, "field 'tvMyselfApplyShop'");
+    view = finder.findRequiredView(source, 2131755412, "field 'llMyselfShop' and method 'shop'");
+    target.llMyselfShop = finder.castView(view, 2131755412, "field 'llMyselfShop'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.shop();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755414, "field 'llMyselfTeam' and method 'team'");
+    target.llMyselfTeam = finder.castView(view, 2131755414, "field 'llMyselfTeam'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.team();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755415, "field 'llMyselfExchangeMall' and method 'exchangeMall'");
+    target.llMyselfExchangeMall = finder.castView(view, 2131755415, "field 'llMyselfExchangeMall'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.exchangeMall();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755416, "field 'llMyselfAddressManagement' and method 'addressManagement'");
+    target.llMyselfAddressManagement = finder.castView(view, 2131755416, "field 'llMyselfAddressManagement'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.addressManagement();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755417, "field 'llMyselfCollection' and method 'collection'");
+    target.llMyselfCollection = finder.castView(view, 2131755417, "field 'llMyselfCollection'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.collection();
+        }
+      });
+    view = finder.findRequiredView(source, 2131755418, "field 'llMyselfCustomerServicePhone' and method 'customerServicePhone'");
+    target.llMyselfCustomerServicePhone = finder.castView(view, 2131755418, "field 'llMyselfCustomerServicePhone'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.customerServicePhone();
+        }
+      });
+  }
+
+  @Override public void unbind(T target) {
+    target.tvMyselfMsgcount = null;
+    target.rlMyselfMsg = null;
+    target.imgMyselfSetting = null;
+    target.imgMyselfHeadportrait = null;
+    target.tvMyselfLoginOrRegister = null;
+    target.tvMyselfLoginUsername = null;
+    target.tvMyselfLoginPersonalinformation = null;
+    target.llMyselfLogin = null;
+    target.imgMyselfInvitationCode = null;
+    target.tvMyselfIntegral = null;
+    target.imgMyselfNewIntegral = null;
+    target.llMyselfIntegral = null;
+    target.tvMyselfCoupcon = null;
+    target.imgMyselfNewCoupcontext = null;
+    target.llMyselfCoupcon = null;
+    target.tvMyselfBalance = null;
+    target.imgMyselfNewBalancetext = null;
+    target.llMyselfBalance = null;
+    target.llMyselfWallet = null;
+    target.tvMyselfApplyShop = null;
+    target.llMyselfShop = null;
+    target.llMyselfTeam = null;
+    target.llMyselfExchangeMall = null;
+    target.llMyselfAddressManagement = null;
+    target.llMyselfCollection = null;
+    target.llMyselfCustomerServicePhone = null;
+  }
+}

@@ -1,0 +1,20 @@
+package com.a365vintagewine.mvp.presenter;
+
+import com.a365vintagewine.mvp.model.SettingLoginPasswordModel;
+import com.a365vintagewine.mvp.view.SettingLoginPasswordView;
+import com.commsdk.base.presenter.BasePresenter;
+
+/**
+ * Created by Administrator on 2017/8/25 0025.
+ */
+
+public class SettingLoginPasswordPresenter extends BasePresenter<SettingLoginPasswordView,SettingLoginPasswordModel> {
+    public SettingLoginPasswordPresenter(SettingLoginPasswordView mView) {
+        super(mView);
+    }
+
+    @Override
+    public SettingLoginPasswordModel createModel() {
+        return new SettingLoginPasswordModel();
+    }
+}

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.a365vintagewine">
+
+    <!-- 图片选择器 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 高德地图 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="49e55ab98acbe380a813c740df97a66a" />
+        <!-- 高德地图定位 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".mvp.activity.LaunchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".mvp.activity.RegisterActivity" />
+        <activity android:name=".mvp.activity.LoginActivity" />
+        <activity android:name=".mvp.activity.GuideActivity" />
+        <activity android:name=".mvp.activity.HomeActivity" />
+        <activity android:name=".mvp.activity.setting.AccountSecurityActivity" />
+        <activity android:name=".mvp.activity.setting.SeetingActivity" />
+        <activity android:name=".mvp.activity.setting.FeedBackActivity" />
+        <activity android:name=".mvp.activity.setting.SettingLoginPasswordActivity" />
+        <activity
+            android:name=".mvp.activity.ForgetPasswordActivity"
+            android:label="@string/title_activity_forget_password"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".mvp.activity.setting.SettingPaymentPasswordActivity" />
+        <activity android:name=".mvp.activity.setting.ModifyPaymentPwdActivity" />
+        <activity
+            android:name=".mvp.activity.personal.PersonalInformationActivity"
+            android:label="@string/title_activity_personal_information"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".mvp.activity.personal.UpdateNickNameActivity" />
+        <activity android:name=".mvp.activity.personal.RealNameAuthenticationActivity" />
+        <activity android:name=".mvp.activity.personal.FillInInvitationCodeActivity" />
+        <activity android:name=".mvp.activity.setting.IntegralMallActivity" />
+        <activity android:name=".mvp.activity.setting.MerchantsSettledActivity" />
+        <activity android:name=".mvp.activity.setting.SellerAuditStatusActivity" />
+        <activity android:name=".mvp.activity.personal.MyWalletActivity" />
+        <activity android:name=".mvp.activity.personal.MyIntegralActivity" />
+        <activity android:name=".mvp.activity.personal.IntegralDetailActivity" />
+        <activity android:name=".mvp.activity.setting.ExchangeRecordActivity" />
+        <activity android:name=".mvp.activity.personal.MyVoucherActivity" />
+        <activity android:name=".mvp.activity.personal.MyTeamActivity" />
+        <activity android:name=".mvp.activity.personal.BalanceHomeActivity" />
+        <activity android:name=".mvp.activity.personal.BalanceDetailedActivity" />
+        <activity android:name=".mvp.activity.personal.CumulativeProfitDetailActivity" />
+        <activity android:name=".mvp.activity.personal.ProfitDetailActivity" />
+        <activity android:name=".mvp.activity.personal.AdressHomeActivcity" />
+        <activity android:name=".mvp.activity.personal.AdressEditActivity" />
+        <activity android:name=".mvp.activity.personal.LBSLatLngLocationActivity" />
+        <activity android:name=".mvp.activity.personal.LBSSearchActivity" />
+        <activity android:name=".mvp.activity.personal.AboutUsActivity" />
+        <activity android:name=".mvp.activity.personal.MyFollowActivity" />
+        <activity android:name=".mvp.search.SearchActivity" />
+        <activity android:name=".mvp.search.SearchShopGoodsActivity" />
+        <activity android:name=".mvp.activity.goods.GoodsDetailActivity" />
+        <activity android:name=".mvp.activity.order.OrderDetailActivity"></activity>
+    </application>
+
+</manifest>

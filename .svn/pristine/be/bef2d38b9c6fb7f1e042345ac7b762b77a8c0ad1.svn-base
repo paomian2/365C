@@ -1,0 +1,27 @@
+// Generated code from Butter Knife. Do not modify!
+package com.a365vintagewine.adapter;
+
+import android.view.View;
+import butterknife.ButterKnife.Finder;
+import butterknife.ButterKnife.ViewBinder;
+
+public class ClassificationTwoLevelAdapter$ViewHolder$$ViewBinder<T extends com.a365vintagewine.adapter.ClassificationTwoLevelAdapter.ViewHolder> implements ViewBinder<T> {
+  @Override public void bind(final Finder finder, final T target, Object source) {
+    View view;
+    view = finder.findRequiredView(source, 2131755434, "field 'tvClassificationTwolevelname'");
+    target.tvClassificationTwolevelname = finder.castView(view, 2131755434, "field 'tvClassificationTwolevelname'");
+    view = finder.findRequiredView(source, 2131755435, "field 'tvClassificationTwolevelmore'");
+    target.tvClassificationTwolevelmore = finder.castView(view, 2131755435, "field 'tvClassificationTwolevelmore'");
+    view = finder.findRequiredView(source, 2131755436, "field 'gvClassificationBrand'");
+    target.gvClassificationBrand = finder.castView(view, 2131755436, "field 'gvClassificationBrand'");
+    view = finder.findRequiredView(source, 2131755437, "field 'rlClassificationShowbrand'");
+    target.rlClassificationShowbrand = finder.castView(view, 2131755437, "field 'rlClassificationShowbrand'");
+  }
+
+  @Override public void unbind(T target) {
+    target.tvClassificationTwolevelname = null;
+    target.tvClassificationTwolevelmore = null;
+    target.gvClassificationBrand = null;
+    target.rlClassificationShowbrand = null;
+  }
+}

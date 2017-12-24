@@ -1,0 +1,18 @@
+package com.a365vintagewine.mvp.view;
+
+import com.a365vintagewine.mvp.bean.FollowGoods;
+import com.commsdk.base.view.BaseView;
+
+import java.util.List;
+
+/**
+ * Created by Administrator on 2017/8/31 0031.
+ */
+
+public interface FollowGoodsView extends BaseView {
+    //适配我的关注商品列表数据
+    void setFollowGoodsAdapter(List<FollowGoods> list);
+
+    //删除关注的商品
+    void deleteGoods(boolean delete);
+}

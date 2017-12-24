@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.a365vintagewine"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="25.3.1" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.a365vintagewine.mvp.activity.LaunchActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.a365vintagewine.mvp.activity.RegisterActivity" />
+        <activity android:name="com.a365vintagewine.mvp.activity.LoginActivity" />
+        <activity android:name="com.a365vintagewine.mvp.activity.GuideActivity" />
+        <activity android:name="com.a365vintagewine.mvp.activity.HomeActivity" />
+        <activity
+            android:name="com.a365vintagewine.mvp.activity.ForgetPasswordActivity"
+            android:label="@string/title_activity_forget_password"
+            android:theme="@style/AppTheme" />
+        <!-- 适配使用 -->
+        <meta-data
+            android:name="design_width"
+            android:value="750" />
+        <meta-data
+            android:name="design_height"
+            android:value="1334" />
+
+        <activity android:name="com.commsdk.common.sdk_qrqcoder.MainActivity" />
+        <activity android:name="com.commsdk.common.sdk_qrqcoder.CommonScanActivity" />
+        <activity android:name="com.commsdk.common.sdk_qrqcoder.CreateCodeActivity" />
+        <activity android:name="com.imagepicker.ui.crop.ImageCropActivity" />
+        <activity android:name="com.imagepicker.ui.grid.view.ImageDataActivity" />
+        <activity android:name="com.imagepicker.ui.pager.view.ImagePagerActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="@string/app_fileprovider_authorities"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/imagepicker_path" />
+        </provider>
+    </application>
+
+</manifest>
